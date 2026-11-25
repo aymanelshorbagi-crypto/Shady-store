@@ -2,7 +2,21 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f5f7" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_EG" />
+  <meta property="og:site_name" content="Shady Store" />
+  <meta property="og:title" content="Shady Store | شادي ستور للتسوق الإلكتروني" />
+  <meta property="og:description" content="موبايلات، سماعات، ساعات ذكية وإكسسوارات أصلية بأفضل سعر. شحن لجميع المحافظات والدفع عند الاستلام." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="assets/og-image.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Store","name":"Shady Store","alternateName":"شادي ستور","description":"متجر إلكتروني للموبايلات والسماعات والساعات الذكية والإكسسوارات الأصلية","areaServed":"EG","telephone":["+201008485337","+201067390673"],"priceRange":"$$","logo":"assets/logo-round.png"}
+  </script>
   <title>Shady Store | شادي ستور للتسوق الإلكتروني</title>
   <meta name="description" content="متجر شادي ستور - أفضل العروض على الموبايلات، السماعات، الساعات الذكية والإكسسوارات الأصلية بأفضل سعر في مصر." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,26 +33,13 @@
           },
           colors: {
             brandOrange: {
-              50: '#fff7ed',
-              100: '#ffedd5',
-              200: '#fed7aa',
-              300: '#fdba74',
-              400: '#fb923c',
-              500: '#f97316',
-              600: '#ea580c',
-              700: '#c2410c',
+              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd',
+              400: '#2997ff', 500: '#0071e3', 600: '#0066cc', 700: '#0058b0',
             },
             brandTeal: {
-              50: '#f0fdfa',
-              100: '#ccfbf1',
-              200: '#99f6e4',
-              300: '#5eead4',
-              400: '#2dd4bf',
-              500: '#14b8a6',
-              600: '#0d9488',
-              700: '#0f766e',
-              800: '#115e59',
-              900: '#134e4a',
+              50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1',
+              400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
+              800: '#1e293b', 900: '#0f172a',
             }
           }
         }
@@ -55,27 +56,31 @@
       50% { transform: translateY(-5px); }
     }
     .animate-float { animation: floatSlow 3s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+    :focus-visible { outline: 2px solid #14b8a6; outline-offset: 2px; }
+    html { scroll-behavior: smooth; }
+    summary::-webkit-details-marker { display: none; }
     .glass-header {
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
+<body class="bg-[#f5f5f7] text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-gradient-to-l from-brandTeal-800 via-brandTeal-700 to-brandOrange-600 text-white text-xs sm:text-sm py-2 px-4">
+  <div class="bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border-b border-slate-200 dark:border-slate-800 text-xs sm:text-sm py-2 px-4">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2 font-semibold">
-        <span class="inline-block w-2 h-2 rounded-full bg-amber-300 animate-ping"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-brandOrange-400 animate-ping"></span>
         <span>شحن مجاني للطلبات فوق <strong id="topFreeShippingText">3,000</strong> ج.م | الدفع عند الاستلام أو إنستاباي وفودافون كاش</span>
       </div>
       <div class="flex items-center gap-3 text-xs font-bold">
-        <a id="topWaLink1" href="https://wa.me/201008485337" target="_blank" rel="noopener" class="hover:underline flex items-center gap-1 bg-white/15 px-2.5 py-0.5 rounded-full">
+        <a id="topWaLink1" href="https://wa.me/201008485337" target="_blank" rel="noopener" class="hover:underline flex items-center gap-1 bg-[#f5f5f7] dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-2.5 py-0.5 rounded-full">
           <span>واتساب 1:</span>
           <span dir="ltr">01008485337</span>
         </a>
-        <a id="topWaLink2" href="https://wa.me/201067390673" target="_blank" rel="noopener" class="hover:underline flex items-center gap-1 bg-white/15 px-2.5 py-0.5 rounded-full">
+        <a id="topWaLink2" href="https://wa.me/201067390673" target="_blank" rel="noopener" class="hover:underline flex items-center gap-1 bg-[#f5f5f7] dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-2.5 py-0.5 rounded-full">
           <span>واتساب 2:</span>
           <span dir="ltr">01067390673</span>
         </a>
@@ -88,12 +93,10 @@
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
       <!-- Brand Logo -->
       <a href="#" onclick="resetFilters(); return false;" class="flex items-center gap-2.5 shrink-0 group">
-        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-brandOrange-500 to-brandTeal-600 flex items-center justify-center text-white font-black text-xl shadow-md shadow-brandOrange-500/20 group-hover:scale-105 transition-transform">
-          S
-        </div>
+        <img src="assets/logo-round.png" alt="شعار Shady Store" width="44" height="44" class="w-11 h-11 rounded-full shadow-md ring-2 ring-brandOrange-500/40 group-hover:scale-105 transition-transform" />
         <div>
           <div class="flex items-center gap-1.5">
-            <span class="font-black text-xl tracking-tight bg-gradient-to-l from-brandTeal-700 to-brandOrange-600 dark:from-brandTeal-400 dark:to-brandOrange-400 bg-clip-text text-transparent">Shady Store</span>
+            <span class="font-black text-xl tracking-tight text-slate-900 dark:text-white">Shady Store</span>
           </div>
           <p class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold -mt-1">شادي ستور للتقنية والإلكترونيات</p>
         </div>
@@ -101,33 +104,27 @@
 
       <!-- Search Input (Desktop) -->
       <div class="hidden md:flex flex-1 max-w-md relative">
-        <input id="desktopSearch" type="text" oninput="handleSearch(this.value)" placeholder="ابحث عن موبايل، سماعة، ساعة ذكية، شاحن..." class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl py-2.5 pr-10 pl-4 text-sm focus:outline-none focus:ring-2 focus:ring-brandTeal-500 transition" />
+        <input id="desktopSearch" aria-label="بحث في المنتجات" type="text" oninput="handleSearch(this.value)" placeholder="ابحث عن موبايل، سماعة، ساعة ذكية، شاحن..." class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl py-2.5 pr-10 pl-4 text-sm focus:outline-none focus:ring-2 focus:ring-brandTeal-500 transition" />
         <svg class="w-5 h-5 text-slate-400 absolute right-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
       </div>
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-2">
         <!-- My Orders Button -->
-        <button type="button" onclick="openMyOrdersModal()" class="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs sm:text-sm font-bold bg-brandTeal-50 dark:bg-brandTeal-900/40 text-brandTeal-700 dark:text-brandTeal-300 hover:bg-brandTeal-100 transition border border-brandTeal-200/70 dark:border-brandTeal-800">
+        <button onclick="openMyOrdersModal()" aria-label="طلباتي" class="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs sm:text-sm font-bold bg-brandTeal-50 dark:bg-brandTeal-900/40 text-brandTeal-700 dark:text-brandTeal-300 hover:bg-brandTeal-100 transition border border-brandTeal-200/70 dark:border-brandTeal-800">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
           <span class="hidden sm:inline">طلباتي</span>
           <span id="myOrdersBadge" class="hidden bg-brandTeal-600 text-white text-[10px] px-1.5 py-0.2 rounded-full">0</span>
         </button>
 
-        <!-- Admin Dashboard Button -->
-        <button type="button" onclick="openAdminModal()" class="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition border border-slate-200 dark:border-slate-700" title="لوحة تحكم المتجر">
-          <svg class="w-4 h-4 text-brandOrange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          <span class="hidden sm:inline">لوحة التحكم</span>
-        </button>
-
         <!-- Dark Mode Toggle -->
-        <button type="button" onclick="toggleDarkMode()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="تبديل المظهر">
+        <button onclick="toggleDarkMode()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="تبديل المظهر">
           <svg id="sunIcon" class="w-5 h-5 hidden dark:block text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
           <svg id="moonIcon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
 
         <!-- Cart Button -->
-        <button type="button" onclick="toggleCart(true)" class="relative flex items-center gap-2 bg-gradient-to-l from-brandOrange-600 to-brandOrange-500 hover:from-brandOrange-700 hover:to-brandOrange-600 text-white px-3.5 py-2.5 rounded-xl font-bold text-sm shadow-md shadow-brandOrange-500/25 transition active:scale-95">
+        <button onclick="toggleCart(true)" aria-label="فتح سلة المشتريات" class="relative flex items-center gap-2 bg-brandOrange-500 hover:bg-brandOrange-600 text-white px-3.5 py-2.5 rounded-full font-bold text-sm transition active:scale-95">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
           <span class="hidden sm:inline">السلة</span>
           <span id="cartCount" class="bg-white text-brandOrange-600 font-black text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span>
@@ -138,59 +135,49 @@
     <!-- Mobile Search Bar -->
     <div class="md:hidden px-4 pb-3">
       <div class="relative">
-        <input id="mobileSearch" type="text" oninput="handleSearch(this.value)" placeholder="ابحث عن منتج في Shady Store..." class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl py-2 pr-9 pl-4 text-sm focus:outline-none focus:ring-2 focus:ring-brandTeal-500" />
+        <input id="mobileSearch" aria-label="بحث في المنتجات" type="text" oninput="handleSearch(this.value)" placeholder="ابحث عن منتج في Shady Store..." class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl py-2 pr-9 pl-4 text-sm focus:outline-none focus:ring-2 focus:ring-brandTeal-500" />
         <svg class="w-4 h-4 text-slate-400 absolute right-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
       </div>
     </div>
   </header>
 
   <!-- Hero Banner -->
-  <section class="relative overflow-hidden bg-gradient-to-bl from-brandTeal-900 via-brandTeal-800 to-slate-900 text-white">
-    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#f97316_1.5px,transparent_1.5px)] [background-size:24px_24px]"></div>
-    <div class="max-w-7xl mx-auto px-4 py-10 sm:py-14 relative z-10 grid md:grid-cols-12 gap-8 items-center">
-      <div class="md:col-span-7 space-y-4">
-        <div class="inline-flex items-center gap-2 bg-brandOrange-500/20 border border-brandOrange-400/30 text-brandOrange-200 px-3.5 py-1 rounded-full text-xs font-bold">
-          <span>🔥 عروض حصرية وضمان حقيقي من شادي ستور</span>
-        </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
-          كل اللي محتاجه في عالم <span class="text-brandOrange-400">الموبايلات والإلكترونيات</span> في مكان واحد
-        </h1>
-        <p id="heroSubtext" class="text-slate-200 text-sm sm:text-base max-w-xl leading-relaxed">
-          اطلب أونلاين بسهولة من <strong>Shady Store</strong> مع توصيل سريع لجميع محافظات مصر أو استلام مباشر من الفرع، ودعم فني متواصل عبر واتساب.
-        </p>
-        <div class="flex flex-wrap items-center gap-3 pt-2">
-          <a href="#productsSection" class="bg-brandOrange-500 hover:bg-brandOrange-600 text-white font-extrabold px-6 py-3 rounded-xl shadow-lg shadow-brandOrange-500/30 transition active:scale-95 text-sm sm:text-base">
-            تصفح المنتجات الآن
-          </a>
-          <a id="heroWaBtn" href="https://wa.me/201008485337?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20Shady%20Store%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA" target="_blank" rel="noopener" class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 text-white font-bold px-5 py-3 rounded-xl transition flex items-center gap-2 text-sm sm:text-base">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-            <span>تواصل واتساب مباشر</span>
-          </a>
-        </div>
+  <section class="bg-[#f5f5f7] dark:bg-slate-950 text-slate-900 dark:text-white">
+    <div class="max-w-5xl mx-auto px-4 pt-12 sm:pt-16 text-center">
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">Shady Store</h1>
+      <p id="heroSubtext" class="mt-3 text-lg sm:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed">موبايلات وإكسسوارات أصلية، بتوصيل لكل محافظات مصر.</p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <a href="#productsSection" class="bg-brandOrange-500 hover:bg-brandOrange-600 text-white px-7 py-3 rounded-full font-bold text-base transition">تصفح المنتجات</a>
+        <a id="heroWaBtn" href="https://wa.me/201008485337?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20Shady%20Store%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA" target="_blank" rel="noopener" class="border border-brandOrange-500 text-brandOrange-500 hover:bg-brandOrange-500 hover:text-white px-7 py-3 rounded-full font-bold text-base transition">تواصل عبر واتساب</a>
       </div>
+    </div>
 
-      <!-- Feature Highlights Card -->
-      <div class="md:col-span-5 grid grid-cols-2 gap-3">
-        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl">
-          <div class="w-10 h-10 rounded-xl bg-brandOrange-500/20 text-brandOrange-300 flex items-center justify-center font-black text-lg mb-2">🚚</div>
-          <h3 class="font-bold text-sm">شحن لجميع المحافظات</h3>
-          <p class="text-xs text-slate-300 mt-1">توصيل سريع لباب البيت أو استلام مجاني</p>
-        </div>
-        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl">
-          <div class="w-10 h-10 rounded-xl bg-brandTeal-500/20 text-brandTeal-300 flex items-center justify-center font-black text-lg mb-2">🛡️</div>
-          <h3 class="font-bold text-sm">منتجات أصلية 100%</h3>
-          <p class="text-xs text-slate-300 mt-1">ضمان استبدال وفحص قبل الاستلام</p>
-        </div>
-        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl">
-          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-black text-lg mb-2">💳</div>
-          <h3 class="font-bold text-sm">طرق دفع مرنة</h3>
-          <p class="text-xs text-slate-300 mt-1">كاش عند الاستلام، فودافون كاش، إنستاباي</p>
-        </div>
-        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl">
-          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center font-black text-lg mb-2">💬</div>
-          <h3 class="font-bold text-sm">خدمة عملاء سريعة</h3>
-          <p class="text-xs text-slate-300 mt-1">رد فوري على رقمي الواتساب طوال اليوم</p>
-        </div>
+    <div class="max-w-5xl mx-auto px-4 mt-10">
+      <div class="rounded-[2rem] bg-black overflow-hidden py-6 sm:py-10">
+        <img src="assets/logo-wide.png" alt="Shady Store - Mobile &amp; Accessories" width="900" height="600" class="mx-auto w-full max-w-xl h-auto" />
+      </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 text-center">
+        <div class="text-3xl mb-2">🚚</div>
+        <h3 class="font-extrabold text-sm">شحن لكل المحافظات</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">أو استلام مجاني من الفرع</p>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 text-center">
+        <div class="text-3xl mb-2">🛡️</div>
+        <h3 class="font-extrabold text-sm">منتجات أصلية 100%</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">ضمان استبدال وفحص قبل الاستلام</p>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 text-center">
+        <div class="text-3xl mb-2">💳</div>
+        <h3 class="font-extrabold text-sm">طرق دفع مرنة</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">كاش، فودافون كاش، إنستاباي</p>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 text-center">
+        <div class="text-3xl mb-2">💬</div>
+        <h3 class="font-extrabold text-sm">دعم سريع</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">رد فوري على واتساب</p>
       </div>
     </div>
   </section>
@@ -200,9 +187,9 @@
     <!-- Connection Status & Controls -->
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
       <div>
-        <div class="flex items-center gap-2 flex-wrap">
-          <h2 class="text-2xl font-black text-slate-900 dark:text-white">منتجات المتجر</h2>
-          <span id="dbStatusBadge" class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-brandTeal-100 text-brandTeal-800 dark:bg-brandTeal-900/50 dark:text-brandTeal-300">جاهز (باقة البداية)</span>
+        <div class="flex items-center gap-2">
+          <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">منتجات المتجر</h2>
+          <span id="dbStatusBadge" class="hidden text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-brandTeal-100 text-brandTeal-800 dark:bg-brandTeal-900/50 dark:text-brandTeal-300">متصل بقاعدة البيانات</span>
         </div>
         <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">اختر المنتجات وأضفها للسلة لإتمام طلبك في أقل من دقيقة</p>
       </div>
@@ -221,48 +208,90 @@
 
     <!-- Category Pills -->
     <div id="categoryTabs" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-6">
-      <!-- Rendered immediately by instant script -->
+      <!-- Rendered dynamically -->
     </div>
 
     <!-- Products Grid -->
     <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <!-- Rendered immediately by instant script -->
+      <!-- Loading skeleton -->
+      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div><div class="rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div><div class="rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div><div class="rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div>
     </div>
   </main>
 
+  <!-- How to order + FAQ -->
+  <section class="max-w-7xl mx-auto px-4 pb-4">
+    <div class="grid md:grid-cols-3 gap-4 mb-10">
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5">
+        <div class="w-9 h-9 rounded-xl bg-brandOrange-500 text-white font-black flex items-center justify-center mb-3">1</div>
+        <h3 class="font-extrabold mb-1">اختار منتجك</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">تصفح الأقسام أو ابحث بالاسم وأضف ما يعجبك إلى السلة.</p>
+      </div>
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5">
+        <div class="w-9 h-9 rounded-xl bg-brandTeal-600 text-white font-black flex items-center justify-center mb-3">2</div>
+        <h3 class="font-extrabold mb-1">أدخل بياناتك</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">اكتب اسمك وعنوانك واختر طريقة الدفع المناسبة، أو اختر الاستلام من الفرع.</p>
+      </div>
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5">
+        <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white font-black flex items-center justify-center mb-3">3</div>
+        <h3 class="font-extrabold mb-1">أكّد على واتساب</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">ابعت الإيصال على واتساب ونتواصل معك لتأكيد الطلب وموعد الشحن.</p>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-black mb-4">أسئلة شائعة</h2>
+    <div class="space-y-2.5 max-w-3xl">
+      <details class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4">
+        <summary class="cursor-pointer font-extrabold text-sm flex items-center justify-between">ما هي طرق الدفع المتاحة؟ <span class="text-brandOrange-500 group-open:rotate-45 transition">+</span></summary>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">الدفع كاش عند الاستلام، أو فودافون كاش، أو إنستاباي.</p>
+      </details>
+      <details class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4">
+        <summary class="cursor-pointer font-extrabold text-sm flex items-center justify-between">كم تكلفة الشحن؟ <span class="text-brandOrange-500 group-open:rotate-45 transition">+</span></summary>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">تختلف حسب المحافظة وتظهر لك قبل تأكيد الطلب، ويكون الشحن مجانياً عند تخطي الحد الموضح في أعلى الصفحة.</p>
+      </details>
+      <details class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4">
+        <summary class="cursor-pointer font-extrabold text-sm flex items-center justify-between">هل المنتجات أصلية؟ <span class="text-brandOrange-500 group-open:rotate-45 transition">+</span></summary>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">نعم، كل المنتجات أصلية مع ضمان استبدال وإمكانية الفحص قبل الاستلام.</p>
+      </details>
+      <details class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4">
+        <summary class="cursor-pointer font-extrabold text-sm flex items-center justify-between">هل يمكنني الاستلام من الفرع؟ <span class="text-brandOrange-500 group-open:rotate-45 transition">+</span></summary>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">نعم، اختر "استلام من الفرع" في صفحة إتمام الطلب بدون مصاريف شحن.</p>
+      </details>
+    </div>
+  </section>
+
   <!-- Customer Service & Footer -->
-  <footer class="bg-slate-900 text-slate-300 border-t border-slate-800 mt-12">
+  <footer class="bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 mt-12">
     <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
         <div class="flex items-center gap-2.5 mb-3">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brandOrange-500 to-brandTeal-600 flex items-center justify-center text-white font-black text-lg">S</div>
-          <span class="font-black text-xl text-white">Shady Store</span>
+          <img src="assets/logo-round.png" alt="شعار Shady Store" width="40" height="40" loading="lazy" class="w-10 h-10 rounded-full" />
+          <span class="font-black text-xl text-slate-900 dark:text-white">Shady Store</span>
         </div>
-        <p class="text-sm text-slate-400 leading-relaxed">
+        <p class="text-sm text-slate-500 leading-relaxed">
           متجرك الموثوق للموبايلات، السماعات اللاسلكية، الساعات الذكية، والإكسسوارات الأصلية بأفضل سعر وخدمة ما بعد البيع.
         </p>
       </div>
 
       <div>
-        <h3 class="text-white font-extrabold text-base mb-3">تواصل معنا عبر واتساب</h3>
+        <h3 class="text-slate-900 dark:text-white font-extrabold text-base mb-3">تواصل معنا عبر واتساب</h3>
         <div class="space-y-2.5">
-          <a id="footerWa1" href="https://wa.me/201008485337" target="_blank" rel="noopener" class="flex items-center justify-between bg-slate-800/80 hover:bg-slate-800 border border-slate-700 p-3 rounded-xl transition">
+          <a id="footerWa1" href="https://wa.me/201008485337" target="_blank" rel="noopener" class="flex items-center justify-between bg-[#f5f5f7] dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 p-3 rounded-xl transition">
             <div class="flex items-center gap-2.5">
               <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">WA</span>
               <div>
-                <p class="text-xs text-slate-400">المبيعات والطلبات (1)</p>
-                <p id="footerPhone1Text" class="font-bold text-white text-sm" dir="ltr">01008485337</p>
+                <p class="text-xs text-slate-500">المبيعات والطلبات (1)</p>
+                <p id="footerPhone1Text" class="font-bold text-slate-900 dark:text-white text-sm" dir="ltr">01008485337</p>
               </div>
             </div>
             <span class="text-xs bg-emerald-600 text-white px-2.5 py-1 rounded-lg font-bold">مراسلة</span>
           </a>
 
-          <a id="footerWa2" href="https://wa.me/201067390673" target="_blank" rel="noopener" class="flex items-center justify-between bg-slate-800/80 hover:bg-slate-800 border border-slate-700 p-3 rounded-xl transition">
+          <a id="footerWa2" href="https://wa.me/201067390673" target="_blank" rel="noopener" class="flex items-center justify-between bg-[#f5f5f7] dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 p-3 rounded-xl transition">
             <div class="flex items-center gap-2.5">
               <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">WA</span>
               <div>
-                <p class="text-xs text-slate-400">خدمة العملاء والمتابعة (2)</p>
-                <p id="footerPhone2Text" class="font-bold text-white text-sm" dir="ltr">01067390673</p>
+                <p class="text-xs text-slate-500">خدمة العملاء والمتابعة (2)</p>
+                <p id="footerPhone2Text" class="font-bold text-slate-900 dark:text-white text-sm" dir="ltr">01067390673</p>
               </div>
             </div>
             <span class="text-xs bg-emerald-600 text-white px-2.5 py-1 rounded-lg font-bold">مراسلة</span>
@@ -271,17 +300,16 @@
       </div>
 
       <div>
-        <h3 class="text-white font-extrabold text-base mb-3">روابط سريعة</h3>
+        <h3 class="text-slate-900 dark:text-white font-extrabold text-base mb-3">روابط سريعة</h3>
         <ul class="space-y-2 text-sm">
-          <li><button type="button" onclick="resetFilters(); window.scrollTo({top:0,behavior:'smooth'})" class="hover:text-brandOrange-400 transition">الرئيسية والمنتجات</button></li>
-          <li><button type="button" onclick="openMyOrdersModal()" class="hover:text-brandOrange-400 transition">متابعة طلباتي السابقة</button></li>
-          <li><button type="button" onclick="toggleCart(true)" class="hover:text-brandOrange-400 transition">سلة المشتريات وإتمام الطلب</button></li>
-          <li><button type="button" onclick="openAdminModal()" class="hover:text-brandTeal-400 transition">لوحة تحكم الإدارة</button></li>
+          <li><button onclick="resetFilters(); window.scrollTo({top:0,behavior:'smooth'})" class="hover:text-brandOrange-400 transition">الرئيسية والمنتجات</button></li>
+          <li><button onclick="openMyOrdersModal()" class="hover:text-brandOrange-400 transition">متابعة طلباتي السابقة</button></li>
+          <li><button onclick="toggleCart(true)" class="hover:text-brandOrange-400 transition">سلة المشتريات وإتمام الطلب</button></li>
         </ul>
       </div>
     </div>
-    <div class="border-t border-slate-800 py-4 text-center text-xs text-slate-500">
-      © 2026 Shady Store (شادي ستور) - جميع الحقوق محفوظة.
+    <div class="border-t border-slate-200 dark:border-slate-800 py-4 text-center text-xs text-slate-500">
+      © 2026 Shady Store (شادي ستور) - جميع الحقوق محفوظة. <button onclick="openAdminModal()" class="text-slate-600 hover:text-slate-500 mr-2 text-[11px]">دخول الإدارة</button>
     </div>
   </footer>
 
@@ -293,7 +321,7 @@
           <p class="font-extrabold text-sm">خدمة عملاء Shady Store</p>
           <p class="text-[11px] text-emerald-100">متاحون للرد على استفساراتكم وطلباتكم</p>
         </div>
-        <button type="button" onclick="toggleWaWidget()" class="text-white/80 hover:text-white font-bold text-lg leading-none">×</button>
+        <button onclick="toggleWaWidget()" class="text-white/80 hover:text-white font-bold text-lg leading-none">×</button>
       </div>
       <div class="p-3 space-y-2.5">
         <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200/70 dark:border-slate-700 flex items-center justify-between">
@@ -302,7 +330,7 @@
             <p id="widgetPhone1" class="font-extrabold text-sm text-slate-800 dark:text-white" dir="ltr">01008485337</p>
           </div>
           <div class="flex items-center gap-1.5">
-            <button type="button" onclick="copyPhone(1)" class="p-1.5 rounded-lg bg-slate-200 dark:bg-slate-700 text-xs font-bold hover:bg-slate-300" title="نسخ الرقم">نسخ</button>
+            <button onclick="copyPhone(1)" class="p-1.5 rounded-lg bg-slate-200 dark:bg-slate-700 text-xs font-bold hover:bg-slate-300" title="نسخ الرقم">نسخ</button>
             <a id="widgetWaLink1" href="https://wa.me/201008485337" target="_blank" rel="noopener" class="px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold">محادثة</a>
           </div>
         </div>
@@ -313,14 +341,14 @@
             <p id="widgetPhone2" class="font-extrabold text-sm text-slate-800 dark:text-white" dir="ltr">01067390673</p>
           </div>
           <div class="flex items-center gap-1.5">
-            <button type="button" onclick="copyPhone(2)" class="p-1.5 rounded-lg bg-slate-200 dark:bg-slate-700 text-xs font-bold hover:bg-slate-300" title="نسخ الرقم">نسخ</button>
+            <button onclick="copyPhone(2)" class="p-1.5 rounded-lg bg-slate-200 dark:bg-slate-700 text-xs font-bold hover:bg-slate-300" title="نسخ الرقم">نسخ</button>
             <a id="widgetWaLink2" href="https://wa.me/201067390673" target="_blank" rel="noopener" class="px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold">محادثة</a>
           </div>
         </div>
       </div>
     </div>
 
-    <button type="button" onclick="toggleWaWidget()" class="animate-float flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-xl shadow-emerald-600/30 font-extrabold text-sm transition active:scale-95">
+    <button onclick="toggleWaWidget()" class="animate-float flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-xl shadow-emerald-600/30 font-extrabold text-sm transition active:scale-95">
       <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
       <span>واتساب</span>
     </button>
@@ -339,7 +367,7 @@
             <p class="text-xs text-slate-500" id="cartSubtitle">راجع منتجاتك وأدخل بيانات التوصيل</p>
           </div>
         </div>
-        <button type="button" onclick="toggleCart(false)" class="w-8 h-8 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center font-bold hover:bg-slate-300">✕</button>
+        <button onclick="toggleCart(false)" class="w-8 h-8 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center font-bold hover:bg-slate-300">✕</button>
       </div>
 
       <!-- Free Shipping Progress Bar -->
@@ -452,7 +480,7 @@
             </div>
           </div>
 
-          <button id="submitOrderBtn" type="submit" class="w-full bg-gradient-to-l from-brandOrange-600 to-brandOrange-500 hover:from-brandOrange-700 hover:to-brandOrange-600 text-white font-black py-3.5 rounded-xl shadow-lg shadow-brandOrange-500/25 transition active:scale-98 text-base">
+          <button id="submitOrderBtn" type="submit" class="w-full bg-brandOrange-500 hover:bg-brandOrange-600 text-white font-black py-3.5 rounded-full transition active:scale-98 text-base">
             تأكيد وإرسال الطلب الآن ✓
           </button>
         </form>
@@ -469,7 +497,7 @@
         <p class="text-xs text-slate-500 mt-1">رقم الطلب الخاص بك هو:</p>
         <div class="mt-2 inline-flex items-center gap-2 bg-brandTeal-50 dark:bg-brandTeal-950 border border-brandTeal-200 dark:border-brandTeal-800 px-4 py-1.5 rounded-xl">
           <span id="receiptOrderId" class="font-black text-lg text-brandTeal-700 dark:text-brandTeal-300 tracking-wider">SHD-0000</span>
-          <button type="button" onclick="copyOrderId()" class="text-xs bg-brandTeal-600 text-white px-2 py-0.5 rounded-md font-bold">نسخ</button>
+          <button onclick="copyOrderId()" class="text-xs bg-brandTeal-600 text-white px-2 py-0.5 rounded-md font-bold">نسخ</button>
         </div>
       </div>
 
@@ -489,7 +517,7 @@
         </div>
       </div>
 
-      <button type="button" onclick="closeModal('orderSuccessModal')" class="w-full py-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 font-bold text-sm hover:bg-slate-300 transition">إغلاق والعودة للمتجر</button>
+      <button onclick="closeModal('orderSuccessModal')" class="w-full py-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 font-bold text-sm hover:bg-slate-300 transition">إغلاق والعودة للمتجر</button>
     </div>
   </div>
 
@@ -505,7 +533,7 @@
     <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
       <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
         <h3 class="font-black text-lg">📦 سجل طلباتي على هذا الجهاز</h3>
-        <button type="button" onclick="closeModal('myOrdersModal')" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 font-bold">✕</button>
+        <button onclick="closeModal(\'myOrdersModal\')" aria-label="إغلاق" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 font-bold">✕</button>
       </div>
       <div id="myOrdersList" class="p-4 overflow-y-auto space-y-3 flex-1"></div>
     </div>
@@ -524,8 +552,8 @@
           </div>
         </div>
         <div class="flex items-center gap-2">
-          <button type="button" id="adminSignOutBtn" onclick="adminSignOut()" class="hidden text-xs bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/30 text-rose-200 px-3 py-1.5 rounded-xl font-bold">تسجيل خروج</button>
-          <button type="button" onclick="closeModal('adminModal')" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 font-bold">✕</button>
+          <button id="adminSignOutBtn" onclick="adminSignOut()" class="hidden text-xs bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/30 text-rose-200 px-3 py-1.5 rounded-xl font-bold">تسجيل خروج</button>
+          <button onclick="closeModal(\'adminModal\')" aria-label="إغلاق" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 font-bold">✕</button>
         </div>
       </div>
 
@@ -538,7 +566,7 @@
             سجل الدخول بحساب <strong>Google</strong> المصرّح له في Firebase حتى تتمكن من إضافة وتعديل المنتجات والاطلاع على طلبات العملاء الحقيقية.
           </p>
         </div>
-        <button type="button" onclick="adminGoogleLogin()" class="inline-flex items-center justify-center gap-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-brandOrange-500 px-6 py-3.5 rounded-2xl font-extrabold text-sm shadow-md transition active:scale-95">
+        <button onclick="adminGoogleLogin()" class="inline-flex items-center justify-center gap-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-brandOrange-500 px-6 py-3.5 rounded-2xl font-extrabold text-sm shadow-md transition active:scale-95">
           <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.4 1 3.5 3.6 1.6 7.4l3.7 2.8C6.2 7.2 8.9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.7-.2-2.5H12v4.8h6.5c-.3 1.5-1.1 2.8-2.4 3.6l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.3 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.6 7.4C.6 9.4 0 11.6 0 14s.6 4.6 1.6 6.6l3.7-2.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3.1 0-5.8-2.1-6.7-5l-3.7 2.8C3.5 21.4 7.4 24 12 24z"/></svg>
           <span>المتابعة باستخدام Google</span>
         </button>
@@ -569,9 +597,9 @@
 
         <!-- Admin Navigation Tabs -->
         <div class="flex border-b border-slate-200 dark:border-slate-800 px-4 bg-white dark:bg-slate-900">
-          <button type="button" onclick="switchAdminTab('orders')" id="tabBtnOrders" class="px-4 py-3 text-xs sm:text-sm font-black border-b-2 border-brandOrange-500 text-brandOrange-600">📋 طلبات العملاء</button>
-          <button type="button" onclick="switchAdminTab('products')" id="tabBtnProducts" class="px-4 py-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">📦 إدارة المنتجات</button>
-          <button type="button" onclick="switchAdminTab('settings')" id="tabBtnSettings" class="px-4 py-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">⚙️ إعدادات المتجر</button>
+          <button onclick="switchAdminTab('orders')" id="tabBtnOrders" class="px-4 py-3 text-xs sm:text-sm font-black border-b-2 border-brandOrange-500 text-brandOrange-600">📋 طلبات العملاء</button>
+          <button onclick="switchAdminTab('products')" id="tabBtnProducts" class="px-4 py-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">📦 إدارة المنتجات</button>
+          <button onclick="switchAdminTab('settings')" id="tabBtnSettings" class="px-4 py-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">⚙️ إعدادات المتجر</button>
         </div>
 
         <!-- Tab 1: Orders Management -->
@@ -692,7 +720,7 @@
           <div class="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 p-4 rounded-2xl max-w-xl space-y-2 text-xs">
             <p class="font-black text-amber-800 dark:text-amber-300">💡 تذكير مهم لعمل تسجيل الدخول على الرابط العام:</p>
             <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-              بعد نشر الموقع على Cloudflare أو أي استضافة، انسخ رابط الموقع (بدون https://) وأضفه في Firebase Console داخل:
+              بعد رفع الموقع على Netlify أو Vercel، انسخ رابط الموقع (بدون https://) وأضفه في Firebase Console داخل:
               <strong>Authentication ← Settings ← Authorized domains</strong> حتى يعمل زر تسجيل الدخول بحساب Google على الرابط الجديد.
             </p>
           </div>
@@ -707,1144 +735,946 @@
     <span id="toastMsg"></span>
   </div>
 
-  <!-- Instant Non-Module UI & Store Engine (Runs immediately even if Firebase module is slow or blocked) -->
-  <script>
-    (function () {
-      const STARTER_PRODUCTS = [
-        {
-          id: "starter-1",
-          name: "Samsung Galaxy A16 (4GB / 128GB)",
-          category: "موبايلات",
-          price: 10499,
-          oldPrice: 11300,
-          badge: "الأكثر طلباً",
-          inStock: true,
-          image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80",
-          description: "شاشة Super AMOLED مقاس 6.7 بوصة بتردد 90Hz، بطارية 5000mAh، كاميرا رئيسية 50 ميجابكسل، ضمان محلي لمدة عام."
-        },
-        {
-          id: "starter-2",
-          name: "سماعة Anker Soundcore R50i اللاسلكية",
-          category: "سماعات",
-          price: 1150,
-          oldPrice: 1400,
-          badge: "خصم 18%",
-          inStock: true,
-          image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80",
-          description: "صوت Bass قوي، بطارية تدوم حتى 30 ساعة مع العلبة، مقاومة للماء بمعيار IPX5، مايكروفون مزدوج لعزل الضوضاء أثناء المكالمات."
-        },
-        {
-          id: "starter-3",
-          name: "ساعة ذكية Oraimo Watch 4 Plus",
-          category: "ساعات ذكية",
-          price: 1690,
-          oldPrice: 1950,
-          badge: "عرض خاص",
-          inStock: true,
-          image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=600&q=80",
-          description: "شاشة HD كبيرة 2.01 بوصة، إجراء واستقبال المكالمات عبر البلوتوث، قياس نبضات القلب والأكسجين، أكثر من 100 وضع رياضي."
-        },
-        {
-          id: "starter-4",
-          name: "شاحن سريع Anker 30W PD Type-C",
-          category: "شواحن وكابلات",
-          price: 750,
-          oldPrice: 900,
-          badge: "أصلي",
-          inStock: true,
-          image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80",
-          description: "تقنية PowerIQ 3.0 للشحن فائق السرعة لهواتف الآيفون وسامسونج وشاومي مع حماية كاملة من ارتفاع الحرارة."
-        }
-      ];
+  <!-- Firebase & Store Logic -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import {
+      getFirestore, collection, doc, addDoc, setDoc, updateDoc, deleteDoc,
+      onSnapshot, serverTimestamp
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    import {
+      getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect,
+      getRedirectResult, signOut, onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-      function safeReadJson(key, fallback) {
-        try {
-          const raw = localStorage.getItem(key);
-          return raw ? JSON.parse(raw) : fallback;
-        } catch (_) {
-          return fallback;
-        }
+    const firebaseConfig = {
+      apiKey: "AIzaSyDRdjgtpI0F1DR_54y0py5yxCf8tKrylO8",
+      authDomain: "shady-store-f61eb.firebaseapp.com",
+      projectId: "shady-store-f61eb",
+      storageBucket: "shady-store-f61eb.firebasestorage.app",
+      messagingSenderId: "546624189861",
+      appId: "1:546624189861:web:115a340f1c66db4520a44c",
+      measurementId: "G-2JX79V3LW0"
+    };
+
+    const esc = (v) => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
+    // Starter fallback products (shown if database is still empty)
+    const STARTER_PRODUCTS = [
+      {
+        id: "starter-1",
+        name: "Samsung Galaxy A16 (4GB / 128GB)",
+        category: "موبايلات",
+        price: 10499,
+        oldPrice: 11300,
+        badge: "الأكثر طلباً",
+        inStock: true,
+        image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80",
+        description: "شاشة Super AMOLED مقاس 6.7 بوصة بتردد 90Hz، بطارية 5000mAh، كاميرا رئيسية 50 ميجابكسل، ضمان محلي لمدة عام."
+      },
+      {
+        id: "starter-2",
+        name: "سماعة Anker Soundcore R50i اللاسلكية",
+        category: "سماعات",
+        price: 1150,
+        oldPrice: 1400,
+        badge: "خصم 18%",
+        inStock: true,
+        image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80",
+        description: "صوت Bass قوي، بطارية تدوم حتى 30 ساعة مع العلبة، مقاومة للماء بمعيار IPX5، مايكروفون مزدوج لعزل الضوضاء أثناء المكالمات."
+      },
+      {
+        id: "starter-3",
+        name: "ساعة ذكية Oraimo Watch 4 Plus",
+        category: "ساعات ذكية",
+        price: 1690,
+        oldPrice: 1950,
+        badge: "عرض خاص",
+        inStock: true,
+        image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=600&q=80",
+        description: "شاشة HD كبيرة 2.01 بوصة، إجراء واستقبال المكالمات عبر البلوتوث، قياس نبضات القلب والأكسجين، أكثر من 100 وضع رياضي."
+      },
+      {
+        id: "starter-4",
+        name: "شاحن سريع Anker 30W PD Type-C",
+        category: "شواحن وكابلات",
+        price: 750,
+        oldPrice: 900,
+        badge: "أصلي",
+        inStock: true,
+        image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80",
+        description: "تقنية PowerIQ 3.0 للشحن فائق السرعة لهواتف الآيفون وسامسونج وشاومي مع حماية كاملة من ارتفاع الحرارة."
       }
+    ];
 
-      function safeWriteJson(key, value) {
-        try {
-          localStorage.setItem(key, JSON.stringify(value));
-        } catch (_) {}
+    // Global State
+    let products = [];
+    let isUsingStarterFallback = false;
+    let cart = JSON.parse(localStorage.getItem("shady_cart") || "[]");
+    let myOrders = JSON.parse(localStorage.getItem("shady_my_orders") || "[]");
+    let adminOrders = [];
+    let currentCategory = "الكل";
+    let searchQuery = "";
+    let sortBy = "featured";
+    let currentUser = null;
+    let unsubOrders = null;
+    let storeSettings = JSON.parse(localStorage.getItem("shady_settings") || JSON.stringify({
+      wa1: "01008485337",
+      wa2: "01067390673",
+      freeShippingThreshold: 3000
+    }));
+
+    // Handle redirect login result on mobile Safari
+    getRedirectResult(auth).catch((err) => {
+      console.warn("Redirect auth info:", err);
+    });
+
+    // Apply saved dark mode
+    if (localStorage.getItem("shady_dark") === "true") {
+      document.documentElement.classList.add("dark");
+    }
+
+    function formatWaIntl(phone) {
+      const clean = String(phone).replace(/\D/g, "");
+      return clean.startsWith("20") ? clean : "2" + clean;
+    }
+
+    function applySettingsUI() {
+      const { wa1, wa2, freeShippingThreshold } = storeSettings;
+      const intl1 = formatWaIntl(wa1);
+      const intl2 = formatWaIntl(wa2);
+
+      document.getElementById("topFreeShippingText").textContent = Number(freeShippingThreshold).toLocaleString();
+      document.getElementById("topWaLink1").href = `https://wa.me/${intl1}`;
+      document.getElementById("topWaLink1").querySelector("span[dir='ltr']").textContent = wa1;
+      document.getElementById("topWaLink2").href = `https://wa.me/${intl2}`;
+      document.getElementById("topWaLink2").querySelector("span[dir='ltr']").textContent = wa2;
+
+      document.getElementById("heroWaBtn").href = `https://wa.me/${intl1}?text=${encodeURIComponent("أهلاً Shady Store، عندي استفسار عن المنتجات")}`;
+      document.getElementById("footerWa1").href = `https://wa.me/${intl1}`;
+      document.getElementById("footerPhone1Text").textContent = wa1;
+      document.getElementById("footerWa2").href = `https://wa.me/${intl2}`;
+      document.getElementById("footerPhone2Text").textContent = wa2;
+
+      document.getElementById("widgetPhone1").textContent = wa1;
+      document.getElementById("widgetWaLink1").href = `https://wa.me/${intl1}`;
+      document.getElementById("widgetPhone2").textContent = wa2;
+      document.getElementById("widgetWaLink2").href = `https://wa.me/${intl2}`;
+
+      document.getElementById("setWa1").value = wa1;
+      document.getElementById("setWa2").value = wa2;
+      document.getElementById("setFreeShip").value = freeShippingThreshold;
+      updateTotals();
+    }
+
+    // Listen to Products in Firestore
+    onSnapshot(collection(db, "products"), (snapshot) => {
+      if (snapshot.empty) {
+        isUsingStarterFallback = true;
+        products = [...STARTER_PRODUCTS];
+        document.getElementById("dbStatusBadge").textContent = "جاهز (باقة البداية)";
+      } else {
+        isUsingStarterFallback = false;
+        products = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+        document.getElementById("dbStatusBadge").textContent = `متصل مباشر (${products.length} منتج)`;
       }
+      renderCategories();
+      renderProducts();
+      renderAdminProducts();
+      updateAdminKPIs();
+    }, (error) => {
+      console.error("Firestore products error:", error);
+      isUsingStarterFallback = true;
+      products = [...STARTER_PRODUCTS];
+      document.getElementById("dbStatusBadge").textContent = "وضع العرض المحلي";
+      renderCategories();
+      renderProducts();
+    });
 
-      const store = {
-        STARTER_PRODUCTS,
-        products: [...STARTER_PRODUCTS],
-        isUsingStarterFallback: true,
-        cart: safeReadJson("shady_cart", []),
-        myOrders: safeReadJson("shady_my_orders", []),
-        adminOrders: safeReadJson("shady_local_orders", []),
-        currentCategory: "الكل",
-        searchQuery: "",
-        sortBy: "featured",
-        currentUser: null,
-        storeSettings: Object.assign({
-          wa1: "01008485337",
-          wa2: "01067390673",
-          freeShippingThreshold: 3000
-        }, safeReadJson("shady_settings", {}))
-      };
-
-      window.__SHADY_STORE__ = store;
-
-      try {
-        if (localStorage.getItem("shady_dark") === "true") {
-          document.documentElement.classList.add("dark");
-        }
-      } catch (_) {}
-
-      function formatWaIntl(phone) {
-        const clean = String(phone || "").replace(/\D/g, "");
-        if (!clean) return "201008485337";
-        return clean.startsWith("20") ? clean : "2" + clean;
+    // Listen to Settings in Firestore (optional live sync)
+    onSnapshot(doc(db, "settings", "store"), (docSnap) => {
+      if (docSnap.exists()) {
+        storeSettings = { ...storeSettings, ...docSnap.data() };
+        localStorage.setItem("shady_settings", JSON.stringify(storeSettings));
+        applySettingsUI();
       }
+    }, () => {});
 
-      function escapeHtmlAttr(str) {
-        return String(str || "")
-          .replace(/&/g, "&amp;")
-          .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#39;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;");
-      }
+    // Auth State Observer
+    onAuthStateChanged(auth, (user) => {
+      currentUser = user;
+      const loginView = document.getElementById("adminLoginView");
+      const dashView = document.getElementById("adminDashboardView");
+      const signOutBtn = document.getElementById("adminSignOutBtn");
+      const statusText = document.getElementById("adminAuthStatusText");
 
-      let toastTimer = null;
-      function showToast(msg) {
-        const box = document.getElementById("toastBox");
-        const txt = document.getElementById("toastMsg");
-        if (!box || !txt) return;
-        txt.textContent = msg;
-        box.classList.remove("hidden");
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => box.classList.add("hidden"), 3200);
-      }
+      if (user) {
+        loginView.classList.add("hidden");
+        dashView.classList.remove("hidden");
+        signOutBtn.classList.remove("hidden");
+        statusText.textContent = `مسجل الدخول كـ: ${user.email}`;
 
-      function applySettingsUI() {
-        const { wa1, wa2, freeShippingThreshold } = store.storeSettings;
-        const intl1 = formatWaIntl(wa1);
-        const intl2 = formatWaIntl(wa2);
-        const setText = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
-        const setHref = (id, val) => { const el = document.getElementById(id); if (el) el.href = val; };
-        const setVal = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
-
-        setText("topFreeShippingText", Number(freeShippingThreshold || 3000).toLocaleString());
-        setHref("topWaLink1", `https://wa.me/${intl1}`);
-        const topSpan1 = document.querySelector("#topWaLink1 span[dir='ltr']");
-        if (topSpan1) topSpan1.textContent = wa1;
-        setHref("topWaLink2", `https://wa.me/${intl2}`);
-        const topSpan2 = document.querySelector("#topWaLink2 span[dir='ltr']");
-        if (topSpan2) topSpan2.textContent = wa2;
-
-        setHref("heroWaBtn", `https://wa.me/${intl1}?text=${encodeURIComponent("أهلاً Shady Store، عندي استفسار عن المنتجات")}`);
-        setHref("footerWa1", `https://wa.me/${intl1}`);
-        setText("footerPhone1Text", wa1);
-        setHref("footerWa2", `https://wa.me/${intl2}`);
-        setText("footerPhone2Text", wa2);
-
-        setText("widgetPhone1", wa1);
-        setHref("widgetWaLink1", `https://wa.me/${intl1}`);
-        setText("widgetPhone2", wa2);
-        setHref("widgetWaLink2", `https://wa.me/${intl2}`);
-
-        setVal("setWa1", wa1);
-        setVal("setWa2", wa2);
-        setVal("setFreeShip", freeShippingThreshold);
-        updateTotals();
-      }
-
-      function renderCategories() {
-        const cats = ["الكل", ...new Set(store.products.map(p => p.category).filter(Boolean))];
-        const container = document.getElementById("categoryTabs");
-        if (!container) return;
-        container.innerHTML = cats.map(cat => {
-          const active = cat === store.currentCategory;
-          const safeCat = escapeHtmlAttr(cat);
-          return `<button type="button" onclick="selectCategory('${safeCat}')" class="shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition ${
-            active
-              ? "bg-brandOrange-500 text-white shadow-md shadow-brandOrange-500/25"
-              : "bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brandTeal-500"
-          }">${escapeHtmlAttr(cat)}</button>`;
-        }).join("");
-      }
-
-      function renderProducts() {
-        const grid = document.getElementById("productsGrid");
-        if (!grid) return;
-
-        let filtered = store.products.filter(p => {
-          const matchCat = store.currentCategory === "الكل" || p.category === store.currentCategory;
-          const q = store.searchQuery;
-          const matchSearch = !q ||
-            (p.name && String(p.name).toLowerCase().includes(q)) ||
-            (p.description && String(p.description).toLowerCase().includes(q)) ||
-            (p.category && String(p.category).toLowerCase().includes(q));
-          return matchCat && matchSearch;
+        // Subscribe to real-time orders
+        if (unsubOrders) unsubOrders();
+        unsubOrders = onSnapshot(collection(db, "orders"), (snap) => {
+          adminOrders = snap.docs.map(d => ({ docId: d.id, ...d.data() }));
+          adminOrders.sort((a, b) => (b.createdAtMs || 0) - (a.createdAtMs || 0));
+          renderAdminOrders();
+          updateAdminKPIs();
+        }, (err) => {
+          console.error("Orders read error:", err);
+          showToast("تنبيه: تأكد من إضافة إيميلك في Firestore Rules لقراءة الطلبات.");
         });
-
-        if (store.sortBy === "price-asc") filtered.sort((a, b) => Number(a.price) - Number(b.price));
-        if (store.sortBy === "price-desc") filtered.sort((a, b) => Number(b.price) - Number(a.price));
-        if (store.sortBy === "discount") {
-          filtered.sort((a, b) => {
-            const discA = Number(a.oldPrice) > Number(a.price) ? (Number(a.oldPrice) - Number(a.price)) / Number(a.oldPrice) : 0;
-            const discB = Number(b.oldPrice) > Number(b.price) ? (Number(b.oldPrice) - Number(b.price)) / Number(b.oldPrice) : 0;
-            return discB - discA;
-          });
-        }
-
-        if (filtered.length === 0) {
-          grid.innerHTML = `<div class="col-span-full py-16 text-center space-y-2">
-            <p class="text-lg font-black text-slate-600 dark:text-slate-300">لا توجد منتجات مطابقة لبحثك</p>
-            <button type="button" onclick="resetFilters()" class="text-xs bg-brandTeal-600 text-white px-4 py-2 rounded-xl font-bold">عرض كل المنتجات</button>
-          </div>`;
-          return;
-        }
-
-        const fallbackImg = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80";
-        grid.innerHTML = filtered.map(p => {
-          const priceNum = Number(p.price) || 0;
-          const oldPriceNum = Number(p.oldPrice) || 0;
-          const hasDiscount = oldPriceNum > priceNum && priceNum > 0;
-          const discountPct = hasDiscount ? Math.round(((oldPriceNum - priceNum) / oldPriceNum) * 100) : 0;
-          const safeId = escapeHtmlAttr(p.id);
-          const safeName = escapeHtmlAttr(p.name);
-          const safeCat = escapeHtmlAttr(p.category || "عام");
-          const safeDesc = escapeHtmlAttr(p.description || "");
-          const safeBadge = escapeHtmlAttr(p.badge || "");
-          const imgSrc = escapeHtmlAttr(p.image || fallbackImg);
-          const isInStock = p.inStock !== false;
-
-          return `
-            <div class="group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-xs hover:shadow-xl hover:border-brandOrange-400/60 transition-all flex flex-col">
-              <div class="relative aspect-square bg-slate-100 dark:bg-slate-800 overflow-hidden cursor-pointer" onclick="openProductDetail('${safeId}')">
-                <img src="${imgSrc}" alt="${safeName}" loading="lazy" onerror="this.onerror=null;this.src='${fallbackImg}'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div class="absolute top-3 right-3 flex flex-col gap-1.5">
-                  ${safeBadge ? `<span class="bg-brandOrange-500 text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-lg shadow">${safeBadge}</span>` : ""}
-                  ${hasDiscount ? `<span class="bg-brandTeal-600 text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-lg shadow">وفر ${discountPct}%</span>` : ""}
-                </div>
-                ${!isInStock ? `<div class="absolute inset-0 bg-slate-950/60 flex items-center justify-center"><span class="bg-rose-600 text-white font-black text-xs px-3 py-1.5 rounded-xl">نفذت الكمية مؤقتاً</span></div>` : ""}
-              </div>
-
-              <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
-                <div>
-                  <span class="text-[11px] font-bold text-brandTeal-600 dark:text-brandTeal-400">${safeCat}</span>
-                  <h3 onclick="openProductDetail('${safeId}')" class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white line-clamp-2 mt-0.5 cursor-pointer hover:text-brandOrange-600 transition">${safeName}</h3>
-                  <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mt-1">${safeDesc}</p>
-                </div>
-
-                <div class="pt-2 border-t border-slate-100 dark:border-slate-800 space-y-2.5">
-                  <div class="flex items-baseline gap-2">
-                    <span class="text-lg font-black text-brandOrange-600 dark:text-brandOrange-400">${priceNum.toLocaleString()} <span class="text-xs">ج.م</span></span>
-                    ${hasDiscount ? `<span class="text-xs text-slate-400 line-through">${oldPriceNum.toLocaleString()} ج.م</span>` : ""}
-                  </div>
-
-                  <div class="flex items-center gap-2">
-                    <button type="button" onclick="addToCart('${safeId}')" ${!isInStock ? "disabled" : ""} class="flex-1 bg-gradient-to-l from-brandTeal-700 to-brandTeal-600 hover:from-brandTeal-800 hover:to-brandTeal-700 disabled:opacity-40 text-white font-extrabold py-2.5 px-3 rounded-xl text-xs transition active:scale-95 flex items-center justify-center gap-1.5">
-                      <span>+ أضف للسلة</span>
-                    </button>
-                    <button type="button" onclick="openProductDetail('${safeId}')" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold" title="التفاصيل">
-                      👁️
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          `;
-        }).join("");
+      } else {
+        loginView.classList.remove("hidden");
+        dashView.classList.add("hidden");
+        signOutBtn.classList.add("hidden");
+        statusText.textContent = "إدارة المنتجات، طلبات العملاء، وإعدادات المتجر";
+        if (unsubOrders) { unsubOrders(); unsubOrders = null; }
       }
+    });
 
-      function saveCart() {
-        safeWriteJson("shady_cart", store.cart);
-        renderCart();
-      }
-
-      function renderCart() {
-        const totalQty = store.cart.reduce((sum, item) => sum + (Number(item.qty) || 0), 0);
-        const countEl = document.getElementById("cartCount");
-        if (countEl) countEl.textContent = totalQty;
-
-        const container = document.getElementById("cartItemsContainer");
-        const form = document.getElementById("checkoutForm");
-        if (!container || !form) return;
-
-        if (store.cart.length === 0) {
-          container.innerHTML = `
-            <div class="py-12 text-center space-y-3">
-              <div class="text-4xl">🛍️</div>
-              <p class="font-extrabold text-slate-600 dark:text-slate-300">سلة المشتريات فارغة حالياً</p>
-              <button type="button" onclick="toggleCart(false)" class="bg-brandTeal-600 text-white text-xs font-bold px-4 py-2 rounded-xl">تصفح المنتجات</button>
-            </div>
-          `;
-          form.classList.add("hidden");
+    window.adminGoogleLogin = async () => {
+      const errEl = document.getElementById("adminLoginError");
+      errEl.classList.add("hidden");
+      try {
+        await signInWithPopup(auth, provider);
+        showToast("تم تسجيل الدخول بنجاح!");
+      } catch (err) {
+        console.error("Login error:", err);
+        if (err.code === "auth/popup-blocked" || err.code === "auth/operation-not-supported-in-this-environment") {
+          await signInWithRedirect(auth, provider);
         } else {
-          form.classList.remove("hidden");
-          container.innerHTML = store.cart.map(item => {
-            const safeId = escapeHtmlAttr(item.id);
-            const safeName = escapeHtmlAttr(item.name);
-            const lineTotal = (Number(item.price) || 0) * (Number(item.qty) || 1);
-            return `
-              <div class="flex items-center justify-between gap-3 bg-slate-50 dark:bg-slate-800/80 p-3 rounded-2xl border border-slate-200/70 dark:border-slate-700">
-                <div class="flex-1 min-w-0">
-                  <p class="font-extrabold text-xs sm:text-sm truncate">${safeName}</p>
-                  <p class="text-xs font-bold text-brandOrange-600 mt-0.5">${lineTotal.toLocaleString()} ج.م</p>
-                </div>
-                <div class="flex items-center gap-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-2 py-1">
-                  <button type="button" onclick="changeCartQty('${safeId}', -1)" class="w-6 h-6 font-black text-rose-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">-</button>
-                  <span class="text-xs font-black w-5 text-center">${Number(item.qty) || 1}</span>
-                  <button type="button" onclick="changeCartQty('${safeId}', 1)" class="w-6 h-6 font-black text-brandTeal-600 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">+</button>
-                </div>
-              </div>
-            `;
-          }).join("");
-        }
-        updateTotals();
-      }
-
-      function updateTotals() {
-        const subTotal = store.cart.reduce((sum, item) => sum + (Number(item.price) || 0) * (Number(item.qty) || 1), 0);
-        const threshold = Number(store.storeSettings.freeShippingThreshold) || 3000;
-        const deliveryRadio = document.querySelector("input[name='deliveryType']:checked");
-        const deliveryType = deliveryRadio ? deliveryRadio.value : "delivery";
-
-        const addrFields = document.getElementById("deliveryAddressFields");
-        const addrInput = document.getElementById("custAddress");
-        if (addrFields && addrInput) {
-          if (deliveryType === "pickup") {
-            addrFields.classList.add("hidden");
-            addrInput.required = false;
-          } else {
-            addrFields.classList.remove("hidden");
-            addrInput.required = true;
-          }
-        }
-
-        let shipping = 0;
-        if (subTotal > 0 && deliveryType === "delivery") {
-          if (subTotal >= threshold) {
-            shipping = 0;
-          } else {
-            const govSelect = document.getElementById("custGov");
-            const selectedOpt = govSelect && govSelect.options[govSelect.selectedIndex];
-            shipping = selectedOpt ? Number(selectedOpt.getAttribute("data-ship") || 60) : 60;
-          }
-        }
-
-        const grandTotal = subTotal + shipping;
-        const setText = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
-        setText("subTotalVal", subTotal.toLocaleString());
-        setText("shippingVal", shipping === 0 && subTotal > 0 ? "مجاني 🎉" : `${shipping} ج.م`);
-        setText("grandTotalVal", grandTotal.toLocaleString());
-
-        const pct = Math.min(100, Math.round((subTotal / threshold) * 100));
-        const bar = document.getElementById("freeShippingBar");
-        if (bar) bar.style.width = `${pct}%`;
-
-        const msg = document.getElementById("freeShippingMsg");
-        if (msg) {
-          if (subTotal >= threshold) {
-            msg.textContent = "مبروك! حصلت على شحن مجاني بالكامل 🎉";
-          } else {
-            const diff = threshold - subTotal;
-            msg.textContent = `أضف منتجات بقيمة ${diff.toLocaleString()} ج.م للحصول على شحن مجاني!`;
-          }
+          errEl.textContent = `تعذر تسجيل الدخول: ${err.message}`;
+          errEl.classList.remove("hidden");
         }
       }
+    };
 
-      function updateMyOrdersBadge() {
-        const badge = document.getElementById("myOrdersBadge");
-        if (!badge) return;
-        if (store.myOrders.length > 0) {
-          badge.textContent = store.myOrders.length;
-          badge.classList.remove("hidden");
-        } else {
-          badge.classList.add("hidden");
-        }
+    window.adminSignOut = async () => {
+      await signOut(auth);
+      showToast("تم تسجيل الخروج من لوحة التحكم");
+    };
+
+    function renderCategories() {
+      const cats = ["الكل", ...new Set(products.map(p => p.category).filter(Boolean))];
+      const container = document.getElementById("categoryTabs");
+      container.innerHTML = cats.map(cat => {
+        const active = cat === currentCategory;
+        return `<button data-cat="${esc(cat)}" onclick="selectCategory(this.dataset.cat)" class="shrink-0 px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition ${
+          active
+            ? "bg-slate-900 text-white dark:bg-white dark:text-slate-900"
+            : "bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800"
+        }">${esc(cat)}</button>`;
+      }).join("");
+    }
+
+    window.selectCategory = (cat) => {
+      currentCategory = cat;
+      renderCategories();
+      renderProducts();
+    };
+
+    window.handleSearch = (val) => {
+      searchQuery = val.trim().toLowerCase();
+      document.getElementById("desktopSearch").value = val;
+      document.getElementById("mobileSearch").value = val;
+      renderProducts();
+    };
+
+    window.handleSort = (val) => {
+      sortBy = val;
+      renderProducts();
+    };
+
+    window.resetFilters = () => {
+      currentCategory = "الكل";
+      searchQuery = "";
+      sortBy = "featured";
+      document.getElementById("desktopSearch").value = "";
+      document.getElementById("mobileSearch").value = "";
+      document.getElementById("sortSelect").value = "featured";
+      renderCategories();
+      renderProducts();
+    };
+
+    function renderProducts() {
+      let filtered = products.filter(p => {
+        const matchCat = currentCategory === "الكل" || p.category === currentCategory;
+        const matchSearch = !searchQuery ||
+          (p.name && p.name.toLowerCase().includes(searchQuery)) ||
+          (p.description && p.description.toLowerCase().includes(searchQuery)) ||
+          (p.category && p.category.toLowerCase().includes(searchQuery));
+        return matchCat && matchSearch;
+      });
+
+      if (sortBy === "price-asc") filtered.sort((a, b) => Number(a.price) - Number(b.price));
+      if (sortBy === "price-desc") filtered.sort((a, b) => Number(b.price) - Number(a.price));
+      if (sortBy === "discount") {
+        filtered.sort((a, b) => {
+          const discA = a.oldPrice > a.price ? (a.oldPrice - a.price) / a.oldPrice : 0;
+          const discB = b.oldPrice > b.price ? (b.oldPrice - b.price) / b.oldPrice : 0;
+          return discB - discA;
+        });
       }
 
-      function updateAdminKPIs() {
-        const setText = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
-        setText("kpiTotalOrders", store.adminOrders.length);
-        setText("kpiPendingOrders", store.adminOrders.filter(o => o.status === "قيد المراجعة").length);
-        const rev = store.adminOrders.filter(o => o.status !== "ملغي").reduce((s, o) => s + Number(o.total || 0), 0);
-        setText("kpiRevenue", rev.toLocaleString());
-        setText("kpiProductsCount", store.isUsingStarterFallback ? 0 : store.products.length);
+      const grid = document.getElementById("productsGrid");
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class="col-span-full py-16 text-center space-y-2">
+          <p class="text-lg font-black text-slate-600 dark:text-slate-300">لا توجد منتجات مطابقة لبحثك</p>
+          <button onclick="resetFilters()" class="text-xs bg-brandTeal-600 text-white px-4 py-2 rounded-xl font-bold">عرض كل المنتجات</button>
+        </div>`;
+        return;
       }
 
-      function renderAdminProducts() {
-        const realCount = store.isUsingStarterFallback ? 0 : store.products.length;
-        const countEl = document.getElementById("adminProdCount");
-        if (countEl) countEl.textContent = realCount;
-        const list = document.getElementById("adminProductsList");
-        if (!list) return;
-
-        if (store.isUsingStarterFallback) {
-          list.innerHTML = `<p class="col-span-full text-xs text-slate-500 bg-slate-100 dark:bg-slate-800 p-4 rounded-2xl">قاعدة البيانات فارغة حالياً أو لم يكتمل الاتصال بعد، ويظهر للزوار منتجات البداية المؤقتة. أضف أول منتج حقيقي لمتجرك من الفورم بالأعلى.</p>`;
-          return;
-        }
-
-        list.innerHTML = store.products.map(p => {
-          const safeId = escapeHtmlAttr(p.id);
-          const safeName = escapeHtmlAttr(p.name);
-          const safeCat = escapeHtmlAttr(p.category || "عام");
-          return `
-            <div class="flex items-center justify-between gap-3 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
-              <div class="min-w-0">
-                <p class="font-extrabold text-xs sm:text-sm truncate">${safeName}</p>
-                <p class="text-xs text-brandOrange-600 font-bold">${Number(p.price || 0).toLocaleString()} ج.م <span class="text-slate-400 font-normal">(${safeCat})</span></p>
-              </div>
-              <div class="flex items-center gap-1.5 shrink-0">
-                <button type="button" onclick="editProduct('${safeId}')" class="px-2.5 py-1.5 rounded-lg bg-brandTeal-600 text-white text-xs font-bold">تعديل</button>
-                <button type="button" onclick="deleteProduct('${safeId}')" class="px-2.5 py-1.5 rounded-lg bg-rose-600 text-white text-xs font-bold">حذف</button>
-              </div>
-            </div>
-          `;
-        }).join("");
-      }
-
-      function renderAdminOrders() {
-        const filterEl = document.getElementById("adminOrderFilter");
-        const filter = filterEl ? filterEl.value : "all";
-        const filtered = filter === "all" ? store.adminOrders : store.adminOrders.filter(o => o.status === filter);
-        const list = document.getElementById("adminOrdersList");
-        if (!list) return;
-
-        if (filtered.length === 0) {
-          list.innerHTML = `<p class="text-center text-xs text-slate-400 py-10">لا توجد طلبات في هذا القسم حالياً.</p>`;
-          return;
-        }
-
-        list.innerHTML = filtered.map(o => {
-          const custWa = formatWaIntl(o.customerPhone || "");
-          const confirmMsg = encodeURIComponent(
-            `أهلاً أ/ ${o.customerName}، مع حضرتك خدمة عملاء *Shady Store* 🛍️\n` +
-            `بخصوص طلبك رقم *${o.orderId}* بإجمالي *${Number(o.total || 0).toLocaleString()} ج.م*.\n` +
-            `حالة الطلب الحالية: *${o.status}*`
-          );
-          const docKey = escapeHtmlAttr(o.docId || o.orderId);
-          return `
-            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 space-y-2.5 text-xs">
-              <div class="flex flex-wrap items-center justify-between gap-2">
-                <div class="flex items-center gap-2">
-                  <span class="font-black text-sm text-brandTeal-600">${escapeHtmlAttr(o.orderId)}</span>
-                  <span class="font-bold text-slate-800 dark:text-white">${escapeHtmlAttr(o.customerName)}</span>
-                  <span class="text-slate-500" dir="ltr">(${escapeHtmlAttr(o.customerPhone)})</span>
-                </div>
-                <span class="text-[11px] text-slate-400">${escapeHtmlAttr(o.createdAtText || "")}</span>
-              </div>
-
-              <div class="bg-white dark:bg-slate-900 p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-700 space-y-1">
-                ${(o.items || []).map(i => `<p>• ${escapeHtmlAttr(i.name)} × ${Number(i.qty) || 1} — <strong>${((Number(i.price) || 0) * (Number(i.qty) || 1)).toLocaleString()} ج.م</strong></p>`).join("")}
-              </div>
-
-              <div class="flex flex-wrap justify-between gap-2 text-slate-600 dark:text-slate-300">
-                <span>📍 ${escapeHtmlAttr(o.governorate)} - ${escapeHtmlAttr(o.address)}</span>
-                <span>💳 ${escapeHtmlAttr(o.paymentMethod)} | الإجمالي: <strong class="text-brandOrange-600 text-sm">${Number(o.total || 0).toLocaleString()} ج.م</strong></span>
-              </div>
-              ${o.notes ? `<p class="text-amber-700 dark:text-amber-300">📝 ملاحظة: ${escapeHtmlAttr(o.notes)}</p>` : ""}
-
-              <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-200 dark:border-slate-700">
-                <div class="flex items-center gap-2">
-                  <select onchange="updateOrderStatus('${docKey}', this.value)" class="rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-2.5 py-1.5 font-bold text-xs">
-                    ${["قيد المراجعة", "تم التأكيد", "جاري التوصيل", "تم التسليم", "ملغي"].map(st =>
-                      `<option value="${st}" ${o.status === st ? "selected" : ""}>${st}</option>`
-                    ).join("")}
-                  </select>
-                  <a href="https://wa.me/${custWa}?text=${confirmMsg}" target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3 py-1.5 rounded-xl">واتساب العميل</a>
-                </div>
-                <button type="button" onclick="deleteOrder('${docKey}')" class="text-rose-500 hover:underline font-bold">حذف</button>
-              </div>
-            </div>
-          `;
-        }).join("");
-      }
-
-      // Expose immediate UI & store handlers globally
-      window.showToast = showToast;
-      window.formatWaIntl = formatWaIntl;
-      window.applySettingsUI = applySettingsUI;
-      window.renderCategories = renderCategories;
-      window.renderProducts = renderProducts;
-      window.saveCart = saveCart;
-      window.renderCart = renderCart;
-      window.updateTotals = updateTotals;
-      window.updateMyOrdersBadge = updateMyOrdersBadge;
-      window.updateAdminKPIs = updateAdminKPIs;
-      window.renderAdminProducts = renderAdminProducts;
-      window.renderAdminOrders = renderAdminOrders;
-
-      window.selectCategory = (cat) => {
-        store.currentCategory = cat;
-        renderCategories();
-        renderProducts();
-      };
-
-      window.handleSearch = (val) => {
-        store.searchQuery = String(val || "").trim().toLowerCase();
-        const d = document.getElementById("desktopSearch");
-        const m = document.getElementById("mobileSearch");
-        if (d && d.value !== val) d.value = val;
-        if (m && m.value !== val) m.value = val;
-        renderProducts();
-      };
-
-      window.handleSort = (val) => {
-        store.sortBy = val;
-        renderProducts();
-      };
-
-      window.resetFilters = () => {
-        store.currentCategory = "الكل";
-        store.searchQuery = "";
-        store.sortBy = "featured";
-        const d = document.getElementById("desktopSearch");
-        const m = document.getElementById("mobileSearch");
-        const s = document.getElementById("sortSelect");
-        if (d) d.value = "";
-        if (m) m.value = "";
-        if (s) s.value = "featured";
-        renderCategories();
-        renderProducts();
-      };
-
-      window.openProductDetail = (id) => {
-        const p = store.products.find(item => String(item.id) === String(id));
-        if (!p) return;
+      grid.innerHTML = filtered.map(p => {
+        const hasDiscount = Number(p.oldPrice) > Number(p.price);
+        const discountPct = hasDiscount ? Math.round(((p.oldPrice - p.price) / p.oldPrice) * 100) : 0;
         const fallbackImg = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80";
-        const priceNum = Number(p.price) || 0;
-        const oldPriceNum = Number(p.oldPrice) || 0;
-        const safeId = escapeHtmlAttr(p.id);
-        const safeName = escapeHtmlAttr(p.name);
-        const safeCat = escapeHtmlAttr(p.category || "عام");
-        const safeDesc = escapeHtmlAttr(p.description || "منتج أصلي بضمان Shady Store.");
-        const imgSrc = escapeHtmlAttr(p.image || fallbackImg);
-        const waMsg = encodeURIComponent(`أهلاً Shady Store، كنت حابب أستفسر عن منتج: ${p.name} (بسعر ${priceNum} ج.م)`);
-        const intl1 = formatWaIntl(store.storeSettings.wa1);
-        const isInStock = p.inStock !== false;
-
-        const body = document.getElementById("productDetailBody");
-        if (!body) return;
-        body.innerHTML = `
-          <div class="grid md:grid-cols-2">
-            <div class="bg-slate-100 dark:bg-slate-800 aspect-square">
-              <img src="${imgSrc}" alt="${safeName}" onerror="this.onerror=null;this.src='${fallbackImg}'" class="w-full h-full object-cover" />
+        return `
+          <div class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden hover:shadow-xl transition-all flex flex-col">
+            <div class="relative aspect-square bg-slate-100 dark:bg-slate-800 overflow-hidden cursor-pointer" onclick="openProductDetail('${p.id}')">
+              <img src="${p.image || fallbackImg}" alt="${esc(p.name)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImg}'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div class="absolute top-3 right-3 flex flex-col gap-1.5">
+                ${p.badge ? `<span class="bg-brandOrange-500 text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-lg shadow">${esc(p.badge)}</span>` : ""}
+                ${hasDiscount ? `<span class="bg-brandTeal-600 text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-lg shadow">وفر ${discountPct}%</span>` : ""}
+              </div>
+              ${!p.inStock ? `<div class="absolute inset-0 bg-slate-950/60 flex items-center justify-center"><span class="bg-rose-600 text-white font-black text-xs px-3 py-1.5 rounded-xl">نفذت الكمية مؤقتاً</span></div>` : ""}
             </div>
-            <div class="p-6 flex flex-col justify-between space-y-4">
-              <div class="space-y-2">
-                <div class="flex items-center justify-between">
-                  <span class="text-xs font-bold bg-brandTeal-50 dark:bg-brandTeal-950 text-brandTeal-700 dark:text-brandTeal-300 px-3 py-1 rounded-full">${safeCat}</span>
-                  <button type="button" onclick="closeModal('productDetailModal')" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 font-bold">✕</button>
-                </div>
-                <h3 class="text-xl font-black text-slate-900 dark:text-white pt-1">${safeName}</h3>
-                <div class="flex items-baseline gap-2.5">
-                  <span class="text-2xl font-black text-brandOrange-600">${priceNum.toLocaleString()} ج.م</span>
-                  ${oldPriceNum > priceNum ? `<span class="text-sm text-slate-400 line-through">${oldPriceNum.toLocaleString()} ج.م</span>` : ""}
-                </div>
-                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed pt-2">${safeDesc}</p>
+
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <span class="text-[11px] font-bold text-brandTeal-600 dark:text-brandTeal-400">${esc(p.category || "عام")}</span>
+                <h3 onclick="openProductDetail('${p.id}')" class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white line-clamp-2 mt-0.5 cursor-pointer hover:text-brandOrange-600 transition">${esc(p.name)}</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mt-1">${esc(p.description || "")}</p>
               </div>
 
-              <div class="space-y-2 pt-3 border-t border-slate-200 dark:border-slate-800">
-                <button type="button" onclick="addToCart('${safeId}'); closeModal('productDetailModal'); toggleCart(true);" ${!isInStock ? "disabled" : ""} class="w-full bg-brandOrange-500 hover:bg-brandOrange-600 disabled:opacity-40 text-white font-black py-3 rounded-xl text-sm shadow-lg shadow-brandOrange-500/25">
-                  اطلب المنتج الآن
-                </button>
-                <a href="https://wa.me/${intl1}?text=${waMsg}" target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl text-xs">
-                  <span>اسأل عن المنتج على واتساب</span>
-                </a>
+              <div class="pt-2 border-t border-slate-100 dark:border-slate-800 space-y-2.5">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-lg font-extrabold text-slate-900 dark:text-white">${Number(p.price).toLocaleString()} <span class="text-xs">ج.م</span></span>
+                  ${hasDiscount ? `<span class="text-xs text-slate-400 line-through">${Number(p.oldPrice).toLocaleString()} ج.م</span>` : ""}
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <button onclick="addToCart('${p.id}')" ${!p.inStock ? "disabled" : ""} class="flex-1 bg-brandOrange-500 hover:bg-brandOrange-600 disabled:opacity-40 text-white font-extrabold py-2.5 px-3 rounded-full text-xs transition active:scale-95 flex items-center justify-center gap-1.5">
+                    <span>+ أضف للسلة</span>
+                  </button>
+                  <button onclick="openProductDetail('${p.id}')" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold" title="التفاصيل">
+                    👁️
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         `;
-        document.getElementById("productDetailModal").classList.remove("hidden");
-      };
+      }).join("");
+    }
 
-      window.addToCart = (id) => {
-        const p = store.products.find(item => String(item.id) === String(id));
-        if (!p || p.inStock === false) return;
-        const existing = store.cart.find(c => String(c.id) === String(id));
-        if (existing) {
-          existing.qty += 1;
-        } else {
-          store.cart.push({ id: p.id, name: p.name, price: Number(p.price) || 0, image: p.image || "", qty: 1 });
-        }
-        saveCart();
-        showToast(`تمت إضافة "${p.name}" للسلة`);
-      };
+    window.openProductDetail = (id) => {
+      const p = products.find(item => item.id === id);
+      if (!p) return;
+      const fallbackImg = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80";
+      const waMsg = encodeURIComponent(`أهلاً Shady Store، كنت حابب أستفسر عن منتج: ${p.name} (بسعر ${p.price} ج.م)`);
+      const intl1 = formatWaIntl(storeSettings.wa1);
 
-      window.changeCartQty = (id, delta) => {
-        const idx = store.cart.findIndex(c => String(c.id) === String(id));
-        if (idx === -1) return;
-        store.cart[idx].qty += delta;
-        if (store.cart[idx].qty <= 0) store.cart.splice(idx, 1);
-        saveCart();
-      };
-
-      window.submitOrder = async (e) => {
-        e.preventDefault();
-        if (store.cart.length === 0) return;
-
-        const name = document.getElementById("custName").value.trim();
-        const phone = document.getElementById("custPhone").value.trim();
-        if (!/^01[0125][0-9]{8}$/.test(phone.replace(/\s+/g, ""))) {
-          showToast("يرجى إدخال رقم موبايل مصري صحيح مكون من 11 رقم");
-          return;
-        }
-
-        const deliveryRadio = document.querySelector("input[name='deliveryType']:checked");
-        const deliveryType = deliveryRadio ? deliveryRadio.value : "delivery";
-        const gov = deliveryType === "delivery" ? document.getElementById("custGov").value : "استلام من الفرع";
-        const address = deliveryType === "delivery" ? document.getElementById("custAddress").value.trim() : "استلام مباشر من الفرع";
-        const payment = document.getElementById("custPayment").value;
-        const notes = document.getElementById("custNotes").value.trim();
-
-        const subTotal = store.cart.reduce((sum, item) => sum + (Number(item.price) || 0) * (Number(item.qty) || 1), 0);
-        const threshold = Number(store.storeSettings.freeShippingThreshold) || 3000;
-        const govSelect = document.getElementById("custGov");
-        const selectedOpt = govSelect && govSelect.options[govSelect.selectedIndex];
-        const rawShip = selectedOpt ? Number(selectedOpt.getAttribute("data-ship") || 60) : 60;
-        const shipping = deliveryType === "pickup" ? 0 : (subTotal >= threshold ? 0 : rawShip);
-        const total = subTotal + shipping;
-
-        const orderId = "SHD-" + Math.floor(1000 + Math.random() * 9000);
-        const orderPayload = {
-          orderId,
-          customerName: name,
-          customerPhone: phone,
-          deliveryType,
-          governorate: gov,
-          address,
-          paymentMethod: payment,
-          notes,
-          items: store.cart.map(c => ({ id: c.id, name: c.name, price: Number(c.price) || 0, qty: Number(c.qty) || 1 })),
-          subTotal,
-          shipping,
-          total,
-          status: "قيد المراجعة",
-          createdAtMs: Date.now(),
-          createdAtText: new Date().toLocaleString("ar-EG")
-        };
-
-        const btn = document.getElementById("submitOrderBtn");
-        if (btn) {
-          btn.disabled = true;
-          btn.textContent = "جاري إرسال الطلب...";
-        }
-
-        if (typeof window.__shadySaveOrderToCloud === "function") {
-          try {
-            await window.__shadySaveOrderToCloud(orderPayload);
-          } catch (err) {
-            console.warn("Cloud order write note:", err);
-          }
-        }
-
-        store.myOrders.unshift(orderPayload);
-        safeWriteJson("shady_my_orders", store.myOrders);
-        updateMyOrdersBadge();
-
-        store.cart = [];
-        saveCart();
-        toggleCart(false);
-        if (btn) {
-          btn.disabled = false;
-          btn.textContent = "تأكيد وإرسال الطلب الآن ✓";
-        }
-
-        document.getElementById("receiptOrderId").textContent = orderId;
-        const itemsText = orderPayload.items.map(i => `• ${i.name} (×${i.qty}) = ${(i.price * i.qty).toLocaleString()} ج.م`).join("\n");
-        document.getElementById("receiptDetailsBox").innerHTML = `
-          <p><strong>العميل:</strong> ${escapeHtmlAttr(name)} (<span dir="ltr">${escapeHtmlAttr(phone)}</span>)</p>
-          <p><strong>الاستلام:</strong> ${escapeHtmlAttr(gov)} - ${escapeHtmlAttr(address)}</p>
-          <p><strong>الدفع:</strong> ${escapeHtmlAttr(payment)}</p>
-          <p><strong>الإجمالي:</strong> <span class="text-brandOrange-600 font-black">${total.toLocaleString()} ج.م</span></p>
-        `;
-
-        const waReceiptMsg = encodeURIComponent(
-          `طلب جديد من موقع *Shady Store* 🛍️\n` +
-          `رقم الطلب: *${orderId}*\n` +
-          `الاسم: ${name}\n` +
-          `الموبايل: ${phone}\n` +
-          `العنوان: ${gov} - ${address}\n` +
-          `طريقة الدفع: ${payment}\n` +
-          `------------------\n` +
-          `${itemsText}\n` +
-          `------------------\n` +
-          `الشحن: ${shipping === 0 ? "مجاني" : shipping + " ج.م"}\n` +
-          `الإجمالي: *${total.toLocaleString()} ج.م*`
-        );
-
-        document.getElementById("receiptWaBtn1").href = `https://wa.me/${formatWaIntl(store.storeSettings.wa1)}?text=${waReceiptMsg}`;
-        document.getElementById("receiptWaBtn2").href = `https://wa.me/${formatWaIntl(store.storeSettings.wa2)}?text=${waReceiptMsg}`;
-        document.getElementById("orderSuccessModal").classList.remove("hidden");
-      };
-
-      window.copyOrderId = () => {
-        const id = document.getElementById("receiptOrderId").textContent;
-        navigator.clipboard?.writeText(id).catch(() => {});
-        showToast(`تم نسخ رقم الطلب: ${id}`);
-      };
-
-      window.openMyOrdersModal = () => {
-        const list = document.getElementById("myOrdersList");
-        if (!list) return;
-        if (store.myOrders.length === 0) {
-          list.innerHTML = `<p class="text-center text-sm text-slate-500 py-10">لم تقم بإرسال أي طلبات من هذا المتصفح بعد.</p>`;
-        } else {
-          list.innerHTML = store.myOrders.map(o => `
-            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1.5 text-xs">
+      document.getElementById("productDetailBody").innerHTML = `
+        <div class="grid md:grid-cols-2">
+          <div class="bg-slate-100 dark:bg-slate-800 aspect-square">
+            <img src="${p.image || fallbackImg}" alt="${esc(p.name)}" onerror="this.src='${fallbackImg}'" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
               <div class="flex items-center justify-between">
-                <span class="font-black text-brandTeal-600 text-sm">${escapeHtmlAttr(o.orderId)}</span>
-                <span class="text-slate-400">${escapeHtmlAttr(o.createdAtText || "")}</span>
+                <span class="text-xs font-bold bg-brandTeal-50 dark:bg-brandTeal-950 text-brandTeal-700 dark:text-brandTeal-300 px-3 py-1 rounded-full">${esc(p.category || "عام")}</span>
+                <button onclick="closeModal(\'productDetailModal\')" aria-label="إغلاق" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 font-bold">✕</button>
               </div>
-              <p class="font-bold">${(o.items || []).map(i => `${escapeHtmlAttr(i.name)} (×${Number(i.qty) || 1})`).join(" ، ")}</p>
-              <p class="text-slate-500">${escapeHtmlAttr(o.governorate)} - ${escapeHtmlAttr(o.address)}</p>
-              <div class="flex items-center justify-between pt-1">
-                <span class="font-black text-brandOrange-600 text-sm">${Number(o.total || 0).toLocaleString()} ج.م</span>
-                <span class="px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold">${escapeHtmlAttr(o.status)}</span>
+              <h3 class="text-xl font-black text-slate-900 dark:text-white pt-1">${esc(p.name)}</h3>
+              <div class="flex items-baseline gap-2.5">
+                <span class="text-2xl font-black text-brandOrange-600">${Number(p.price).toLocaleString()} ج.م</span>
+                ${Number(p.oldPrice) > Number(p.price) ? `<span class="text-sm text-slate-400 line-through">${Number(p.oldPrice).toLocaleString()} ج.م</span>` : ""}
               </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed pt-2">${esc(p.description || "منتج أصلي بضمان Shady Store.")}</p>
             </div>
-          `).join("");
-        }
-        document.getElementById("myOrdersModal").classList.remove("hidden");
-      };
 
-      window.openAdminModal = () => {
-        document.getElementById("adminModal").classList.remove("hidden");
-        renderAdminProducts();
-        renderAdminOrders();
-        updateAdminKPIs();
-      };
+            <div class="space-y-2 pt-3 border-t border-slate-200 dark:border-slate-800">
+              <button onclick="addToCart('${p.id}'); closeModal('productDetailModal'); toggleCart(true);" ${!p.inStock ? "disabled" : ""} class="w-full bg-brandOrange-500 hover:bg-brandOrange-600 disabled:opacity-40 text-white font-black py-3 rounded-xl text-sm shadow-lg shadow-brandOrange-500/25">
+                اطلب المنتج الآن
+              </button>
+              <a href="https://wa.me/${intl1}?text=${waMsg}" target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl text-xs">
+                <span>اسأل عن المنتج على واتساب</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+      document.getElementById("productDetailModal").classList.remove("hidden");
+    };
 
-      window.switchAdminTab = (tab) => {
-        ["orders", "products", "settings"].forEach(t => {
-          const cap = t.charAt(0).toUpperCase() + t.slice(1);
-          const tabPanel = document.getElementById(`adminTab${cap}`);
-          const btn = document.getElementById(`tabBtn${cap}`);
-          if (tabPanel) tabPanel.classList.toggle("hidden", t !== tab);
-          if (btn) {
-            if (t === tab) {
-              btn.classList.add("border-brandOrange-500", "text-brandOrange-600", "font-black");
-              btn.classList.remove("border-transparent", "text-slate-500");
-            } else {
-              btn.classList.remove("border-brandOrange-500", "text-brandOrange-600", "font-black");
-              btn.classList.add("border-transparent", "text-slate-500");
-            }
-          }
-        });
-      };
+    // Cart Management
+    window.addToCart = (id) => {
+      const p = products.find(item => item.id === id);
+      if (!p || !p.inStock) return;
+      const existing = cart.find(c => c.id === id);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ id: p.id, name: p.name, price: Number(p.price), image: p.image || "", qty: 1 });
+      }
+      saveCart();
+      showToast(`تمت إضافة "${p.name}" للسلة`);
+    };
 
-      window.adminGoogleLogin = async () => {
-        const errEl = document.getElementById("adminLoginError");
-        if (errEl) errEl.classList.add("hidden");
-        if (typeof window.__shadyGoogleLogin === "function") {
-          await window.__shadyGoogleLogin();
-        } else {
-          showToast("تعذر تحميل خدمة تسجيل الدخول حالياً، تحقق من الاتصال بالإنترنت");
-        }
-      };
+    window.changeCartQty = (id, delta) => {
+      const idx = cart.findIndex(c => c.id === id);
+      if (idx === -1) return;
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) cart.splice(idx, 1);
+      saveCart();
+    };
 
-      window.adminSignOut = async () => {
-        if (typeof window.__shadyGoogleSignOut === "function") {
-          await window.__shadyGoogleSignOut();
-        }
-      };
-
-      window.updateOrderStatus = async (docId, newStatus) => {
-        if (typeof window.__shadyUpdateOrderStatus === "function") {
-          await window.__shadyUpdateOrderStatus(docId, newStatus);
-        } else {
-          const ord = store.adminOrders.find(o => String(o.docId || o.orderId) === String(docId));
-          if (ord) {
-            ord.status = newStatus;
-            safeWriteJson("shady_local_orders", store.adminOrders);
-            renderAdminOrders();
-            updateAdminKPIs();
-          }
-          showToast(`تم تحديث حالة الطلب إلى: ${newStatus}`);
-        }
-      };
-
-      window.deleteOrder = async (docId) => {
-        if (!confirm("هل أنت متأكد من حذف هذا الطلب نهائياً؟")) return;
-        if (typeof window.__shadyDeleteOrder === "function") {
-          await window.__shadyDeleteOrder(docId);
-        } else {
-          store.adminOrders = store.adminOrders.filter(o => String(o.docId || o.orderId) !== String(docId));
-          safeWriteJson("shady_local_orders", store.adminOrders);
-          renderAdminOrders();
-          updateAdminKPIs();
-          showToast("تم حذف الطلب");
-        }
-      };
-
-      window.handleImageUpload = (event) => {
-        const file = event.target.files && event.target.files[0];
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          const img = new Image();
-          img.onload = () => {
-            const canvas = document.createElement("canvas");
-            const MAX_SIZE = 550;
-            let w = img.width;
-            let h = img.height;
-            if (w > h && w > MAX_SIZE) { h *= MAX_SIZE / w; w = MAX_SIZE; }
-            else if (h > MAX_SIZE) { w *= MAX_SIZE / h; h = MAX_SIZE; }
-            canvas.width = w;
-            canvas.height = h;
-            const ctx = canvas.getContext("2d");
-            ctx.drawImage(img, 0, 0, w, h);
-            const compressedDataUrl = canvas.toDataURL("image/jpeg", 0.72);
-            document.getElementById("prodImageUrl").value = compressedDataUrl;
-            showToast("تم تجهيز وضغط الصورة بنجاح ✓");
-          };
-          img.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-      };
-
-      window.saveProduct = async (e) => {
-        e.preventDefault();
-        if (!store.currentUser) {
-          showToast("يرجى تسجيل الدخول بحساب Google أولاً");
-          return;
-        }
-        const editId = document.getElementById("editProductId").value;
-        const data = {
-          name: document.getElementById("prodName").value.trim(),
-          category: document.getElementById("prodCategory").value.trim(),
-          badge: document.getElementById("prodBadge").value.trim(),
-          price: Number(document.getElementById("prodPrice").value),
-          oldPrice: Number(document.getElementById("prodOldPrice").value || 0),
-          inStock: document.getElementById("prodInStock").checked,
-          image: document.getElementById("prodImageUrl").value.trim(),
-          description: document.getElementById("prodDesc").value.trim(),
-          updatedAtMs: Date.now()
-        };
-
-        const btn = document.getElementById("saveProductBtn");
-        if (btn) {
-          btn.disabled = true;
-          btn.textContent = "جاري الحفظ...";
-        }
-
-        try {
-          if (typeof window.__shadySaveProductToCloud === "function") {
-            await window.__shadySaveProductToCloud(editId, data);
-          } else {
-            throw new Error("Cloud handler unavailable");
-          }
-          window.resetProductForm();
-        } catch (err) {
-          console.error("Save product error:", err);
-          showToast("خطأ في الحفظ: تأكد من كتابة إيميلك الصحيح في Firestore Rules");
-        } finally {
-          if (btn) {
-            btn.disabled = false;
-            btn.textContent = "حفظ المنتج في المتجر";
-          }
-        }
-      };
-
-      window.editProduct = (id) => {
-        const p = store.products.find(item => String(item.id) === String(id));
-        if (!p) return;
-        document.getElementById("editProductId").value = p.id;
-        document.getElementById("prodName").value = p.name || "";
-        document.getElementById("prodCategory").value = p.category || "";
-        document.getElementById("prodBadge").value = p.badge || "";
-        document.getElementById("prodPrice").value = p.price || "";
-        document.getElementById("prodOldPrice").value = p.oldPrice || "";
-        document.getElementById("prodInStock").checked = p.inStock !== false;
-        document.getElementById("prodImageUrl").value = p.image || "";
-        document.getElementById("prodDesc").value = p.description || "";
-        document.getElementById("productFormTitle").textContent = `✏️ تعديل المنتج: ${p.name}`;
-        document.getElementById("cancelEditProductBtn").classList.remove("hidden");
-        const panel = document.getElementById("adminTabProducts");
-        if (panel) panel.scrollTo({ top: 0, behavior: "smooth" });
-      };
-
-      window.resetProductForm = () => {
-        const form = document.getElementById("productForm");
-        if (form) form.reset();
-        document.getElementById("editProductId").value = "";
-        document.getElementById("prodInStock").checked = true;
-        document.getElementById("productFormTitle").textContent = "+ إضافة منتج جديد للمتجر";
-        document.getElementById("cancelEditProductBtn").classList.add("hidden");
-      };
-
-      window.deleteProduct = async (id) => {
-        if (String(id).startsWith("starter-")) {
-          showToast("هذا منتج عرض مؤقت، أضف منتجاتك الحقيقية وسيختفي تلقائياً");
-          return;
-        }
-        if (!confirm("هل تريد حذف هذا المنتج من المتجر؟")) return;
-        if (typeof window.__shadyDeleteProductFromCloud === "function") {
-          await window.__shadyDeleteProductFromCloud(id);
-        }
-      };
-
-      window.seedDefaultProductsToFirestore = async () => {
-        if (!store.currentUser) {
-          showToast("يرجى تسجيل الدخول بحساب Google أولاً");
-          return;
-        }
-        if (typeof window.__shadySeedStarterProducts === "function") {
-          await window.__shadySeedStarterProducts();
-        }
-      };
-
-      window.saveStoreSettings = async (e) => {
-        e.preventDefault();
-        store.storeSettings = {
-          wa1: document.getElementById("setWa1").value.trim(),
-          wa2: document.getElementById("setWa2").value.trim(),
-          freeShippingThreshold: Number(document.getElementById("setFreeShip").value || 3000)
-        };
-        safeWriteJson("shady_settings", store.storeSettings);
-        applySettingsUI();
-        if (typeof window.__shadySaveSettingsToCloud === "function") {
-          try { await window.__shadySaveSettingsToCloud(store.storeSettings); } catch (_) {}
-        }
-        showToast("تم حفظ إعدادات المتجر بنجاح ✓");
-      };
-
-      window.toggleCart = (open) => {
-        const overlay = document.getElementById("cartDrawerOverlay");
-        if (!overlay) return;
-        overlay.classList.toggle("hidden", !open);
-        if (open) renderCart();
-      };
-
-      window.closeModal = (id) => {
-        const el = document.getElementById(id);
-        if (el) el.classList.add("hidden");
-      };
-
-      window.toggleWaWidget = () => {
-        const card = document.getElementById("waWidgetCard");
-        if (card) card.classList.toggle("hidden");
-      };
-
-      window.copyPhone = (num) => {
-        const ph = num === 1 ? store.storeSettings.wa1 : store.storeSettings.wa2;
-        navigator.clipboard?.writeText(ph).catch(() => {});
-        showToast(`تم نسخ الرقم: ${ph}`);
-      };
-
-      window.toggleDarkMode = () => {
-        const isDark = document.documentElement.classList.toggle("dark");
-        try { localStorage.setItem("shady_dark", isDark); } catch (_) {}
-      };
-
-      // Render immediately on page load without waiting for external modules
-      applySettingsUI();
-      renderCategories();
-      renderProducts();
+    function saveCart() {
+      localStorage.setItem("shady_cart", JSON.stringify(cart));
       renderCart();
-      updateMyOrdersBadge();
-      renderAdminProducts();
-      renderAdminOrders();
-      updateAdminKPIs();
-    })();
-  </script>
+    }
 
-  <!-- Optional Background Firebase Sync (Does not block UI or buttons if slow/unreachable) -->
-  <script type="module">
-    const store = window.__SHADY_STORE__;
-    const badge = document.getElementById("dbStatusBadge");
+    function renderCart() {
+      const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+      document.getElementById("cartCount").textContent = totalQty;
 
-    async function initFirebaseSync() {
+      const container = document.getElementById("cartItemsContainer");
+      const form = document.getElementById("checkoutForm");
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="py-12 text-center space-y-3">
+            <div class="text-4xl">🛍️</div>
+            <p class="font-extrabold text-slate-600 dark:text-slate-300">سلة المشتريات فارغة حالياً</p>
+            <button onclick="toggleCart(false)" class="bg-brandTeal-600 text-white text-xs font-bold px-4 py-2 rounded-xl">تصفح المنتجات</button>
+          </div>
+        `;
+        form.classList.add("hidden");
+      } else {
+        form.classList.remove("hidden");
+        container.innerHTML = cart.map(item => `
+          <div class="flex items-center justify-between gap-3 bg-slate-50 dark:bg-slate-800/80 p-3 rounded-2xl border border-slate-200/70 dark:border-slate-700">
+            <div class="flex-1 min-w-0">
+              <p class="font-extrabold text-xs sm:text-sm truncate">${esc(item.name)}</p>
+              <p class="text-xs font-bold text-brandOrange-600 mt-0.5">${(item.price * item.qty).toLocaleString()} ج.م</p>
+            </div>
+            <div class="flex items-center gap-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-2 py-1">
+              <button type="button" onclick="changeCartQty('${item.id}', -1)" class="w-6 h-6 font-black text-rose-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">-</button>
+              <span class="text-xs font-black w-5 text-center">${item.qty}</span>
+              <button type="button" onclick="changeCartQty('${item.id}', 1)" class="w-6 h-6 font-black text-brandTeal-600 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">+</button>
+            </div>
+          </div>
+        `).join("");
+      }
+      updateTotals();
+    }
+
+    window.updateTotals = () => {
+      const subTotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      const threshold = Number(storeSettings.freeShippingThreshold) || 3000;
+      const deliveryRadio = document.querySelector("input[name='deliveryType']:checked");
+      const deliveryType = deliveryRadio ? deliveryRadio.value : "delivery";
+
+      const addrFields = document.getElementById("deliveryAddressFields");
+      const addrInput = document.getElementById("custAddress");
+      if (deliveryType === "pickup") {
+        addrFields.classList.add("hidden");
+        addrInput.required = false;
+      } else {
+        addrFields.classList.remove("hidden");
+        addrInput.required = true;
+      }
+
+      let shipping = 0;
+      if (subTotal > 0 && deliveryType === "delivery") {
+        if (subTotal >= threshold) {
+          shipping = 0;
+        } else {
+          const govSelect = document.getElementById("custGov");
+          const selectedOpt = govSelect.options[govSelect.selectedIndex];
+          shipping = Number(selectedOpt.getAttribute("data-ship") || 60);
+        }
+      }
+
+      const grandTotal = subTotal + shipping;
+      document.getElementById("subTotalVal").textContent = subTotal.toLocaleString();
+      document.getElementById("shippingVal").textContent = shipping === 0 && subTotal > 0 ? "مجاني 🎉" : `${shipping} ج.م`;
+      document.getElementById("grandTotalVal").textContent = grandTotal.toLocaleString();
+
+      // Update free shipping bar
+      const pct = Math.min(100, Math.round((subTotal / threshold) * 100));
+      document.getElementById("freeShippingBar").style.width = `${pct}%`;
+      if (subTotal >= threshold) {
+        document.getElementById("freeShippingMsg").textContent = "مبروك! حصلت على شحن مجاني بالكامل 🎉";
+      } else {
+        const diff = threshold - subTotal;
+        document.getElementById("freeShippingMsg").textContent = `أضف منتجات بقيمة ${diff.toLocaleString()} ج.م للحصول على شحن مجاني!`;
+      }
+    };
+
+    window.submitOrder = async (e) => {
+      e.preventDefault();
+      if (cart.length === 0) return;
+
+      const name = document.getElementById("custName").value.trim();
+      const phone = document.getElementById("custPhone").value.trim();
+      if (!/^01[0125][0-9]{8}$/.test(phone.replace(/\s+/g, ""))) {
+        showToast("يرجى إدخال رقم موبايل مصري صحيح مكون من 11 رقم");
+        return;
+      }
+
+      const deliveryType = document.querySelector("input[name='deliveryType']:checked").value;
+      const gov = deliveryType === "delivery" ? document.getElementById("custGov").value : "استلام من الفرع";
+      const address = deliveryType === "delivery" ? document.getElementById("custAddress").value.trim() : "استلام مباشر من الفرع";
+      const payment = document.getElementById("custPayment").value;
+      const notes = document.getElementById("custNotes").value.trim();
+
+      const subTotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      const threshold = Number(storeSettings.freeShippingThreshold) || 3000;
+      const govSelect = document.getElementById("custGov");
+      const rawShip = Number(govSelect.options[govSelect.selectedIndex].getAttribute("data-ship") || 60);
+      const shipping = deliveryType === "pickup" ? 0 : (subTotal >= threshold ? 0 : rawShip);
+      const total = subTotal + shipping;
+
+      const orderId = "SHD-" + Date.now().toString(36).slice(-5).toUpperCase() + Math.floor(Math.random() * 10);
+      const orderPayload = {
+        orderId,
+        customerName: name,
+        customerPhone: phone,
+        deliveryType,
+        governorate: gov,
+        address,
+        paymentMethod: payment,
+        notes,
+        items: cart.map(c => ({ id: c.id, name: c.name, price: c.price, qty: c.qty })),
+        subTotal,
+        shipping,
+        total,
+        status: "قيد المراجعة",
+        createdAtMs: Date.now(),
+        createdAtText: new Date().toLocaleString("ar-EG")
+      };
+
+      const btn = document.getElementById("submitOrderBtn");
+      btn.disabled = true;
+      btn.textContent = "جاري إرسال الطلب...";
+
+      let orderSaved = true;
       try {
-        const [appMod, fsMod, authMod] = await Promise.all([
-          import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"),
-          import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"),
-          import("https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js")
-        ]);
-
-        const { initializeApp } = appMod;
-        const {
-          getFirestore, collection, doc, addDoc, setDoc, updateDoc, deleteDoc,
-          onSnapshot, serverTimestamp
-        } = fsMod;
-        const {
-          getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect,
-          getRedirectResult, signOut, onAuthStateChanged
-        } = authMod;
-
-        const firebaseConfig = {
-          apiKey: "AIzaSyDRdjgtpI0F1DR_54y0py5yxCf8tKrylO8",
-          authDomain: "shady-store-f61eb.firebaseapp.com",
-          projectId: "shady-store-f61eb",
-          storageBucket: "shady-store-f61eb.firebasestorage.app",
-          messagingSenderId: "546624189861",
-          appId: "1:546624189861:web:115a340f1c66db4520a44c",
-          measurementId: "G-2JX79V3LW0"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        const auth = getAuth(app);
-        const provider = new GoogleAuthProvider();
-        let unsubOrders = null;
-
-        getRedirectResult(auth).catch((err) => {
-          console.warn("Redirect auth info:", err);
-        });
-
-        window.__shadySaveOrderToCloud = async (orderPayload) => {
-          await addDoc(collection(db, "orders"), {
-            ...orderPayload,
-            createdAt: serverTimestamp()
-          });
-        };
-
-        window.__shadyGoogleLogin = async () => {
-          const errEl = document.getElementById("adminLoginError");
-          if (errEl) errEl.classList.add("hidden");
-          try {
-            await signInWithPopup(auth, provider);
-            window.showToast("تم تسجيل الدخول بنجاح!");
-          } catch (err) {
-            console.error("Login error:", err);
-            if (err.code === "auth/popup-blocked" || err.code === "auth/operation-not-supported-in-this-environment") {
-              await signInWithRedirect(auth, provider);
-            } else if (errEl) {
-              errEl.textContent = `تعذر تسجيل الدخول: ${err.message}`;
-              errEl.classList.remove("hidden");
-            }
-          }
-        };
-
-        window.__shadyGoogleSignOut = async () => {
-          await signOut(auth);
-          window.showToast("تم تسجيل الخروج من لوحة التحكم");
-        };
-
-        window.__shadyUpdateOrderStatus = async (docId, newStatus) => {
-          try {
-            await updateDoc(doc(db, "orders", docId), { status: newStatus });
-            window.showToast(`تم تحديث حالة الطلب إلى: ${newStatus}`);
-          } catch (err) {
-            window.showToast("خطأ في تحديث الحالة: تأكد من صلاحيات الإيميل في Rules");
-          }
-        };
-
-        window.__shadyDeleteOrder = async (docId) => {
-          try {
-            await deleteDoc(doc(db, "orders", docId));
-            window.showToast("تم حذف الطلب");
-          } catch (err) {
-            window.showToast("تعذر حذف الطلب");
-          }
-        };
-
-        window.__shadySaveProductToCloud = async (editId, data) => {
-          if (editId && !String(editId).startsWith("starter-")) {
-            await updateDoc(doc(db, "products", editId), data);
-            window.showToast("تم تعديل المنتج بنجاح ✓");
-          } else {
-            await addDoc(collection(db, "products"), data);
-            window.showToast("تم إضافة المنتج للمتجر بنجاح ✓");
-          }
-        };
-
-        window.__shadyDeleteProductFromCloud = async (id) => {
-          try {
-            await deleteDoc(doc(db, "products", id));
-            window.showToast("تم حذف المنتج");
-          } catch (err) {
-            window.showToast("تعذر حذف المنتج");
-          }
-        };
-
-        window.__shadySeedStarterProducts = async () => {
-          try {
-            for (const item of store.STARTER_PRODUCTS) {
-              const { id, ...cleanItem } = item;
-              await addDoc(collection(db, "products"), cleanItem);
-            }
-            window.showToast("تمت إضافة 4 منتجات جاهزة إلى قاعدة البيانات!");
-          } catch (err) {
-            window.showToast("خطأ: تأكد من صلاحيات الإيميل في Firestore Rules");
-          }
-        };
-
-        window.__shadySaveSettingsToCloud = async (settingsData) => {
-          await setDoc(doc(db, "settings", "store"), settingsData);
-        };
-
-        onSnapshot(collection(db, "products"), (snapshot) => {
-          if (snapshot.empty) {
-            store.isUsingStarterFallback = true;
-            store.products = [...store.STARTER_PRODUCTS];
-            if (badge) badge.textContent = "جاهز (باقة البداية)";
-          } else {
-            store.isUsingStarterFallback = false;
-            store.products = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
-            if (badge) badge.textContent = `متصل مباشر (${store.products.length} منتج)`;
-          }
-          window.renderCategories();
-          window.renderProducts();
-          window.renderAdminProducts();
-          window.updateAdminKPIs();
-        }, (error) => {
-          console.error("Firestore products error:", error);
-          store.isUsingStarterFallback = true;
-          store.products = [...store.STARTER_PRODUCTS];
-          if (badge) badge.textContent = "وضع العرض المحلي";
-          window.renderCategories();
-          window.renderProducts();
-        });
-
-        onSnapshot(doc(db, "settings", "store"), (docSnap) => {
-          if (docSnap.exists()) {
-            store.storeSettings = Object.assign({}, store.storeSettings, docSnap.data());
-            try { localStorage.setItem("shady_settings", JSON.stringify(store.storeSettings)); } catch (_) {}
-            window.applySettingsUI();
-          }
-        }, () => {});
-
-        onAuthStateChanged(auth, (user) => {
-          store.currentUser = user;
-          const loginView = document.getElementById("adminLoginView");
-          const dashView = document.getElementById("adminDashboardView");
-          const signOutBtn = document.getElementById("adminSignOutBtn");
-          const statusText = document.getElementById("adminAuthStatusText");
-
-          if (user) {
-            if (loginView) loginView.classList.add("hidden");
-            if (dashView) dashView.classList.remove("hidden");
-            if (signOutBtn) signOutBtn.classList.remove("hidden");
-            if (statusText) statusText.textContent = `مسجل الدخول كـ: ${user.email}`;
-
-            if (unsubOrders) unsubOrders();
-            unsubOrders = onSnapshot(collection(db, "orders"), (snap) => {
-              store.adminOrders = snap.docs.map(d => ({ docId: d.id, ...d.data() }));
-              store.adminOrders.sort((a, b) => (b.createdAtMs || 0) - (a.createdAtMs || 0));
-              window.renderAdminOrders();
-              window.updateAdminKPIs();
-            }, (err) => {
-              console.error("Orders read error:", err);
-              window.showToast("تنبيه: تأكد من إضافة إيميلك في Firestore Rules لقراءة الطلبات.");
-            });
-          } else {
-            if (loginView) loginView.classList.remove("hidden");
-            if (dashView) dashView.classList.add("hidden");
-            if (signOutBtn) signOutBtn.classList.add("hidden");
-            if (statusText) statusText.textContent = "إدارة المنتجات، طلبات العملاء، وإعدادات المتجر";
-            if (unsubOrders) { unsubOrders(); unsubOrders = null; }
-          }
+        await addDoc(collection(db, "orders"), {
+          ...orderPayload,
+          createdAt: serverTimestamp()
         });
       } catch (err) {
-        console.warn("Firebase module unavailable in current network environment:", err);
-        if (badge) badge.textContent = "وضع العرض المحلي";
+        orderSaved = false;
+        console.warn("Firestore order write note:", err);
+      }
+
+      // Save locally for customer receipt tracking
+      myOrders.unshift(orderPayload);
+      localStorage.setItem("shady_my_orders", JSON.stringify(myOrders));
+      updateMyOrdersBadge();
+
+      // Clear cart
+      cart = [];
+      saveCart();
+      toggleCart(false);
+      btn.disabled = false;
+      btn.textContent = "تأكيد وإرسال الطلب الآن ✓";
+
+      // Show Receipt Modal
+      document.getElementById("receiptOrderId").textContent = orderId;
+      const itemsText = orderPayload.items.map(i => `• ${i.name} (×${i.qty}) = ${(i.price * i.qty).toLocaleString()} ج.م`).join("\n");
+      document.getElementById("receiptDetailsBox").innerHTML = `
+        <p><strong>العميل:</strong> ${esc(name)} (<span dir="ltr">${esc(phone)}</span>)</p>
+        <p><strong>الاستلام:</strong> ${esc(gov)} - ${esc(address)}</p>
+        <p><strong>الدفع:</strong> ${esc(payment)}</p>
+        <p><strong>الإجمالي:</strong> <span class="text-brandOrange-600 font-black">${total.toLocaleString()} ج.م</span></p>
+        ${orderSaved ? "" : '<p class="text-rose-600 font-black pt-1">⚠️ تعذر تسجيل الطلب إلكترونياً. من فضلك أرسل الإيصال على واتساب الآن لتأكيده.</p>'}
+      `;
+
+      const waReceiptMsg = encodeURIComponent(
+        `طلب جديد من موقع *Shady Store* 🛍️
+` +
+        `رقم الطلب: *${orderId}*
+` +
+        `الاسم: ${name}
+` +
+        `الموبايل: ${phone}
+` +
+        `العنوان: ${gov} - ${address}
+` +
+        `طريقة الدفع: ${payment}
+` +
+        `------------------
+` +
+        `${itemsText}
+` +
+        `------------------
+` +
+        `الشحن: ${shipping === 0 ? "مجاني" : shipping + " ج.م"}
+` +
+        `الإجمالي: *${total.toLocaleString()} ج.م*`
+      );
+
+      document.getElementById("receiptWaBtn1").href = `https://wa.me/${formatWaIntl(storeSettings.wa1)}?text=${waReceiptMsg}`;
+      document.getElementById("receiptWaBtn2").href = `https://wa.me/${formatWaIntl(storeSettings.wa2)}?text=${waReceiptMsg}`;
+      document.getElementById("orderSuccessModal").classList.remove("hidden");
+    };
+
+    window.copyOrderId = () => {
+      const id = document.getElementById("receiptOrderId").textContent;
+      navigator.clipboard?.writeText(id);
+      showToast(`تم نسخ رقم الطلب: ${id}`);
+    };
+
+    function updateMyOrdersBadge() {
+      const badge = document.getElementById("myOrdersBadge");
+      if (myOrders.length > 0) {
+        badge.textContent = myOrders.length;
+        badge.classList.remove("hidden");
       }
     }
 
-    initFirebaseSync();
+    window.openMyOrdersModal = () => {
+      const list = document.getElementById("myOrdersList");
+      if (myOrders.length === 0) {
+        list.innerHTML = `<p class="text-center text-sm text-slate-500 py-10">لم تقم بإرسال أي طلبات من هذا المتصفح بعد.</p>`;
+      } else {
+        list.innerHTML = myOrders.map(o => `
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1.5 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="font-black text-brandTeal-600 text-sm">${esc(o.orderId)}</span>
+              <span class="text-slate-400">${esc(o.createdAtText || "")}</span>
+            </div>
+            <p class="font-bold">${o.items.map(i => `${esc(i.name)} (×${esc(i.qty)})`).join(" ، ")}</p>
+            <p class="text-slate-500">${esc(o.governorate)} - ${esc(o.address)}</p>
+            <div class="flex items-center justify-between pt-1">
+              <span class="font-black text-brandOrange-600 text-sm">${Number(o.total).toLocaleString()} ج.م</span>
+              <span class="px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold">${esc(o.status)}</span>
+            </div>
+          </div>
+        `).join("");
+      }
+      document.getElementById("myOrdersModal").classList.remove("hidden");
+    };
+
+    // Admin Dashboard Functions
+    window.openAdminModal = () => {
+      document.getElementById("adminModal").classList.remove("hidden");
+      renderAdminProducts();
+      updateAdminKPIs();
+    };
+
+    window.switchAdminTab = (tab) => {
+      ["orders", "products", "settings"].forEach(t => {
+        document.getElementById(`adminTab${t.charAt(0).toUpperCase() + t.slice(1)}`).classList.toggle("hidden", t !== tab);
+        const btn = document.getElementById(`tabBtn${t.charAt(0).toUpperCase() + t.slice(1)}`);
+        if (t === tab) {
+          btn.classList.add("border-brandOrange-500", "text-brandOrange-600", "font-black");
+          btn.classList.remove("border-transparent", "text-slate-500");
+        } else {
+          btn.classList.remove("border-brandOrange-500", "text-brandOrange-600", "font-black");
+          btn.classList.add("border-transparent", "text-slate-500");
+        }
+      });
+    };
+
+    function updateAdminKPIs() {
+      document.getElementById("kpiTotalOrders").textContent = adminOrders.length;
+      document.getElementById("kpiPendingOrders").textContent = adminOrders.filter(o => o.status === "قيد المراجعة").length;
+      const rev = adminOrders.filter(o => o.status !== "ملغي").reduce((s, o) => s + Number(o.total || 0), 0);
+      document.getElementById("kpiRevenue").textContent = rev.toLocaleString();
+      document.getElementById("kpiProductsCount").textContent = isUsingStarterFallback ? 0 : products.length;
+    }
+
+    window.renderAdminOrders = () => {
+      const filter = document.getElementById("adminOrderFilter").value;
+      const filtered = filter === "all" ? adminOrders : adminOrders.filter(o => o.status === filter);
+      const list = document.getElementById("adminOrdersList");
+
+      if (filtered.length === 0) {
+        list.innerHTML = `<p class="text-center text-xs text-slate-400 py-10">لا توجد طلبات في هذا القسم حالياً.</p>`;
+        return;
+      }
+
+      list.innerHTML = filtered.map(o => {
+        const custWa = formatWaIntl(o.customerPhone || "");
+        const confirmMsg = encodeURIComponent(
+          `أهلاً أ/ ${o.customerName}، مع حضرتك خدمة عملاء *Shady Store* 🛍️
+` +
+          `بخصوص طلبك رقم *${o.orderId}* بإجمالي *${Number(o.total).toLocaleString()} ج.م*.
+` +
+          `حالة الطلب الحالية: *${o.status}*`
+        );
+        return `
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 space-y-2.5 text-xs">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="font-black text-sm text-brandTeal-600">${esc(o.orderId)}</span>
+                <span class="font-bold text-slate-800 dark:text-white">${esc(o.customerName)}</span>
+                <span class="text-slate-500" dir="ltr">(${esc(o.customerPhone)})</span>
+              </div>
+              <span class="text-[11px] text-slate-400">${esc(o.createdAtText || "")}</span>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-700 space-y-1">
+              ${(o.items || []).map(i => `<p>• ${esc(i.name)} × ${esc(i.qty)} — <strong>${(i.price * i.qty).toLocaleString()} ج.م</strong></p>`).join("")}
+            </div>
+
+            <div class="flex flex-wrap justify-between gap-2 text-slate-600 dark:text-slate-300">
+              <span>📍 ${esc(o.governorate)} - ${esc(o.address)}</span>
+              <span>💳 ${esc(o.paymentMethod)} | الإجمالي: <strong class="text-brandOrange-600 text-sm">${Number(o.total).toLocaleString()} ج.م</strong></span>
+            </div>
+            ${o.notes ? `<p class="text-amber-700 dark:text-amber-300">📝 ملاحظة: ${esc(o.notes)}</p>` : ""}
+
+            <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-200 dark:border-slate-700">
+              <div class="flex items-center gap-2">
+                <select onchange="updateOrderStatus('${o.docId}', this.value)" class="rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-2.5 py-1.5 font-bold text-xs">
+                  ${["قيد المراجعة", "تم التأكيد", "جاري التوصيل", "تم التسليم", "ملغي"].map(st =>
+                    `<option value="${st}" ${o.status === st ? "selected" : ""}>${st}</option>`
+                  ).join("")}
+                </select>
+                <a href="https://wa.me/${custWa}?text=${confirmMsg}" target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3 py-1.5 rounded-xl">واتساب العميل</a>
+              </div>
+              <button onclick="deleteOrder('${o.docId}')" class="text-rose-500 hover:underline font-bold">حذف</button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    };
+
+    window.updateOrderStatus = async (docId, newStatus) => {
+      try {
+        await updateDoc(doc(db, "orders", docId), { status: newStatus });
+        showToast(`تم تحديث حالة الطلب إلى: ${newStatus}`);
+      } catch (err) {
+        showToast("خطأ في تحديث الحالة: تأكد من صلاحيات الإيميل في Rules");
+      }
+    };
+
+    window.deleteOrder = async (docId) => {
+      if (!confirm("هل أنت متأكد من حذف هذا الطلب نهائياً؟")) return;
+      try {
+        await deleteDoc(doc(db, "orders", docId));
+        showToast("تم حذف الطلب");
+      } catch (err) {
+        showToast("تعذر حذف الطلب");
+      }
+    };
+
+    // Compress uploaded image via Canvas so it fits cleanly in Firestore
+    window.handleImageUpload = (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+          const MAX_SIZE = 550;
+          let w = img.width;
+          let h = img.height;
+          if (w > h && w > MAX_SIZE) { h *= MAX_SIZE / w; w = MAX_SIZE; }
+          else if (h > MAX_SIZE) { w *= MAX_SIZE / h; h = MAX_SIZE; }
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext("2d");
+          ctx.drawImage(img, 0, 0, w, h);
+          const compressedDataUrl = canvas.toDataURL("image/jpeg", 0.72);
+          document.getElementById("prodImageUrl").value = compressedDataUrl;
+          showToast("تم تجهيز وضغط الصورة بنجاح ✓");
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    };
+
+    window.saveProduct = async (e) => {
+      e.preventDefault();
+      if (!currentUser) {
+        showToast("يرجى تسجيل الدخول بحساب Google أولاً");
+        return;
+      }
+
+      const editId = document.getElementById("editProductId").value;
+      const data = {
+        name: document.getElementById("prodName").value.trim(),
+        category: document.getElementById("prodCategory").value.trim(),
+        badge: document.getElementById("prodBadge").value.trim(),
+        price: Number(document.getElementById("prodPrice").value),
+        oldPrice: Number(document.getElementById("prodOldPrice").value || 0),
+        inStock: document.getElementById("prodInStock").checked,
+        image: document.getElementById("prodImageUrl").value.trim(),
+        description: document.getElementById("prodDesc").value.trim(),
+        updatedAtMs: Date.now()
+      };
+
+      const btn = document.getElementById("saveProductBtn");
+      btn.disabled = true;
+      btn.textContent = "جاري الحفظ...";
+
+      try {
+        if (editId && !editId.startsWith("starter-")) {
+          await updateDoc(doc(db, "products", editId), data);
+          showToast("تم تعديل المنتج بنجاح ✓");
+        } else {
+          await addDoc(collection(db, "products"), data);
+          showToast("تم إضافة المنتج للمتجر بنجاح ✓");
+        }
+        resetProductForm();
+      } catch (err) {
+        console.error("Save product error:", err);
+        showToast("خطأ في الحفظ: تأكد من كتابة إيميلك الصحيح في Firestore Rules");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "حفظ المنتج في المتجر";
+      }
+    };
+
+    window.editProduct = (id) => {
+      const p = products.find(item => item.id === id);
+      if (!p) return;
+      document.getElementById("editProductId").value = p.id;
+      document.getElementById("prodName").value = p.name || "";
+      document.getElementById("prodCategory").value = p.category || "";
+      document.getElementById("prodBadge").value = p.badge || "";
+      document.getElementById("prodPrice").value = p.price || "";
+      document.getElementById("prodOldPrice").value = p.oldPrice || "";
+      document.getElementById("prodInStock").checked = p.inStock !== false;
+      document.getElementById("prodImageUrl").value = p.image || "";
+      document.getElementById("prodDesc").value = p.description || "";
+      document.getElementById("productFormTitle").textContent = `✏️ تعديل المنتج: ${p.name}`;
+      document.getElementById("cancelEditProductBtn").classList.remove("hidden");
+      document.getElementById("adminTabProducts").scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    window.resetProductForm = () => {
+      document.getElementById("productForm").reset();
+      document.getElementById("editProductId").value = "";
+      document.getElementById("prodInStock").checked = true;
+      document.getElementById("productFormTitle").textContent = "+ إضافة منتج جديد للمتجر";
+      document.getElementById("cancelEditProductBtn").classList.add("hidden");
+    };
+
+    window.deleteProduct = async (id) => {
+      if (id.startsWith("starter-")) {
+        showToast("هذا منتج عرض مؤقت، أضف منتجاتك الحقيقية وسيختفي تلقائياً");
+        return;
+      }
+      if (!confirm("هل تريد حذف هذا المنتج من المتجر؟")) return;
+      try {
+        await deleteDoc(doc(db, "products", id));
+        showToast("تم حذف المنتج");
+      } catch (err) {
+        showToast("تعذر حذف المنتج");
+      }
+    };
+
+    window.seedDefaultProductsToFirestore = async () => {
+      if (!currentUser) return;
+      try {
+        for (const item of STARTER_PRODUCTS) {
+          const { id, ...cleanItem } = item;
+          await addDoc(collection(db, "products"), cleanItem);
+        }
+        showToast("تمت إضافة 4 منتجات جاهزة إلى قاعدة البيانات!");
+      } catch (err) {
+        showToast("خطأ: تأكد من صلاحيات الإيميل في Firestore Rules");
+      }
+    };
+
+    function renderAdminProducts() {
+      const realCount = isUsingStarterFallback ? 0 : products.length;
+      document.getElementById("adminProdCount").textContent = realCount;
+      const list = document.getElementById("adminProductsList");
+
+      if (isUsingStarterFallback) {
+        list.innerHTML = `<p class="col-span-full text-xs text-slate-500 bg-slate-100 dark:bg-slate-800 p-4 rounded-2xl">قاعدة البيانات فارغة حالياً ويظهر للزوار منتجات البداية المؤقتة. أضف أول منتج حقيقي لمتجرك من الفورم بالأعلى.</p>`;
+        return;
+      }
+
+      list.innerHTML = products.map(p => `
+        <div class="flex items-center justify-between gap-3 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+          <div class="min-w-0">
+            <p class="font-extrabold text-xs sm:text-sm truncate">${esc(p.name)}</p>
+            <p class="text-xs text-brandOrange-600 font-bold">${Number(p.price).toLocaleString()} ج.م <span class="text-slate-400 font-normal">(${esc(p.category)})</span></p>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button onclick="editProduct('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-brandTeal-600 text-white text-xs font-bold">تعديل</button>
+            <button onclick="deleteProduct('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-rose-600 text-white text-xs font-bold">حذف</button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    window.saveStoreSettings = async (e) => {
+      e.preventDefault();
+      storeSettings = {
+        wa1: document.getElementById("setWa1").value.trim(),
+        wa2: document.getElementById("setWa2").value.trim(),
+        freeShippingThreshold: Number(document.getElementById("setFreeShip").value || 3000)
+      };
+      localStorage.setItem("shady_settings", JSON.stringify(storeSettings));
+      applySettingsUI();
+      try {
+        await setDoc(doc(db, "settings", "store"), storeSettings);
+      } catch (_) {}
+      showToast("تم حفظ إعدادات المتجر بنجاح ✓");
+    };
+
+    // UI Helpers
+    window.toggleCart = (open) => {
+      document.getElementById("cartDrawerOverlay").classList.toggle("hidden", !open);
+      if (open) renderCart();
+    };
+
+    window.closeModal = (id) => {
+      document.getElementById(id).classList.add("hidden");
+    };
+
+    window.toggleWaWidget = () => {
+      document.getElementById("waWidgetCard").classList.toggle("hidden");
+    };
+
+    window.copyPhone = (num) => {
+      const ph = num === 1 ? storeSettings.wa1 : storeSettings.wa2;
+      navigator.clipboard?.writeText(ph);
+      showToast(`تم نسخ الرقم: ${ph}`);
+    };
+
+    window.toggleDarkMode = () => {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("shady_dark", isDark);
+    };
+
+    let toastTimer = null;
+    function showToast(msg) {
+      const box = document.getElementById("toastBox");
+      document.getElementById("toastMsg").textContent = msg;
+      box.classList.remove("hidden");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => box.classList.add("hidden"), 3200);
+    }
+    window.showToast = showToast;
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      ["productDetailModal", "myOrdersModal", "adminModal", "orderSuccessModal"].forEach(id => document.getElementById(id)?.classList.add("hidden"));
+      toggleCart(false);
+    });
+
+    // Initial render
+    applySettingsUI();
+    renderCart();
+    updateMyOrdersBadge();
   </script>
 </body>
 </html>
