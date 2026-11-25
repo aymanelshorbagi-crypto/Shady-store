@@ -21,14 +21,14 @@
   <meta name="description" content="متجر شادي ستور - أفضل العروض على الموبايلات، السماعات، الساعات الذكية والإكسسوارات الأصلية بأفضل سعر في مصر." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: 'Cairo', sans-serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "IBM Plex Sans Arabic", "Helvetica Neue", Arial, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
     --color-amber-50: oklch(98.7% 0.022 95.277);
@@ -70,32 +70,32 @@
     --container-3xl: 48rem;
     --container-5xl: 64rem;
     --container-7xl: 80rem;
-    --text-xs: 0.75rem;
-    --text-xs--line-height: calc(1 / 0.75);
-    --text-sm: 0.875rem;
-    --text-sm--line-height: calc(1.25 / 0.875);
-    --text-base: 1rem;
-    --text-base--line-height: calc(1.5 / 1);
-    --text-lg: 1.125rem;
-    --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
+    --text-xs: 0.75rem;      /* 12px - Apple Caption */
+    --text-xs--line-height: 1.33337;
+    --text-sm: 0.875rem;     /* 14px - Apple Subheadline */
+    --text-sm--line-height: 1.42859;
+    --text-base: 1.0625rem;  /* 17px - Apple Body Standard */
+    --text-base--line-height: 1.47059;
+    --text-lg: 1.1875rem;    /* 19px - Apple Lead */
+    --text-lg--line-height: 1.4211;
+    --text-xl: 1.3125rem;    /* 21px - Apple Card Title */
+    --text-xl--line-height: 1.381;
+    --text-2xl: 1.75rem;     /* 28px - Apple Sub-hero */
+    --text-2xl--line-height: 1.28583;
+    --text-3xl: 2.5rem;      /* 40px - Apple Section Headline */
+    --text-3xl--line-height: 1.15;
+    --text-4xl: 3rem;        /* 48px - Apple Hero Mobile */
+    --text-4xl--line-height: 1.12;
+    --text-6xl: 3.5rem;      /* 56px - Apple Hero Desktop */
+    --text-6xl--line-height: 1.08;
     --font-weight-normal: 400;
     --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
-    --font-weight-black: 900;
-    --tracking-tight: -0.025em;
-    --tracking-wider: 0.05em;
-    --leading-relaxed: 1.625;
+    --font-weight-bold: 600;
+    --font-weight-extrabold: 700;
+    --font-weight-black: 700;
+    --tracking-tight: -0.022em;
+    --tracking-wider: 0.04em;
+    --leading-relaxed: 1.47059;
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
@@ -287,140 +287,53 @@
     white-space: nowrap;
     border-width: 0;
   }
-  .absolute {
-    position: absolute;
-  }
-  .fixed {
-    position: fixed;
-  }
-  .relative {
-    position: relative;
-  }
-  .sticky {
-    position: sticky;
-  }
-  .inset-0 {
-    inset: 0px;
-  }
-  .inset-y-0 {
-    inset-block: 0px;
-  }
-  .top-0 {
-    top: 0px;
-  }
-  .top-2\.5 {
-    top: calc(var(--spacing) * 2.5);
-  }
-  .top-3 {
-    top: calc(var(--spacing) * 3);
-  }
-  .right-3 {
-    right: calc(var(--spacing) * 3);
-  }
-  .right-5 {
-    right: calc(var(--spacing) * 5);
-  }
-  .bottom-5 {
-    bottom: calc(var(--spacing) * 5);
-  }
-  .left-0 {
-    left: 0px;
-  }
-  .left-5 {
-    left: calc(var(--spacing) * 5);
-  }
-  .z-40 {
-    z-index: 40;
-  }
-  .z-50 {
-    z-index: 50;
-  }
-  .col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-  .col-span-full {
-    grid-column: 1 / -1;
-  }
-  .container {
-    width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem;
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem;
-    }
-    @media (width >= 96rem) {
-      max-width: 96rem;
-    }
-  }
-  .mx-auto {
-    margin-inline: auto;
-  }
-  .my-auto {
-    margin-block: auto;
-  }
-  .-mt-1 {
-    margin-top: calc(var(--spacing) * -1);
-  }
-  .mt-0\.5 {
-    margin-top: calc(var(--spacing) * 0.5);
-  }
-  .mt-1 {
-    margin-top: var(--spacing);
-  }
-  .mt-2 {
-    margin-top: calc(var(--spacing) * 2);
-  }
-  .mt-3 {
-    margin-top: calc(var(--spacing) * 3);
-  }
-  .mt-5 {
-    margin-top: calc(var(--spacing) * 5);
-  }
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
-  }
-  .mt-10 {
-    margin-top: calc(var(--spacing) * 10);
-  }
-  .mt-12 {
-    margin-top: calc(var(--spacing) * 12);
-  }
-  .mr-2 {
-    margin-right: calc(var(--spacing) * 2);
-  }
-  .mb-1 {
-    margin-bottom: var(--spacing);
-  }
-  .mb-1\.5 {
-    margin-bottom: calc(var(--spacing) * 1.5);
-  }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
-  .mb-2\.5 {
-    margin-bottom: calc(var(--spacing) * 2.5);
-  }
-  .mb-3 {
-    margin-bottom: calc(var(--spacing) * 3);
-  }
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
-  }
-  .mb-5 {
-    margin-bottom: calc(var(--spacing) * 5);
-  }
-  .mb-6 {
-    margin-bottom: calc(var(--spacing) * 6);
-  }
-  .mb-10 {
-    margin-bottom: calc(var(--spacing) * 10);
+  .absolute { position: absolute; }
+  .fixed { position: fixed; }
+  .relative { position: relative; }
+  .sticky { position: sticky; }
+  .inset-0 { inset: 0px; }
+  .inset-y-0 { inset-block: 0px; }
+  .top-0 { top: 0px; }
+  .top-2 { top: calc(var(--spacing) * 2); }
+  .top-2\.5 { top: calc(var(--spacing) * 2.5); }
+  .top-3 { top: calc(var(--spacing) * 3); }
+  .right-2 { right: calc(var(--spacing) * 2); }
+  .right-3 { right: calc(var(--spacing) * 3); }
+  .right-5 { right: calc(var(--spacing) * 5); }
+  .bottom-5 { bottom: calc(var(--spacing) * 5); }
+  .left-0 { left: 0px; }
+  .left-5 { left: calc(var(--spacing) * 5); }
+  .z-40 { z-index: 40; }
+  .z-50 { z-index: 50; }
+  .z-60 { z-index: 60; }
+  .col-span-2 { grid-column: span 2 / span 2; }
+  .col-span-full { grid-column: 1 / -1; }
+  .mx-auto { margin-inline: auto; }
+  .my-auto { margin-block: auto; }
+  .-mt-1 { margin-top: calc(var(--spacing) * -1); }
+  .mt-0\.5 { margin-top: calc(var(--spacing) * 0.5); }
+  .mt-1 { margin-top: var(--spacing); }
+  .mt-2 { margin-top: calc(var(--spacing) * 2); }
+  .mt-3 { margin-top: calc(var(--spacing) * 3); }
+  .mt-5 { margin-top: calc(var(--spacing) * 5); }
+  .mt-6 { margin-top: calc(var(--spacing) * 6); }
+  .mt-10 { margin-top: calc(var(--spacing) * 10); }
+  .mt-12 { margin-top: calc(var(--spacing) * 12); }
+  .mr-2 { margin-right: calc(var(--spacing) * 2); }
+  .mb-1 { margin-bottom: var(--spacing); }
+  .mb-1\.5 { margin-bottom: calc(var(--spacing) * 1.5); }
+  .mb-2 { margin-bottom: calc(var(--spacing) * 2); }
+  .mb-2\.5 { margin-bottom: calc(var(--spacing) * 2.5); }
+  .mb-3 { margin-bottom: calc(var(--spacing) * 3); }
+  .mb-4 { margin-bottom: calc(var(--spacing) * 4); }
+  .mb-5 { margin-bottom: calc(var(--spacing) * 5); }
+  .mb-6 { margin-bottom: calc(var(--spacing) * 6); }
+  .mb-10 { margin-bottom: calc(var(--spacing) * 10); }
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
   }
   .line-clamp-2 {
     overflow: hidden;
@@ -428,1577 +341,408 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
-  .block {
-    display: block;
-  }
-  .flex {
-    display: flex;
-  }
-  .grid {
-    display: grid;
-  }
-  .hidden {
-    display: none;
-  }
-  .inline-block {
-    display: inline-block;
-  }
-  .inline-flex {
-    display: inline-flex;
-  }
-  .aspect-square {
-    aspect-ratio: 1 / 1;
-  }
-  .h-2 {
-    height: calc(var(--spacing) * 2);
-  }
-  .h-2\.5 {
-    height: calc(var(--spacing) * 2.5);
-  }
-  .h-3 {
-    height: calc(var(--spacing) * 3);
-  }
-  .h-4 {
-    height: calc(var(--spacing) * 4);
-  }
-  .h-5 {
-    height: calc(var(--spacing) * 5);
-  }
-  .h-6 {
-    height: calc(var(--spacing) * 6);
-  }
-  .h-8 {
-    height: calc(var(--spacing) * 8);
-  }
-  .h-9 {
-    height: calc(var(--spacing) * 9);
-  }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
-  .h-11 {
-    height: calc(var(--spacing) * 11);
-  }
-  .h-16 {
-    height: calc(var(--spacing) * 16);
-  }
-  .h-auto {
-    height: auto;
-  }
-  .h-full {
-    height: 100%;
-  }
-  .max-h-\[85vh\] {
-    max-height: 85vh;
-  }
-  .max-h-\[92vh\] {
-    max-height: 92vh;
-  }
-  .w-1\/3 {
-    width: calc(1 / 3 * 100%);
-  }
-  .w-2 {
-    width: calc(var(--spacing) * 2);
-  }
-  .w-2\.5 {
-    width: calc(var(--spacing) * 2.5);
-  }
-  .w-4 {
-    width: calc(var(--spacing) * 4);
-  }
-  .w-4\/5 {
-    width: calc(4 / 5 * 100%);
-  }
-  .w-5 {
-    width: calc(var(--spacing) * 5);
-  }
-  .w-6 {
-    width: calc(var(--spacing) * 6);
-  }
-  .w-8 {
-    width: calc(var(--spacing) * 8);
-  }
-  .w-9 {
-    width: calc(var(--spacing) * 9);
-  }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
-  }
-  .w-11 {
-    width: calc(var(--spacing) * 11);
-  }
-  .w-16 {
-    width: calc(var(--spacing) * 16);
-  }
-  .w-72 {
-    width: calc(var(--spacing) * 72);
-  }
-  .w-full {
-    width: 100%;
-  }
-  .max-w-2xl {
-    max-width: var(--container-2xl);
-  }
-  .max-w-3xl {
-    max-width: var(--container-3xl);
-  }
-  .max-w-5xl {
-    max-width: var(--container-5xl);
-  }
-  .max-w-7xl {
-    max-width: var(--container-7xl);
-  }
-  .max-w-\[9\.5rem\] {
-    max-width: 9.5rem;
-  }
-  .max-w-lg {
-    max-width: var(--container-lg);
-  }
-  .max-w-md {
-    max-width: var(--container-md);
-  }
-  .max-w-xl {
-    max-width: var(--container-xl);
-  }
-  .min-w-0 {
-    min-width: 0px;
-  }
-  .flex-1 {
-    flex: 1;
-  }
-  .shrink-0 {
-    flex-shrink: 0;
-  }
-  .animate-ping {
-    animation: var(--animate-ping);
-  }
-  .animate-pulse {
-    animation: var(--animate-pulse);
-  }
-  .cursor-pointer {
-    cursor: pointer;
-  }
-  .scroll-mt-32 {
-    scroll-margin-top: calc(var(--spacing) * 32);
-  }
-  .list-disc {
-    list-style-type: disc;
-  }
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .flex-col {
-    flex-direction: column;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-  .items-baseline {
-    align-items: baseline;
-  }
-  .items-center {
-    align-items: center;
-  }
-  .items-end {
-    align-items: flex-end;
-  }
-  .justify-between {
-    justify-content: space-between;
-  }
-  .justify-center {
-    justify-content: center;
-  }
-  .gap-1 {
-    gap: var(--spacing);
-  }
-  .gap-1\.5 {
-    gap: calc(var(--spacing) * 1.5);
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
-  .gap-2\.5 {
-    gap: calc(var(--spacing) * 2.5);
-  }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
-  }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
-  }
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
-  }
-  .gap-8 {
-    gap: calc(var(--spacing) * 8);
-  }
-  :where(.space-y-0\.5 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 0.5) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 0.5) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  :where(.space-y-1 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(var(--spacing) * var(--tw-space-y-reverse));
-    margin-block-end: calc(var(--spacing) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  :where(.space-y-1\.5 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 1.5) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 1.5) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  :where(.space-y-2 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  :where(.space-y-2\.5 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  :where(.space-y-3 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  :where(.space-y-4 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  :where(.space-y-5 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  :where(.space-y-6 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  .self-start {
-    align-self: flex-start;
-  }
-  .truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .overflow-hidden {
-    overflow: hidden;
-  }
-  .overflow-x-auto {
-    overflow-x: auto;
-  }
-  .overflow-y-auto {
-    overflow-y: auto;
-  }
-  .rounded {
-    border-radius: 0.25rem;
-  }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
-  }
-  .rounded-3xl {
-    border-radius: var(--radius-3xl);
-  }
-  .rounded-\[2rem\] {
-    border-radius: 2rem;
-  }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
-  }
-  .rounded-lg {
-    border-radius: var(--radius-lg);
-  }
-  .rounded-md {
-    border-radius: var(--radius-md);
-  }
-  .rounded-xl {
-    border-radius: var(--radius-xl);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
-  .border-t {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 1px;
-  }
-  .border-b {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 1px;
-  }
-  .border-b-2 {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 2px;
-  }
-  .border-amber-200 {
-    border-color: var(--color-amber-200);
-  }
-  .border-brandOrange-500 {
-    border-color: var(--color-brandOrange-500);
-  }
-  .border-brandTeal-100 {
-    border-color: var(--color-brandTeal-100);
-  }
-  .border-brandTeal-200 {
-    border-color: var(--color-brandTeal-200);
-  }
-  .border-brandTeal-200\/70 {
-    border-color: color-mix(in srgb, #e2e8f0 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-brandTeal-200) 70%, transparent);
-    }
-  }
-  .border-rose-400\/30 {
-    border-color: color-mix(in srgb, oklch(71.2% 0.194 13.428) 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-rose-400) 30%, transparent);
-    }
-  }
-  .border-slate-100 {
-    border-color: var(--color-slate-100);
-  }
-  .border-slate-200 {
-    border-color: var(--color-slate-200);
-  }
-  .border-slate-200\/60 {
-    border-color: color-mix(in srgb, oklch(92.9% 0.013 255.508) 60%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-slate-200) 60%, transparent);
-    }
-  }
-  .border-slate-200\/70 {
-    border-color: color-mix(in srgb, oklch(92.9% 0.013 255.508) 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-slate-200) 70%, transparent);
-    }
-  }
-  .border-slate-200\/80 {
-    border-color: color-mix(in srgb, oklch(92.9% 0.013 255.508) 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-slate-200) 80%, transparent);
-    }
-  }
-  .border-slate-300 {
-    border-color: var(--color-slate-300);
-  }
-  .border-slate-700 {
-    border-color: var(--color-slate-700);
-  }
-  .border-transparent {
-    border-color: transparent;
-  }
-  .bg-\[\#f5f5f7\] {
-    background-color: #f5f5f7;
-  }
-  .bg-amber-50 {
-    background-color: var(--color-amber-50);
-  }
-  .bg-amber-100 {
-    background-color: var(--color-amber-100);
-  }
-  .bg-black {
-    background-color: var(--color-black);
-  }
-  .bg-brandOrange-100 {
-    background-color: var(--color-brandOrange-100);
-  }
-  .bg-brandOrange-400 {
-    background-color: var(--color-brandOrange-400);
-  }
-  .bg-brandOrange-500 {
-    background-color: var(--color-brandOrange-500);
-  }
-  .bg-brandOrange-600 {
-    background-color: var(--color-brandOrange-600);
-  }
-  .bg-brandTeal-50 {
-    background-color: var(--color-brandTeal-50);
-  }
-  .bg-brandTeal-100 {
-    background-color: var(--color-brandTeal-100);
-  }
-  .bg-brandTeal-600 {
-    background-color: var(--color-brandTeal-600);
-  }
-  .bg-emerald-100 {
-    background-color: var(--color-emerald-100);
-  }
-  .bg-emerald-500\/20 {
-    background-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 20%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-emerald-500) 20%, transparent);
-    }
-  }
-  .bg-emerald-600 {
-    background-color: var(--color-emerald-600);
-  }
-  .bg-rose-500\/20 {
-    background-color: color-mix(in srgb, oklch(64.5% 0.246 16.439) 20%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-rose-500) 20%, transparent);
-    }
-  }
-  .bg-rose-600 {
-    background-color: var(--color-rose-600);
-  }
-  .bg-slate-50 {
-    background-color: var(--color-slate-50);
-  }
-  .bg-slate-100 {
-    background-color: var(--color-slate-100);
-  }
-  .bg-slate-200 {
-    background-color: var(--color-slate-200);
-  }
-  .bg-slate-900 {
-    background-color: var(--color-slate-900);
-  }
-  .bg-slate-950\/60 {
-    background-color: color-mix(in srgb, oklch(12.9% 0.042 264.695) 60%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-950) 60%, transparent);
-    }
-  }
-  .bg-slate-950\/70 {
-    background-color: color-mix(in srgb, oklch(12.9% 0.042 264.695) 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-950) 70%, transparent);
-    }
-  }
-  .bg-slate-950\/75 {
-    background-color: color-mix(in srgb, oklch(12.9% 0.042 264.695) 75%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-950) 75%, transparent);
-    }
-  }
-  .bg-white {
-    background-color: var(--color-white);
-  }
-  .bg-white\/10 {
-    background-color: color-mix(in srgb, #fff 10%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
-    }
-  }
-  .bg-white\/90 {
-    background-color: color-mix(in srgb, #fff 90%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 90%, transparent);
-    }
-  }
-  .bg-gradient-to-l {
-    --tw-gradient-position: to left in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-  .from-brandOrange-500 {
-    --tw-gradient-from: var(--color-brandOrange-500);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .from-emerald-600 {
-    --tw-gradient-from: var(--color-emerald-600);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .from-slate-900 {
-    --tw-gradient-from: var(--color-slate-900);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-brandTeal-500 {
-    --tw-gradient-to: var(--color-brandTeal-500);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-brandTeal-700 {
-    --tw-gradient-to: var(--color-brandTeal-700);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-brandTeal-900 {
-    --tw-gradient-to: var(--color-brandTeal-900);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .fill-current {
-    fill: currentcolor;
-  }
-  .object-cover {
-    object-fit: cover;
-  }
-  .p-1\.5 {
-    padding: calc(var(--spacing) * 1.5);
-  }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
-  }
-  .p-2\.5 {
-    padding: calc(var(--spacing) * 2.5);
-  }
-  .p-3 {
-    padding: calc(var(--spacing) * 3);
-  }
-  .p-3\.5 {
-    padding: calc(var(--spacing) * 3.5);
-  }
-  .p-4 {
-    padding: calc(var(--spacing) * 4);
-  }
-  .p-5 {
-    padding: calc(var(--spacing) * 5);
-  }
-  .p-6 {
-    padding: calc(var(--spacing) * 6);
-  }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
-  }
-  .px-1\.5 {
-    padding-inline: calc(var(--spacing) * 1.5);
-  }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
-  }
-  .px-2\.5 {
-    padding-inline: calc(var(--spacing) * 2.5);
-  }
-  .px-3 {
-    padding-inline: calc(var(--spacing) * 3);
-  }
-  .px-3\.5 {
-    padding-inline: calc(var(--spacing) * 3.5);
-  }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
-  }
-  .px-5 {
-    padding-inline: calc(var(--spacing) * 5);
-  }
-  .px-6 {
-    padding-inline: calc(var(--spacing) * 6);
-  }
-  .px-7 {
-    padding-inline: calc(var(--spacing) * 7);
-  }
-  .py-0\.5 {
-    padding-block: calc(var(--spacing) * 0.5);
-  }
-  .py-1 {
-    padding-block: var(--spacing);
-  }
-  .py-1\.5 {
-    padding-block: calc(var(--spacing) * 1.5);
-  }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
-  }
-  .py-2\.5 {
-    padding-block: calc(var(--spacing) * 2.5);
-  }
-  .py-3 {
-    padding-block: calc(var(--spacing) * 3);
-  }
-  .py-3\.5 {
-    padding-block: calc(var(--spacing) * 3.5);
-  }
-  .py-4 {
-    padding-block: calc(var(--spacing) * 4);
-  }
-  .py-6 {
-    padding-block: calc(var(--spacing) * 6);
-  }
-  .py-8 {
-    padding-block: calc(var(--spacing) * 8);
-  }
-  .py-10 {
-    padding-block: calc(var(--spacing) * 10);
-  }
-  .py-12 {
-    padding-block: calc(var(--spacing) * 12);
-  }
-  .py-16 {
-    padding-block: calc(var(--spacing) * 16);
-  }
-  .pt-1 {
-    padding-top: var(--spacing);
-  }
-  .pt-2 {
-    padding-top: calc(var(--spacing) * 2);
-  }
-  .pt-3 {
-    padding-top: calc(var(--spacing) * 3);
-  }
-  .pt-4 {
-    padding-top: calc(var(--spacing) * 4);
-  }
-  .pt-12 {
-    padding-top: calc(var(--spacing) * 12);
-  }
-  .pr-5 {
-    padding-right: calc(var(--spacing) * 5);
-  }
-  .pr-9 {
-    padding-right: calc(var(--spacing) * 9);
-  }
-  .pr-10 {
-    padding-right: calc(var(--spacing) * 10);
-  }
-  .pb-3 {
-    padding-bottom: calc(var(--spacing) * 3);
-  }
-  .pb-4 {
-    padding-bottom: calc(var(--spacing) * 4);
-  }
-  .pb-10 {
-    padding-bottom: calc(var(--spacing) * 10);
-  }
-  .pl-4 {
-    padding-left: calc(var(--spacing) * 4);
-  }
-  .text-center {
-    text-align: center;
-  }
-  .text-right {
-    text-align: right;
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
-  }
-  .text-base {
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
-  }
-  .text-lg {
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
-  }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
-  .text-xs {
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
-  .text-\[10px\] {
-    font-size: 10px;
-  }
-  .text-\[11px\] {
-    font-size: 11px;
-  }
-  .leading-none {
-    --tw-leading: 1;
-    line-height: 1;
-  }
-  .leading-relaxed {
-    --tw-leading: var(--leading-relaxed);
-    line-height: var(--leading-relaxed);
-  }
-  .font-black {
-    --tw-font-weight: var(--font-weight-black);
-    font-weight: var(--font-weight-black);
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
-  .font-extrabold {
-    --tw-font-weight: var(--font-weight-extrabold);
-    font-weight: var(--font-weight-extrabold);
-  }
-  .font-normal {
-    --tw-font-weight: var(--font-weight-normal);
-    font-weight: var(--font-weight-normal);
-  }
-  .font-semibold {
-    --tw-font-weight: var(--font-weight-semibold);
-    font-weight: var(--font-weight-semibold);
-  }
-  .tracking-tight {
-    --tw-tracking: var(--tracking-tight);
-    letter-spacing: var(--tracking-tight);
-  }
-  .tracking-wider {
-    --tw-tracking: var(--tracking-wider);
-    letter-spacing: var(--tracking-wider);
-  }
-  .text-amber-400 {
-    color: var(--color-amber-400);
-  }
-  .text-amber-700 {
-    color: var(--color-amber-700);
-  }
-  .text-amber-800 {
-    color: var(--color-amber-800);
-  }
-  .text-brandOrange-500 {
-    color: var(--color-brandOrange-500);
-  }
-  .text-brandOrange-600 {
-    color: var(--color-brandOrange-600);
-  }
-  .text-brandTeal-600 {
-    color: var(--color-brandTeal-600);
-  }
-  .text-brandTeal-700 {
-    color: var(--color-brandTeal-700);
-  }
-  .text-brandTeal-800 {
-    color: var(--color-brandTeal-800);
-  }
-  .text-emerald-100 {
-    color: var(--color-emerald-100);
-  }
-  .text-emerald-400 {
-    color: var(--color-emerald-400);
-  }
-  .text-emerald-600 {
-    color: var(--color-emerald-600);
-  }
-  .text-rose-200 {
-    color: var(--color-rose-200);
-  }
-  .text-rose-500 {
-    color: var(--color-rose-500);
-  }
-  .text-rose-600 {
-    color: var(--color-rose-600);
-  }
-  .text-slate-300 {
-    color: var(--color-slate-300);
-  }
-  .text-slate-400 {
-    color: var(--color-slate-400);
-  }
-  .text-slate-500 {
-    color: var(--color-slate-500);
-  }
-  .text-slate-600 {
-    color: var(--color-slate-600);
-  }
-  .text-slate-700 {
-    color: var(--color-slate-700);
-  }
-  .text-slate-800 {
-    color: var(--color-slate-800);
-  }
-  .text-slate-900 {
-    color: var(--color-slate-900);
-  }
-  .text-white {
-    color: var(--color-white);
-  }
-  .text-white\/80 {
-    color: color-mix(in srgb, #fff 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-white) 80%, transparent);
-    }
-  }
-  .line-through {
-    text-decoration-line: line-through;
-  }
-  .accent-brandTeal-600 {
-    accent-color: var(--color-brandTeal-600);
-  }
-  .shadow {
-    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-2xl {
-    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-lg {
-    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-md {
-    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-xl {
-    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-xs {
-    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .ring-2 {
-    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-brandOrange-500\/25 {
-    --tw-shadow-color: color-mix(in srgb, #0071e3 25%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-brandOrange-500) 25%, transparent) var(--tw-shadow-alpha), transparent);
-    }
-  }
-  .shadow-emerald-600\/30 {
-    --tw-shadow-color: color-mix(in srgb, oklch(59.6% 0.145 163.225) 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-emerald-600) 30%, transparent) var(--tw-shadow-alpha), transparent);
-    }
-  }
-  .ring-brandOrange-500\/40 {
-    --tw-ring-color: color-mix(in srgb, #0071e3 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-ring-color: color-mix(in oklab, var(--color-brandOrange-500) 40%, transparent);
-    }
-  }
-  .filter {
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .backdrop-blur-xs {
-    --tw-backdrop-blur: blur(var(--blur-xs));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .transition-all {
-    transition-property: all;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .transition-colors {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .transition-transform {
-    transition-property: transform, translate, scale, rotate;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .duration-200 {
-    --tw-duration: 200ms;
-    transition-duration: 200ms;
-  }
-  .duration-300 {
-    --tw-duration: 300ms;
-    transition-duration: 300ms;
-  }
-  .ease-in-out {
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
-  }
-  .group-open\:rotate-45:is(:where(.group):is([open], :popover-open, :open) *) {
-    rotate: 45deg;
-  }
+  .block { display: block; }
+  .flex { display: flex; }
+  .grid { display: grid; }
+  .hidden { display: none; }
+  .inline-block { display: inline-block; }
+  .inline-flex { display: inline-flex; }
+  .aspect-square { aspect-ratio: 1 / 1; }
+  .h-2 { height: calc(var(--spacing) * 2); }
+  .h-2\.5 { height: calc(var(--spacing) * 2.5); }
+  .h-3 { height: calc(var(--spacing) * 3); }
+  .h-4 { height: calc(var(--spacing) * 4); }
+  .h-5 { height: calc(var(--spacing) * 5); }
+  .h-6 { height: calc(var(--spacing) * 6); }
+  .h-8 { height: calc(var(--spacing) * 8); }
+  .h-9 { height: calc(var(--spacing) * 9); }
+  .h-10 { height: calc(var(--spacing) * 10); }
+  .h-11 { height: calc(var(--spacing) * 11); }
+  .h-16 { height: calc(var(--spacing) * 16); }
+  .h-auto { height: auto; }
+  .h-full { height: 100%; }
+  .max-h-\[85vh\] { max-height: 85vh; }
+  .max-h-\[92vh\] { max-height: 92vh; }
+  .w-1\/3 { width: calc(1 / 3 * 100%); }
+  .w-2 { width: calc(var(--spacing) * 2); }
+  .w-2\.5 { width: calc(var(--spacing) * 2.5); }
+  .w-4 { width: calc(var(--spacing) * 4); }
+  .w-4\/5 { width: calc(4 / 5 * 100%); }
+  .w-5 { width: calc(var(--spacing) * 5); }
+  .w-6 { width: calc(var(--spacing) * 6); }
+  .w-8 { width: calc(var(--spacing) * 8); }
+  .w-9 { width: calc(var(--spacing) * 9); }
+  .w-10 { width: calc(var(--spacing) * 10); }
+  .w-11 { width: calc(var(--spacing) * 11); }
+  .w-16 { width: calc(var(--spacing) * 16); }
+  .w-72 { width: calc(var(--spacing) * 72); }
+  .w-full { width: 100%; }
+  .max-w-2xl { max-width: var(--container-2xl); }
+  .max-w-3xl { max-width: var(--container-3xl); }
+  .max-w-5xl { max-width: var(--container-5xl); }
+  .max-w-7xl { max-width: var(--container-7xl); }
+  .max-w-\[9\.5rem\] { max-width: 9.5rem; }
+  .max-w-lg { max-width: var(--container-lg); }
+  .max-w-md { max-width: var(--container-md); }
+  .max-w-xl { max-width: var(--container-xl); }
+  .min-w-0 { min-width: 0px; }
+  .flex-1 { flex: 1; }
+  .shrink-0 { flex-shrink: 0; }
+  .animate-ping { animation: var(--animate-ping); }
+  .animate-pulse { animation: var(--animate-pulse); }
+  .cursor-pointer { cursor: pointer; }
+  .scroll-mt-32 { scroll-margin-top: calc(var(--spacing) * 32); }
+  .list-disc { list-style-type: disc; }
+  .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .flex-col { flex-direction: column; }
+  .flex-wrap { flex-wrap: wrap; }
+  .items-baseline { align-items: baseline; }
+  .items-center { align-items: center; }
+  .items-end { align-items: flex-end; }
+  .justify-between { justify-content: space-between; }
+  .justify-center { justify-content: center; }
+  .gap-1 { gap: var(--spacing); }
+  .gap-1\.5 { gap: calc(var(--spacing) * 1.5); }
+  .gap-2 { gap: calc(var(--spacing) * 2); }
+  .gap-2\.5 { gap: calc(var(--spacing) * 2.5); }
+  .gap-3 { gap: calc(var(--spacing) * 3); }
+  .gap-4 { gap: calc(var(--spacing) * 4); }
+  .gap-5 { gap: calc(var(--spacing) * 5); }
+  .gap-8 { gap: calc(var(--spacing) * 8); }
+  :where(.space-y-0\.5 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-block-start: calc(calc(var(--spacing) * 0.5) * var(--tw-space-y-reverse)); margin-block-end: calc(calc(var(--spacing) * 0.5) * calc(1 - var(--tw-space-y-reverse))); }
+  :where(.space-y-1 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-block-start: calc(var(--spacing) * var(--tw-space-y-reverse)); margin-block-end: calc(var(--spacing) * calc(1 - var(--tw-space-y-reverse))); }
+  :where(.space-y-1\.5 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-block-start: calc(calc(var(--spacing) * 1.5) * var(--tw-space-y-reverse)); margin-block-end: calc(calc(var(--spacing) * 1.5) * calc(1 - var(--tw-space-y-reverse))); }
+  :where(.space-y-2 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse)); margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse))); }
+  :where(.space-y-2\.5 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse)); margin-block-end: calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse))); }
+  :where(.space-y-3 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse)); margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse))); }
+  :where(.space-y-4 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse)); margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse))); }
+  :where(.space-y-5 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse)); margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse))); }
+  :where(.space-y-6 > :not(:last-child)) { --tw-space-y-reverse: 0; margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse)); margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse))); }
+  .self-start { align-self: flex-start; }
+  .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .overflow-hidden { overflow: hidden; }
+  .overflow-x-auto { overflow-x: auto; }
+  .overflow-y-auto { overflow-y: auto; }
+  .rounded { border-radius: 0.25rem; }
+  .rounded-2xl { border-radius: var(--radius-2xl); }
+  .rounded-3xl { border-radius: var(--radius-3xl); }
+  .rounded-\[2rem\] { border-radius: 2rem; }
+  .rounded-full { border-radius: calc(infinity * 1px); }
+  .rounded-lg { border-radius: var(--radius-lg); }
+  .rounded-md { border-radius: var(--radius-md); }
+  .rounded-xl { border-radius: var(--radius-xl); }
+  .border { border-style: var(--tw-border-style); border-width: 1px; }
+  .border-2 { border-style: var(--tw-border-style); border-width: 2px; }
+  .border-t { border-top-style: var(--tw-border-style); border-top-width: 1px; }
+  .border-b { border-bottom-style: var(--tw-border-style); border-bottom-width: 1px; }
+  .border-b-2 { border-bottom-style: var(--tw-border-style); border-bottom-width: 2px; }
+  .border-amber-200 { border-color: var(--color-amber-200); }
+  .border-brandOrange-500 { border-color: var(--color-brandOrange-500); }
+  .border-brandTeal-100 { border-color: var(--color-brandTeal-100); }
+  .border-brandTeal-200 { border-color: var(--color-brandTeal-200); }
+  .border-brandTeal-200\/70 { border-color: color-mix(in srgb, #e2e8f0 70%, transparent); }
+  .border-rose-400\/30 { border-color: color-mix(in srgb, oklch(71.2% 0.194 13.428) 30%, transparent); }
+  .border-slate-100 { border-color: var(--color-slate-100); }
+  .border-slate-200 { border-color: var(--color-slate-200); }
+  .border-slate-200\/60 { border-color: color-mix(in srgb, oklch(92.9% 0.013 255.508) 60%, transparent); }
+  .border-slate-200\/70 { border-color: color-mix(in srgb, oklch(92.9% 0.013 255.508) 70%, transparent); }
+  .border-slate-200\/80 { border-color: color-mix(in srgb, oklch(92.9% 0.013 255.508) 80%, transparent); }
+  .border-slate-300 { border-color: var(--color-slate-300); }
+  .border-slate-700 { border-color: var(--color-slate-700); }
+  .border-transparent { border-color: transparent; }
+  .bg-\[\#f5f5f7\] { background-color: #f5f5f7; }
+  .bg-amber-50 { background-color: var(--color-amber-50); }
+  .bg-amber-100 { background-color: var(--color-amber-100); }
+  .bg-black { background-color: var(--color-black); }
+  .bg-brandOrange-100 { background-color: var(--color-brandOrange-100); }
+  .bg-brandOrange-400 { background-color: var(--color-brandOrange-400); }
+  .bg-brandOrange-500 { background-color: var(--color-brandOrange-500); }
+  .bg-brandOrange-600 { background-color: var(--color-brandOrange-600); }
+  .bg-brandTeal-50 { background-color: var(--color-brandTeal-50); }
+  .bg-brandTeal-100 { background-color: var(--color-brandTeal-100); }
+  .bg-brandTeal-600 { background-color: var(--color-brandTeal-600); }
+  .bg-emerald-100 { background-color: var(--color-emerald-100); }
+  .bg-emerald-500\/20 { background-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 20%, transparent); }
+  .bg-emerald-600 { background-color: var(--color-emerald-600); }
+  .bg-rose-500\/20 { background-color: color-mix(in srgb, oklch(64.5% 0.246 16.439) 20%, transparent); }
+  .bg-rose-600 { background-color: var(--color-rose-600); }
+  .bg-slate-50 { background-color: var(--color-slate-50); }
+  .bg-slate-100 { background-color: var(--color-slate-100); }
+  .bg-slate-200 { background-color: var(--color-slate-200); }
+  .bg-slate-900 { background-color: var(--color-slate-900); }
+  .bg-slate-950\/60 { background-color: color-mix(in srgb, oklch(12.9% 0.042 264.695) 60%, transparent); }
+  .bg-slate-950\/70 { background-color: color-mix(in srgb, oklch(12.9% 0.042 264.695) 70%, transparent); }
+  .bg-slate-950\/75 { background-color: color-mix(in srgb, oklch(12.9% 0.042 264.695) 75%, transparent); }
+  .bg-white { background-color: var(--color-white); }
+  .bg-white\/10 { background-color: color-mix(in srgb, #fff 10%, transparent); }
+  .bg-white\/90 { background-color: color-mix(in srgb, #fff 90%, transparent); }
+  .bg-gradient-to-l { --tw-gradient-position: to left in oklab; background-image: linear-gradient(var(--tw-gradient-stops)); }
+  .from-brandOrange-500 { --tw-gradient-from: var(--color-brandOrange-500); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+  .from-emerald-600 { --tw-gradient-from: var(--color-emerald-600); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+  .from-slate-900 { --tw-gradient-from: var(--color-slate-900); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+  .to-brandTeal-500 { --tw-gradient-to: var(--color-brandTeal-500); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+  .to-brandTeal-700 { --tw-gradient-to: var(--color-brandTeal-700); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+  .to-brandTeal-900 { --tw-gradient-to: var(--color-brandTeal-900); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+  .fill-current { fill: currentcolor; }
+  .object-cover { object-fit: cover; }
+  .p-1\.5 { padding: calc(var(--spacing) * 1.5); }
+  .p-2 { padding: calc(var(--spacing) * 2); }
+  .p-2\.5 { padding: calc(var(--spacing) * 2.5); }
+  .p-3 { padding: calc(var(--spacing) * 3); }
+  .p-3\.5 { padding: calc(var(--spacing) * 3.5); }
+  .p-4 { padding: calc(var(--spacing) * 4); }
+  .p-5 { padding: calc(var(--spacing) * 5); }
+  .p-6 { padding: calc(var(--spacing) * 6); }
+  .p-8 { padding: calc(var(--spacing) * 8); }
+  .px-1\.5 { padding-inline: calc(var(--spacing) * 1.5); }
+  .px-2 { padding-inline: calc(var(--spacing) * 2); }
+  .px-2\.5 { padding-inline: calc(var(--spacing) * 2.5); }
+  .px-3 { padding-inline: calc(var(--spacing) * 3); }
+  .px-3\.5 { padding-inline: calc(var(--spacing) * 3.5); }
+  .px-4 { padding-inline: calc(var(--spacing) * 4); }
+  .px-5 { padding-inline: calc(var(--spacing) * 5); }
+  .px-6 { padding-inline: calc(var(--spacing) * 6); }
+  .px-7 { padding-inline: calc(var(--spacing) * 7); }
+  .py-0\.5 { padding-block: calc(var(--spacing) * 0.5); }
+  .py-1 { padding-block: var(--spacing); }
+  .py-1\.5 { padding-block: calc(var(--spacing) * 1.5); }
+  .py-2 { padding-block: calc(var(--spacing) * 2); }
+  .py-2\.5 { padding-block: calc(var(--spacing) * 2.5); }
+  .py-3 { padding-block: calc(var(--spacing) * 3); }
+  .py-3\.5 { padding-block: calc(var(--spacing) * 3.5); }
+  .py-4 { padding-block: calc(var(--spacing) * 4); }
+  .py-6 { padding-block: calc(var(--spacing) * 6); }
+  .py-8 { padding-block: calc(var(--spacing) * 8); }
+  .py-10 { padding-block: calc(var(--spacing) * 10); }
+  .py-12 { padding-block: calc(var(--spacing) * 12); }
+  .py-16 { padding-block: calc(var(--spacing) * 16); }
+  .pt-1 { padding-top: var(--spacing); }
+  .pt-2 { padding-top: calc(var(--spacing) * 2); }
+  .pt-3 { padding-top: calc(var(--spacing) * 3); }
+  .pt-4 { padding-top: calc(var(--spacing) * 4); }
+  .pt-12 { padding-top: calc(var(--spacing) * 12); }
+  .pr-5 { padding-right: calc(var(--spacing) * 5); }
+  .pr-9 { padding-right: calc(var(--spacing) * 9); }
+  .pr-10 { padding-right: calc(var(--spacing) * 10); }
+  .pb-3 { padding-bottom: calc(var(--spacing) * 3); }
+  .pb-4 { padding-bottom: calc(var(--spacing) * 4); }
+  .pb-10 { padding-bottom: calc(var(--spacing) * 10); }
+  .pl-4 { padding-left: calc(var(--spacing) * 4); }
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+  .text-2xl { font-size: var(--text-2xl); line-height: var(--tw-leading, var(--text-2xl--line-height)); }
+  .text-3xl { font-size: var(--text-3xl); line-height: var(--tw-leading, var(--text-3xl--line-height)); }
+  .text-4xl { font-size: var(--text-4xl); line-height: var(--tw-leading, var(--text-4xl--line-height)); }
+  .text-base { font-size: var(--text-base); line-height: var(--tw-leading, var(--text-base--line-height)); }
+  .text-lg { font-size: var(--text-lg); line-height: var(--tw-leading, var(--text-lg--line-height)); }
+  .text-sm { font-size: var(--text-sm); line-height: var(--tw-leading, var(--text-sm--line-height)); }
+  .text-xl { font-size: var(--text-xl); line-height: var(--tw-leading, var(--text-xl--line-height)); }
+  .text-xs { font-size: var(--text-xs); line-height: var(--tw-leading, var(--text-xs--line-height)); }
+  .text-\[10px\] { font-size: 10px; }
+  .text-\[11px\] { font-size: 11px; }
+  .leading-none { --tw-leading: 1; line-height: 1; }
+  .leading-relaxed { --tw-leading: var(--leading-relaxed); line-height: var(--leading-relaxed); }
+  .font-black { --tw-font-weight: var(--font-weight-black); font-weight: var(--font-weight-black); }
+  .font-bold { --tw-font-weight: var(--font-weight-bold); font-weight: var(--font-weight-bold); }
+  .font-extrabold { --tw-font-weight: var(--font-weight-extrabold); font-weight: var(--font-weight-extrabold); }
+  .font-normal { --tw-font-weight: var(--font-weight-normal); font-weight: var(--font-weight-normal); }
+  .font-semibold { --tw-font-weight: var(--font-weight-semibold); font-weight: var(--font-weight-semibold); }
+  .tracking-tight { --tw-tracking: var(--tracking-tight); letter-spacing: var(--tracking-tight); }
+  .tracking-wider { --tw-tracking: var(--tracking-wider); letter-spacing: var(--tracking-wider); }
+  .text-amber-400 { color: var(--color-amber-400); }
+  .text-amber-700 { color: var(--color-amber-700); }
+  .text-amber-800 { color: var(--color-amber-800); }
+  .text-brandOrange-500 { color: var(--color-brandOrange-500); }
+  .text-brandOrange-600 { color: var(--color-brandOrange-600); }
+  .text-brandTeal-600 { color: var(--color-brandTeal-600); }
+  .text-brandTeal-700 { color: var(--color-brandTeal-700); }
+  .text-brandTeal-800 { color: var(--color-brandTeal-800); }
+  .text-emerald-100 { color: var(--color-emerald-100); }
+  .text-emerald-400 { color: var(--color-emerald-400); }
+  .text-emerald-600 { color: var(--color-emerald-600); }
+  .text-rose-200 { color: var(--color-rose-200); }
+  .text-rose-500 { color: var(--color-rose-500); }
+  .text-rose-600 { color: var(--color-rose-600); }
+  .text-slate-300 { color: var(--color-slate-300); }
+  .text-slate-400 { color: var(--color-slate-400); }
+  .text-slate-500 { color: var(--color-slate-500); }
+  .text-slate-600 { color: var(--color-slate-600); }
+  .text-slate-700 { color: var(--color-slate-700); }
+  .text-slate-800 { color: var(--color-slate-800); }
+  .text-slate-900 { color: var(--color-slate-900); }
+  .text-white { color: var(--color-white); }
+  .text-white\/80 { color: color-mix(in srgb, #fff 80%, transparent); }
+  .line-through { text-decoration-line: line-through; }
+  .accent-brandTeal-600 { accent-color: var(--color-brandTeal-600); }
+  .shadow { --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+  .shadow-2xl { --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25)); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+  .shadow-lg { --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1)); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+  .shadow-md { --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1)); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+  .shadow-xl { --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1)); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+  .shadow-xs { --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05)); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+  .ring-2 { --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+  .shadow-brandOrange-500\/25 { --tw-shadow-color: color-mix(in srgb, #0071e3 25%, transparent); }
+  .shadow-emerald-600\/30 { --tw-shadow-color: color-mix(in srgb, oklch(59.6% 0.145 163.225) 30%, transparent); }
+  .ring-brandOrange-500\/40 { --tw-ring-color: color-mix(in srgb, #0071e3 40%, transparent); }
+  .backdrop-blur-xs { --tw-backdrop-blur: blur(var(--blur-xs)); -webkit-backdrop-filter: var(--tw-backdrop-blur); backdrop-filter: var(--tw-backdrop-blur); }
+  .transition { transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform; transition-duration: 150ms; }
+  .transition-all { transition-property: all; transition-duration: 150ms; }
+  .transition-colors { transition-property: color, background-color, border-color; transition-duration: 150ms; }
+  .transition-transform { transition-property: transform, scale; transition-duration: 150ms; }
+  .duration-200 { transition-duration: 200ms; }
+  .duration-300 { transition-duration: 300ms; }
+  .group-open\:rotate-45:is(:where(.group):is([open], :popover-open, :open) *) { rotate: 45deg; }
   @media (hover: hover) {
-    .group-hover\:scale-105:is(:where(.group):hover *) {
-      --tw-scale-x: 105%;
-      --tw-scale-y: 105%;
-      --tw-scale-z: 105%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
+    .group-hover\:scale-105:is(:where(.group):hover *) { scale: 1.05; }
+    .hover\:border-brandOrange-500:hover { border-color: var(--color-brandOrange-500); }
+    .hover\:bg-brandOrange-500:hover { background-color: var(--color-brandOrange-500); }
+    .hover\:bg-brandOrange-600:hover { background-color: var(--color-brandOrange-600); }
+    .hover\:bg-brandOrange-700:hover { background-color: var(--color-brandOrange-700); }
+    .hover\:bg-brandTeal-100:hover { background-color: var(--color-brandTeal-100); }
+    .hover\:bg-brandTeal-700:hover { background-color: var(--color-brandTeal-700); }
+    .hover\:bg-emerald-700:hover { background-color: var(--color-emerald-700); }
+    .hover\:bg-rose-500\/30:hover { background-color: color-mix(in srgb, oklch(64.5% 0.246 16.439) 30%, transparent); }
+    .hover\:bg-rose-700:hover { background-color: #be123c; }
+    .hover\:bg-slate-100:hover { background-color: var(--color-slate-100); }
+    .hover\:bg-slate-200:hover { background-color: var(--color-slate-200); }
+    .hover\:bg-slate-300:hover { background-color: var(--color-slate-300); }
+    .hover\:bg-white\/20:hover { background-color: color-mix(in srgb, #fff 20%, transparent); }
+    .hover\:text-brandOrange-400:hover { color: var(--color-brandOrange-400); }
+    .hover\:text-brandOrange-600:hover { color: var(--color-brandOrange-600); }
+    .hover\:text-slate-500:hover { color: var(--color-slate-500); }
+    .hover\:text-slate-800:hover { color: var(--color-slate-800); }
+    .hover\:text-white:hover { color: var(--color-white); }
+    .hover\:underline:hover { text-decoration-line: underline; }
+    .hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
   }
-  .peer-checked\:border-brandOrange-500:is(:where(.peer):checked ~ *) {
-    border-color: var(--color-brandOrange-500);
-  }
-  .peer-checked\:border-brandTeal-500:is(:where(.peer):checked ~ *) {
-    border-color: var(--color-brandTeal-500);
-  }
-  .peer-checked\:bg-brandOrange-50:is(:where(.peer):checked ~ *) {
-    background-color: var(--color-brandOrange-50);
-  }
-  .peer-checked\:bg-brandTeal-50:is(:where(.peer):checked ~ *) {
-    background-color: var(--color-brandTeal-50);
-  }
-  .file\:ml-2::file-selector-button {
-    margin-left: calc(var(--spacing) * 2);
-  }
-  .file\:rounded-lg::file-selector-button {
-    border-radius: var(--radius-lg);
-  }
-  .file\:border-0::file-selector-button {
-    border-style: var(--tw-border-style);
-    border-width: 0px;
-  }
-  .file\:bg-brandOrange-500::file-selector-button {
-    background-color: var(--color-brandOrange-500);
-  }
-  .file\:px-3::file-selector-button {
-    padding-inline: calc(var(--spacing) * 3);
-  }
-  .file\:py-1\.5::file-selector-button {
-    padding-block: calc(var(--spacing) * 1.5);
-  }
-  .file\:font-bold::file-selector-button {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
-  .file\:text-white::file-selector-button {
-    color: var(--color-white);
-  }
-  @media (hover: hover) {
-    .hover\:border-brandOrange-500:hover {
-      border-color: var(--color-brandOrange-500);
-    }
-    .hover\:bg-brandOrange-500:hover {
-      background-color: var(--color-brandOrange-500);
-    }
-    .hover\:bg-brandOrange-600:hover {
-      background-color: var(--color-brandOrange-600);
-    }
-    .hover\:bg-brandOrange-700:hover {
-      background-color: var(--color-brandOrange-700);
-    }
-    .hover\:bg-brandTeal-100:hover {
-      background-color: var(--color-brandTeal-100);
-    }
-    .hover\:bg-brandTeal-700:hover {
-      background-color: var(--color-brandTeal-700);
-    }
-    .hover\:bg-emerald-700:hover {
-      background-color: var(--color-emerald-700);
-    }
-    .hover\:bg-rose-500\/30:hover {
-      background-color: color-mix(in srgb, oklch(64.5% 0.246 16.439) 30%, transparent);
-    }
-    @supports (color: color-mix(in lab, red, red)) {
-      .hover\:bg-rose-500\/30:hover {
-        background-color: color-mix(in oklab, var(--color-rose-500) 30%, transparent);
-      }
-    }
-    .hover\:bg-slate-100:hover {
-      background-color: var(--color-slate-100);
-    }
-    .hover\:bg-slate-200:hover {
-      background-color: var(--color-slate-200);
-    }
-    .hover\:bg-slate-300:hover {
-      background-color: var(--color-slate-300);
-    }
-    .hover\:bg-white\/20:hover {
-      background-color: color-mix(in srgb, #fff 20%, transparent);
-    }
-    @supports (color: color-mix(in lab, red, red)) {
-      .hover\:bg-white\/20:hover {
-        background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
-      }
-    }
-    .hover\:text-brandOrange-400:hover {
-      color: var(--color-brandOrange-400);
-    }
-    .hover\:text-brandOrange-600:hover {
-      color: var(--color-brandOrange-600);
-    }
-    .hover\:text-slate-500:hover {
-      color: var(--color-slate-500);
-    }
-    .hover\:text-slate-800:hover {
-      color: var(--color-slate-800);
-    }
-    .hover\:text-white:hover {
-      color: var(--color-white);
-    }
-    .hover\:underline:hover {
-      text-decoration-line: underline;
-    }
-    .hover\:shadow-xl:hover {
-      --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-  }
-  .focus\:ring-2:focus {
-    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .focus\:ring-brandOrange-500:focus {
-    --tw-ring-color: var(--color-brandOrange-500);
-  }
-  .focus\:ring-brandTeal-500:focus {
-    --tw-ring-color: var(--color-brandTeal-500);
-  }
-  .focus\:outline-none:focus {
-    --tw-outline-style: none;
-    outline-style: none;
-  }
-  .active\:scale-95:active {
-    --tw-scale-x: 95%;
-    --tw-scale-y: 95%;
-    --tw-scale-z: 95%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
-  .active\:scale-98:active {
-    --tw-scale-x: 98%;
-    --tw-scale-y: 98%;
-    --tw-scale-z: 98%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
-  .disabled\:opacity-40:disabled {
-    opacity: 40%;
-  }
+  .peer-checked\:border-brandOrange-500:is(:where(.peer):checked ~ *) { border-color: var(--color-brandOrange-500); }
+  .peer-checked\:border-brandTeal-500:is(:where(.peer):checked ~ *) { border-color: var(--color-brandTeal-500); }
+  .peer-checked\:bg-brandOrange-50:is(:where(.peer):checked ~ *) { background-color: var(--color-brandOrange-50); }
+  .peer-checked\:bg-brandTeal-50:is(:where(.peer):checked ~ *) { background-color: var(--color-brandTeal-50); }
+  .file\:ml-2::file-selector-button { margin-left: calc(var(--spacing) * 2); }
+  .file\:rounded-lg::file-selector-button { border-radius: var(--radius-lg); }
+  .file\:border-0::file-selector-button { border-width: 0px; }
+  .file\:bg-brandOrange-500::file-selector-button { background-color: var(--color-brandOrange-500); }
+  .file\:px-3::file-selector-button { padding-inline: calc(var(--spacing) * 3); }
+  .file\:py-1\.5::file-selector-button { padding-block: calc(var(--spacing) * 1.5); }
+  .file\:font-bold::file-selector-button { font-weight: 700; }
+  .file\:text-white::file-selector-button { color: var(--color-white); }
+  .focus\:ring-2:focus { box-shadow: 0 0 0 2px var(--tw-ring-color, currentcolor); }
+  .focus\:ring-brandOrange-500:focus { --tw-ring-color: var(--color-brandOrange-500); }
+  .focus\:ring-brandTeal-500:focus { --tw-ring-color: var(--color-brandTeal-500); }
+  .focus\:outline-none:focus { outline-style: none; }
+  .active\:scale-95:active { scale: 0.95; }
+  .active\:scale-98:active { scale: 0.98; }
+  .disabled\:opacity-40:disabled { opacity: 40%; }
   @media (width >= 40rem) {
-    .sm\:col-span-1 {
-      grid-column: span 1 / span 1;
-    }
-    .sm\:inline {
-      display: inline;
-    }
-    .sm\:max-w-none {
-      max-width: none;
-    }
-    .sm\:grid-cols-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .sm\:grid-cols-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    .sm\:grid-cols-4 {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-    .sm\:gap-2 {
-      gap: calc(var(--spacing) * 2);
-    }
-    .sm\:p-4 {
-      padding: calc(var(--spacing) * 4);
-    }
-    .sm\:p-8 {
-      padding: calc(var(--spacing) * 8);
-    }
-    .sm\:py-10 {
-      padding-block: calc(var(--spacing) * 10);
-    }
-    .sm\:pt-16 {
-      padding-top: calc(var(--spacing) * 16);
-    }
-    .sm\:text-2xl {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-    .sm\:text-6xl {
-      font-size: var(--text-6xl);
-      line-height: var(--tw-leading, var(--text-6xl--line-height));
-    }
-    .sm\:text-base {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
-    }
-    .sm\:text-lg {
-      font-size: var(--text-lg);
-      line-height: var(--tw-leading, var(--text-lg--line-height));
-    }
-    .sm\:text-sm {
-      font-size: var(--text-sm);
-      line-height: var(--tw-leading, var(--text-sm--line-height));
-    }
+    .sm\:col-span-1 { grid-column: span 1 / span 1; }
+    .sm\:inline { display: inline; }
+    .sm\:max-w-none { max-width: none; }
+    .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .sm\:gap-2 { gap: calc(var(--spacing) * 2); }
+    .sm\:gap-5 { gap: calc(var(--spacing) * 5); }
+    .sm\:p-4 { padding: calc(var(--spacing) * 4); }
+    .sm\:p-8 { padding: calc(var(--spacing) * 8); }
+    .sm\:py-10 { padding-block: calc(var(--spacing) * 10); }
+    .sm\:pt-16 { padding-top: calc(var(--spacing) * 16); }
+    .sm\:text-2xl { font-size: var(--text-2xl); line-height: var(--tw-leading, var(--text-2xl--line-height)); }
+    .sm\:text-6xl { font-size: var(--text-6xl); line-height: var(--tw-leading, var(--text-6xl--line-height)); }
+    .sm\:text-base { font-size: var(--text-base); line-height: var(--tw-leading, var(--text-base--line-height)); }
+    .sm\:text-lg { font-size: var(--text-lg); line-height: var(--tw-leading, var(--text-lg--line-height)); }
+    .sm\:text-sm { font-size: var(--text-sm); line-height: var(--tw-leading, var(--text-sm--line-height)); }
   }
   @media (width >= 48rem) {
-    .md\:flex {
-      display: flex;
-    }
-    .md\:hidden {
-      display: none;
-    }
-    .md\:grid-cols-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .md\:grid-cols-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    .md\:grid-cols-4 {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-    .md\:flex-row {
-      flex-direction: row;
-    }
-    .md\:items-center {
-      align-items: center;
-    }
-    .md\:self-auto {
-      align-self: auto;
-    }
+    .md\:flex { display: flex; }
+    .md\:hidden { display: none; }
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .md\:flex-row { flex-direction: row; }
+    .md\:items-center { align-items: center; }
+    .md\:self-auto { align-self: auto; }
   }
   @media (width >= 64rem) {
-    .lg\:grid-cols-4 {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+    .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   }
-  .dark\:block:where(.dark, .dark *) {
-    display: block;
-  }
-  .dark\:hidden:where(.dark, .dark *) {
-    display: none;
-  }
-  .dark\:border-amber-800:where(.dark, .dark *) {
-    border-color: var(--color-amber-800);
-  }
-  .dark\:border-brandTeal-800:where(.dark, .dark *) {
-    border-color: var(--color-brandTeal-800);
-  }
-  .dark\:border-brandTeal-900:where(.dark, .dark *) {
-    border-color: var(--color-brandTeal-900);
-  }
-  .dark\:border-slate-600:where(.dark, .dark *) {
-    border-color: var(--color-slate-600);
-  }
-  .dark\:border-slate-700:where(.dark, .dark *) {
-    border-color: var(--color-slate-700);
-  }
-  .dark\:border-slate-800:where(.dark, .dark *) {
-    border-color: var(--color-slate-800);
-  }
-  .dark\:bg-amber-950\/30:where(.dark, .dark *) {
-    background-color: color-mix(in srgb, oklch(27.9% 0.077 45.635) 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-amber-950) 30%, transparent);
-    }
-  }
-  .dark\:bg-brandTeal-900\/40:where(.dark, .dark *) {
-    background-color: color-mix(in srgb, #0f172a 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-brandTeal-900) 40%, transparent);
-    }
-  }
-  .dark\:bg-brandTeal-900\/50:where(.dark, .dark *) {
-    background-color: color-mix(in srgb, #0f172a 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-brandTeal-900) 50%, transparent);
-    }
-  }
-  .dark\:bg-emerald-900\/40:where(.dark, .dark *) {
-    background-color: color-mix(in srgb, oklch(37.8% 0.077 168.94) 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-emerald-900) 40%, transparent);
-    }
-  }
-  .dark\:bg-slate-700:where(.dark, .dark *) {
-    background-color: var(--color-slate-700);
-  }
-  .dark\:bg-slate-800:where(.dark, .dark *) {
-    background-color: var(--color-slate-800);
-  }
-  .dark\:bg-slate-800\/70:where(.dark, .dark *) {
-    background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-800) 70%, transparent);
-    }
-  }
-  .dark\:bg-slate-800\/80:where(.dark, .dark *) {
-    background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-800) 80%, transparent);
-    }
-  }
-  .dark\:bg-slate-800\/90:where(.dark, .dark *) {
-    background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 90%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-800) 90%, transparent);
-    }
-  }
-  .dark\:bg-slate-900:where(.dark, .dark *) {
-    background-color: var(--color-slate-900);
-  }
-  .dark\:bg-slate-900\/90:where(.dark, .dark *) {
-    background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 90%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-900) 90%, transparent);
-    }
-  }
-  .dark\:bg-slate-950:where(.dark, .dark *) {
-    background-color: var(--color-slate-950);
-  }
-  .dark\:bg-slate-950\/60:where(.dark, .dark *) {
-    background-color: color-mix(in srgb, oklch(12.9% 0.042 264.695) 60%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-950) 60%, transparent);
-    }
-  }
-  .dark\:bg-white:where(.dark, .dark *) {
-    background-color: var(--color-white);
-  }
-  .dark\:text-amber-300:where(.dark, .dark *) {
-    color: var(--color-amber-300);
-  }
-  .dark\:text-brandOrange-400:where(.dark, .dark *) {
-    color: var(--color-brandOrange-400);
-  }
-  .dark\:text-brandTeal-300:where(.dark, .dark *) {
-    color: var(--color-brandTeal-300);
-  }
-  .dark\:text-brandTeal-400:where(.dark, .dark *) {
-    color: var(--color-brandTeal-400);
-  }
-  .dark\:text-emerald-400:where(.dark, .dark *) {
-    color: var(--color-emerald-400);
-  }
-  .dark\:text-slate-100:where(.dark, .dark *) {
-    color: var(--color-slate-100);
-  }
-  .dark\:text-slate-200:where(.dark, .dark *) {
-    color: var(--color-slate-200);
-  }
-  .dark\:text-slate-300:where(.dark, .dark *) {
-    color: var(--color-slate-300);
-  }
-  .dark\:text-slate-400:where(.dark, .dark *) {
-    color: var(--color-slate-400);
-  }
-  .dark\:text-slate-900:where(.dark, .dark *) {
-    color: var(--color-slate-900);
-  }
-  .dark\:text-white:where(.dark, .dark *) {
-    color: var(--color-white);
-  }
+  .dark\:block:where(.dark, .dark *) { display: block; }
+  .dark\:hidden:where(.dark, .dark *) { display: none; }
+  .dark\:border-amber-800:where(.dark, .dark *) { border-color: var(--color-amber-800); }
+  .dark\:border-brandTeal-800:where(.dark, .dark *) { border-color: var(--color-brandTeal-800); }
+  .dark\:border-brandTeal-900:where(.dark, .dark *) { border-color: var(--color-brandTeal-900); }
+  .dark\:border-slate-600:where(.dark, .dark *) { border-color: var(--color-slate-600); }
+  .dark\:border-slate-700:where(.dark, .dark *) { border-color: var(--color-slate-700); }
+  .dark\:border-slate-800:where(.dark, .dark *) { border-color: var(--color-slate-800); }
+  .dark\:bg-amber-950\/30:where(.dark, .dark *) { background-color: color-mix(in srgb, oklch(27.9% 0.077 45.635) 30%, transparent); }
+  .dark\:bg-brandTeal-900\/40:where(.dark, .dark *) { background-color: color-mix(in srgb, #0f172a 40%, transparent); }
+  .dark\:bg-brandTeal-900\/50:where(.dark, .dark *) { background-color: color-mix(in srgb, #0f172a 50%, transparent); }
+  .dark\:bg-emerald-900\/40:where(.dark, .dark *) { background-color: color-mix(in srgb, oklch(37.8% 0.077 168.94) 40%, transparent); }
+  .dark\:bg-slate-700:where(.dark, .dark *) { background-color: var(--color-slate-700); }
+  .dark\:bg-slate-800:where(.dark, .dark *) { background-color: var(--color-slate-800); }
+  .dark\:bg-slate-800\/70:where(.dark, .dark *) { background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 70%, transparent); }
+  .dark\:bg-slate-800\/80:where(.dark, .dark *) { background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 80%, transparent); }
+  .dark\:bg-slate-800\/90:where(.dark, .dark *) { background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 90%, transparent); }
+  .dark\:bg-slate-900:where(.dark, .dark *) { background-color: var(--color-slate-900); }
+  .dark\:bg-slate-900\/90:where(.dark, .dark *) { background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 90%, transparent); }
+  .dark\:bg-slate-950:where(.dark, .dark *) { background-color: var(--color-slate-950); }
+  .dark\:bg-slate-950\/60:where(.dark, .dark *) { background-color: color-mix(in srgb, oklch(12.9% 0.042 264.695) 60%, transparent); }
+  .dark\:bg-white:where(.dark, .dark *) { background-color: var(--color-white); }
+  .dark\:text-amber-300:where(.dark, .dark *) { color: var(--color-amber-300); }
+  .dark\:text-brandOrange-400:where(.dark, .dark *) { color: var(--color-brandOrange-400); }
+  .dark\:text-brandTeal-300:where(.dark, .dark *) { color: var(--color-brandTeal-300); }
+  .dark\:text-brandTeal-400:where(.dark, .dark *) { color: var(--color-brandTeal-400); }
+  .dark\:text-emerald-400:where(.dark, .dark *) { color: var(--color-emerald-400); }
+  .dark\:text-slate-100:where(.dark, .dark *) { color: var(--color-slate-100); }
+  .dark\:text-slate-200:where(.dark, .dark *) { color: var(--color-slate-200); }
+  .dark\:text-slate-300:where(.dark, .dark *) { color: var(--color-slate-300); }
+  .dark\:text-slate-400:where(.dark, .dark *) { color: var(--color-slate-400); }
+  .dark\:text-slate-900:where(.dark, .dark *) { color: var(--color-slate-900); }
+  .dark\:text-white:where(.dark, .dark *) { color: var(--color-white); }
   @media (hover: hover) {
-    .dark\:hover\:bg-slate-700:where(.dark, .dark *):hover {
-      background-color: var(--color-slate-700);
-    }
-    .dark\:hover\:bg-slate-800:where(.dark, .dark *):hover {
-      background-color: var(--color-slate-800);
-    }
+    .dark\:hover\:bg-slate-700:where(.dark, .dark *):hover { background-color: var(--color-slate-700); }
+    .dark\:hover\:bg-slate-800:where(.dark, .dark *):hover { background-color: var(--color-slate-800); }
   }
 }
 @layer base {
-  *, ::after, ::before, ::backdrop, ::file-selector-button {
-    border-color: #e5e7eb;
-  }
-  button:not(:disabled), [role="button"]:not(:disabled) {
-    cursor: pointer;
-  }
+  *, ::after, ::before, ::backdrop, ::file-selector-button { border-color: #e5e7eb; }
+  button:not(:disabled), [role="button"]:not(:disabled) { cursor: pointer; }
 }
-@property --tw-space-y-reverse {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-gradient-position {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-from {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-via {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-to {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-stops {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-via-stops {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-from-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 0%;
-}
-@property --tw-gradient-via-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 50%;
-}
-@property --tw-gradient-to-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-leading {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-tracking {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-inset-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-inset-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-inset-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-ring-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ring-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-inset-ring-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-inset-ring-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-ring-inset {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ring-offset-width {
-  syntax: "<length>";
-  inherits: false;
-  initial-value: 0px;
-}
-@property --tw-ring-offset-color {
-  syntax: "*";
-  inherits: false;
-  initial-value: #fff;
-}
-@property --tw-ring-offset-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-blur {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-brightness {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-contrast {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-grayscale {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-hue-rotate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-invert {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-opacity {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-saturate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-sepia {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-drop-shadow-size {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-blur {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-brightness {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-contrast {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-grayscale {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-hue-rotate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-invert {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-opacity {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-saturate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-sepia {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ease {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-@keyframes pulse {
-  50% {
-    opacity: 0.5;
-  }
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-space-y-reverse: 0;
-      --tw-border-style: solid;
-      --tw-gradient-position: initial;
-      --tw-gradient-from: #0000;
-      --tw-gradient-via: #0000;
-      --tw-gradient-to: #0000;
-      --tw-gradient-stops: initial;
-      --tw-gradient-via-stops: initial;
-      --tw-gradient-from-position: 0%;
-      --tw-gradient-via-position: 50%;
-      --tw-gradient-to-position: 100%;
-      --tw-leading: initial;
-      --tw-font-weight: initial;
-      --tw-tracking: initial;
-      --tw-shadow: 0 0 #0000;
-      --tw-shadow-color: initial;
-      --tw-shadow-alpha: 100%;
-      --tw-inset-shadow: 0 0 #0000;
-      --tw-inset-shadow-color: initial;
-      --tw-inset-shadow-alpha: 100%;
-      --tw-ring-color: initial;
-      --tw-ring-shadow: 0 0 #0000;
-      --tw-inset-ring-color: initial;
-      --tw-inset-ring-shadow: 0 0 #0000;
-      --tw-ring-inset: initial;
-      --tw-ring-offset-width: 0px;
-      --tw-ring-offset-color: #fff;
-      --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-blur: initial;
-      --tw-brightness: initial;
-      --tw-contrast: initial;
-      --tw-grayscale: initial;
-      --tw-hue-rotate: initial;
-      --tw-invert: initial;
-      --tw-opacity: initial;
-      --tw-saturate: initial;
-      --tw-sepia: initial;
-      --tw-drop-shadow: initial;
-      --tw-drop-shadow-color: initial;
-      --tw-drop-shadow-alpha: 100%;
-      --tw-drop-shadow-size: initial;
-      --tw-backdrop-blur: initial;
-      --tw-backdrop-brightness: initial;
-      --tw-backdrop-contrast: initial;
-      --tw-backdrop-grayscale: initial;
-      --tw-backdrop-hue-rotate: initial;
-      --tw-backdrop-invert: initial;
-      --tw-backdrop-opacity: initial;
-      --tw-backdrop-saturate: initial;
-      --tw-backdrop-sepia: initial;
-      --tw-duration: initial;
-      --tw-ease: initial;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
-    }
-  }
-}
-
+@keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+@keyframes pulse { 50% { opacity: 0.5; } }
   </style>
   <style>
     * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-    body { font-family: 'Cairo', sans-serif; overflow-x: hidden; }
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "IBM Plex Sans Arabic", "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.47059;
+      letter-spacing: -0.015em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.07143;
+    }
+    h2 {
+      font-weight: 700;
+      letter-spacing: -0.022em;
+      line-height: 1.125;
+    }
+    h3, .font-black, .font-extrabold {
+      font-weight: 600;
+      letter-spacing: -0.018em;
+    }
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     @keyframes floatSlow {
@@ -2007,12 +751,11 @@
     }
     .animate-float { animation: floatSlow 3s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
-    :focus-visible { outline: 2px solid #14b8a6; outline-offset: 2px; }
-    html { scroll-behavior: smooth; }
+    :focus-visible { outline: 2px solid #0071e3; outline-offset: 2px; }
     summary::-webkit-details-marker { display: none; }
     .glass-header {
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
     }
   </style>
 </head>
@@ -2025,7 +768,12 @@
         <span class="inline-block w-2 h-2 rounded-full bg-brandOrange-400 animate-ping"></span>
         <span>شحن مجاني للطلبات فوق <strong id="topFreeShippingText">3,000</strong> ج.م | الدفع عند الاستلام أو إنستاباي وفودافون كاش</span>
       </div>
-      <div class="flex items-center gap-3 text-xs font-bold">
+      <div class="flex items-center flex-wrap gap-2 text-xs font-bold">
+        <!-- Direct Call Button -->
+        <a id="topCallLink" href="tel:+201008485337" class="hover:underline flex items-center gap-1 bg-brandOrange-500 text-white px-2.5 py-0.5 rounded-full shadow-xs">
+          <span>📞 اتصل بنا:</span>
+          <span dir="ltr">01008485337</span>
+        </a>
         <a id="topWaLink1" href="https://wa.me/201008485337" target="_blank" rel="noopener" class="hover:underline flex items-center gap-1 bg-[#f5f5f7] dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-2.5 py-0.5 rounded-full">
           <span>واتساب 1:</span>
           <span dir="ltr">01008485337</span>
@@ -2060,11 +808,17 @@
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <!-- Direct Call Icon Button on Mobile / Pill on Desktop -->
+        <a id="headerCallBtn" href="tel:+201008485337" aria-label="اتصل بنا مباشرة" class="flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span class="hidden sm:inline">اتصل بنا</span>
+        </a>
+
         <!-- My Orders Button -->
-        <button onclick="openMyOrdersModal()" aria-label="طلباتي" class="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs sm:text-sm font-bold bg-brandTeal-50 dark:bg-brandTeal-900/40 text-brandTeal-700 dark:text-brandTeal-300 hover:bg-brandTeal-100 transition border border-brandTeal-200/70 dark:border-brandTeal-800">
+        <button onclick="openMyOrdersModal()" aria-label="طلباتي" class="flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-xl text-xs sm:text-sm font-bold bg-brandTeal-50 dark:bg-brandTeal-900/40 text-brandTeal-700 dark:text-brandTeal-300 hover:bg-brandTeal-100 transition border border-brandTeal-200/70 dark:border-brandTeal-800">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
           <span class="hidden sm:inline">طلباتي</span>
-          <span id="myOrdersBadge" class="hidden bg-brandTeal-600 text-white text-[10px] px-1.5 py-0.2 rounded-full">0</span>
+          <span id="myOrdersBadge" class="hidden bg-brandTeal-600 text-white text-[10px] px-1.5 py-0.5 rounded-full">0</span>
         </button>
 
         <!-- Dark Mode Toggle -->
@@ -2074,7 +828,7 @@
         </button>
 
         <!-- Cart Button -->
-        <button onclick="toggleCart(true)" aria-label="فتح سلة المشتريات" class="relative flex items-center gap-2 bg-brandOrange-500 hover:bg-brandOrange-600 text-white px-3.5 py-2.5 rounded-full font-bold text-sm transition active:scale-95">
+        <button onclick="toggleCart(true)" aria-label="فتح سلة المشتريات" class="relative flex items-center gap-2 bg-brandOrange-500 hover:bg-brandOrange-600 text-white px-3 sm:px-3.5 py-2.5 rounded-full font-bold text-sm transition active:scale-95">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
           <span class="hidden sm:inline">السلة</span>
           <span id="cartCount" class="bg-white text-brandOrange-600 font-black text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span>
@@ -2098,7 +852,10 @@
       <p id="heroSubtext" class="mt-3 text-lg sm:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed">موبايلات وإكسسوارات أصلية، بتوصيل لكل محافظات مصر.</p>
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
         <a href="#productsSection" class="bg-brandOrange-500 hover:bg-brandOrange-600 text-white px-7 py-3 rounded-full font-bold text-base transition">تصفح المنتجات</a>
-        <a id="heroWaBtn" href="https://wa.me/201008485337?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20Shady%20Store%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA" target="_blank" rel="noopener" class="border border-brandOrange-500 text-brandOrange-500 hover:bg-brandOrange-500 hover:text-white px-7 py-3 rounded-full font-bold text-base transition">تواصل عبر واتساب</a>
+        <a id="heroWaBtn" href="https://wa.me/201008485337?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20Shady%20Store%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA" target="_blank" rel="noopener" class="border border-brandOrange-500 text-brandOrange-500 hover:bg-brandOrange-500 hover:text-white px-6 py-3 rounded-full font-bold text-base transition">واتساب</a>
+        <a id="heroCallBtn" href="tel:+201008485337" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-bold text-base transition flex items-center gap-2">
+          <span>📞 اتصل بنا</span>
+        </a>
       </div>
     </div>
 
@@ -2127,7 +884,7 @@
       <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 text-center">
         <div class="text-3xl mb-2">💬</div>
         <h3 class="font-extrabold text-sm">دعم سريع</h3>
-        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">رد فوري على واتساب</p>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">رد فوري على واتساب والمكالمات</p>
       </div>
     </div>
   </section>
@@ -2161,10 +918,13 @@
       <!-- Rendered dynamically -->
     </div>
 
-    <!-- Products Grid -->
-    <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <!-- Products Grid: 2 Columns on Mobile (grid-cols-2), 3 on Tablet, 4 on Desktop -->
+    <div id="productsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
       <!-- Loading skeleton -->
-      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div><div class="rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div><div class="rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div><div class="rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div>
+      <div class="rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-3 sm:p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div>
+      <div class="rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-3 sm:p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div>
+      <div class="rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-3 sm:p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div>
+      <div class="rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden animate-pulse bg-white dark:bg-slate-900"><div class="aspect-square bg-slate-200 dark:bg-slate-800"></div><div class="p-3 sm:p-4 space-y-2"><div class="h-3 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-4 w-4/5 bg-slate-200 dark:bg-slate-800 rounded"></div><div class="h-8 w-full bg-slate-200 dark:bg-slate-800 rounded-xl mt-3"></div></div></div>
     </div>
   </main>
 
@@ -2184,7 +944,7 @@
       <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5">
         <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white font-black flex items-center justify-center mb-3">3</div>
         <h3 class="font-extrabold mb-1">أكّد على واتساب</h3>
-        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">ابعت الإيصال على واتساب ونتواصل معك لتأكيد الطلب وموعد الشحن.</p>
+        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">ابعت الإيصال على واتساب أو اتصل بنا مباشرة لتأكيد الطلب وموعد الشحن.</p>
       </div>
     </div>
 
@@ -2209,9 +969,9 @@
     </div>
   </section>
 
-  <!-- Branch + Return policy -->
-  <section class="max-w-5xl mx-auto px-4 pb-10">
-    <div id="branch" class="scroll-mt-32 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 mb-5">
+  <!-- Branch + Return policy + Privacy Policy -->
+  <section class="max-w-5xl mx-auto px-4 pb-10 space-y-5">
+    <div id="branch" class="scroll-mt-32 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8">
       <h2 class="text-2xl font-extrabold tracking-tight mb-4">زورنا في الفرع</h2>
       <div class="grid sm:grid-cols-2 gap-4 text-sm">
         <div class="bg-[#f5f5f7] dark:bg-slate-800 rounded-2xl p-4">
@@ -2225,6 +985,7 @@
       </div>
       <div class="flex flex-wrap gap-3 mt-5">
         <a href="https://maps.app.goo.gl/YjX9EnDosmAYgaDN6?g_st=ic" target="_blank" rel="noopener" class="bg-brandOrange-500 hover:bg-brandOrange-600 text-white px-6 py-2.5 rounded-full font-bold text-sm transition">افتح الموقع على الخريطة</a>
+        <a id="branchCallBtn" href="tel:+201008485337" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full font-bold text-sm transition">📞 اتصل بالفرع مباشرة</a>
         <a href="https://www.facebook.com/share/1ACASHAtEq/?mibextid=wwXIfr" target="_blank" rel="noopener" class="border border-brandOrange-500 text-brandOrange-500 hover:bg-brandOrange-500 hover:text-white px-6 py-2.5 rounded-full font-bold text-sm transition">صفحتنا على فيسبوك</a>
       </div>
     </div>
@@ -2280,29 +1041,77 @@
         </div>
       </div>
     </div>
+
+    <!-- Privacy Policy Section (Required for Meta/Facebook & Google Ads) -->
+    <div id="privacy" class="scroll-mt-32 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div>
+          <h2 class="text-2xl font-extrabold tracking-tight">سياسة الخصوصية وحماية البيانات</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">متوافقة مع متطلبات الإعلانات في جوجل وفيسبوك — آخر تحديث: 2026</p>
+        </div>
+        <button onclick="openPrivacyModal()" class="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 px-3 py-1.5 rounded-full font-bold">عرض في نافذة مستقلة</button>
+      </div>
+      <div class="space-y-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+        <div>
+          <h3 class="font-extrabold text-slate-900 dark:text-white mb-1">1. البيانات التي نجمعها</h3>
+          <p>عند قيامك بالطلب من متجر <strong>Shady Store</strong>، نجمع فقط البيانات الضرورية لإتمام وتوصيل طلبك: الاسم بالكامل، رقم الهاتف، المحافظة وعنوان التوصيل، وتفاصيل المنتجات المطلوبة.</p>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-slate-900 dark:text-white mb-1">2. كيفية استخدام البيانات</h3>
+          <p>نستخدم بياناتك حصرياً لتأكيد الطلب، شحنه عبر شركات الشحن المعتمدة، والتواصل معك بخصوص حالة طلبك أو خدمة ما بعد البيع. لا نقوم ببيع أو تأجير بياناتك لأي طرف ثالث.</p>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-slate-900 dark:text-white mb-1">3. ملفات تعريف الارتباط والتحليلات</h3>
+          <p>يستخدم الموقع أدوات تحليل الأداء (مثل Google Analytics) والتخزين المحلي لحفظ سلة المشتريات وتحسين تجربة التصفح وقياس فاعلية الحملات الإعلانية بشكل مجهول الهوية.</p>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-slate-900 dark:text-white mb-1">4. حقوقك والتواصل معنا</h3>
+          <p>يحق لك طلب تعديل أو حذف بيانات طلبك في أي وقت عبر التواصل معنا مباشرة على هاتف/واتساب <span dir="ltr" class="font-bold">01008485337</span> أو زيارة مقرنا في كفر حماد، مركز كفر صقر، الشرقية.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Customer Service & Footer -->
   <footer class="bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 mt-12">
     <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <div class="flex items-center gap-2.5 mb-3">
+      <div class="space-y-4">
+        <div class="flex items-center gap-2.5">
           <img src="logo-round.png" alt="شعار Shady Store" width="40" height="40" loading="lazy" class="w-10 h-10 rounded-full" />
           <span class="font-black text-xl text-slate-900 dark:text-white">Shady Store</span>
         </div>
         <p class="text-sm text-slate-500 leading-relaxed">
           متجرك الموثوق للموبايلات، السماعات اللاسلكية، الساعات الذكية، والإكسسوارات الأصلية بأفضل سعر وخدمة ما بعد البيع.
         </p>
+        <!-- Social Media Links -->
+        <div>
+          <p class="text-xs font-extrabold text-slate-900 dark:text-white mb-2">تابعنا على السوشيال ميديا:</p>
+          <div id="socialLinksContainer" class="flex flex-wrap items-center gap-2">
+            <!-- Rendered dynamically with Facebook + Instagram & TikTok if configured -->
+          </div>
+        </div>
       </div>
 
       <div>
-        <h3 class="text-slate-900 dark:text-white font-extrabold text-base mb-3">تواصل معنا عبر واتساب</h3>
+        <h3 class="text-slate-900 dark:text-white font-extrabold text-base mb-3">تواصل معنا مباشرة</h3>
         <div class="space-y-2.5">
+          <!-- Direct Call Card -->
+          <a id="footerCall1" href="tel:+201008485337" class="flex items-center justify-between bg-[#f5f5f7] dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 p-3 rounded-xl transition">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-brandOrange-500/20 text-brandOrange-500 flex items-center justify-center font-bold">📞</span>
+              <div>
+                <p class="text-xs text-slate-500">اتصال هاتفي مباشر</p>
+                <p id="footerCallText" class="font-bold text-slate-900 dark:text-white text-sm" dir="ltr">01008485337</p>
+              </div>
+            </div>
+            <span class="text-xs bg-brandOrange-500 text-white px-2.5 py-1 rounded-lg font-bold">اتصل الآن</span>
+          </a>
+
           <a id="footerWa1" href="https://wa.me/201008485337" target="_blank" rel="noopener" class="flex items-center justify-between bg-[#f5f5f7] dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 p-3 rounded-xl transition">
             <div class="flex items-center gap-2.5">
               <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">WA</span>
               <div>
-                <p class="text-xs text-slate-500">المبيعات والطلبات (1)</p>
+                <p class="text-xs text-slate-500">واتساب المبيعات (1)</p>
                 <p id="footerPhone1Text" class="font-bold text-slate-900 dark:text-white text-sm" dir="ltr">01008485337</p>
               </div>
             </div>
@@ -2313,7 +1122,7 @@
             <div class="flex items-center gap-2.5">
               <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">WA</span>
               <div>
-                <p class="text-xs text-slate-500">خدمة العملاء والمتابعة (2)</p>
+                <p class="text-xs text-slate-500">واتساب خدمة العملاء (2)</p>
                 <p id="footerPhone2Text" class="font-bold text-slate-900 dark:text-white text-sm" dir="ltr">01067390673</p>
               </div>
             </div>
@@ -2330,7 +1139,7 @@
           <li><button onclick="toggleCart(true)" class="hover:text-brandOrange-400 transition">سلة المشتريات وإتمام الطلب</button></li>
           <li><a href="#branch" class="hover:text-brandOrange-400 transition">الفرع ومواعيد العمل</a></li>
           <li><a href="#policy" class="hover:text-brandOrange-400 transition">سياسة الاستبدال والاسترجاع</a></li>
-          <li><a href="https://www.facebook.com/share/1ACASHAtEq/?mibextid=wwXIfr" target="_blank" rel="noopener" class="hover:text-brandOrange-400 transition">صفحتنا على فيسبوك</a></li>
+          <li><a href="#privacy" onclick="openPrivacyModal(); return false;" class="hover:text-brandOrange-400 transition font-bold text-brandTeal-600 dark:text-brandTeal-400">سياسة الخصوصية (Privacy Policy)</a></li>
         </ul>
       </div>
     </div>
@@ -2339,17 +1148,26 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Widget -->
+  <!-- Floating Contact Widget (WhatsApp + Direct Call) -->
   <div class="fixed bottom-5 left-5 z-40">
     <div id="waWidgetCard" class="hidden mb-3 w-72 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
       <div class="bg-gradient-to-l from-emerald-600 to-brandTeal-700 text-white p-3.5 flex items-center justify-between">
         <div>
           <p class="font-extrabold text-sm">خدمة عملاء Shady Store</p>
-          <p class="text-[11px] text-emerald-100">متاحون للرد على استفساراتكم وطلباتكم</p>
+          <p class="text-[11px] text-emerald-100">اتصل بنا أو راسلنا على واتساب فوراً</p>
         </div>
         <button onclick="toggleWaWidget()" class="text-white/80 hover:text-white font-bold text-lg leading-none">×</button>
       </div>
       <div class="p-3 space-y-2.5">
+        <!-- Direct Call Row -->
+        <div class="p-2.5 rounded-xl bg-brandOrange-50 dark:bg-slate-800 border border-brandOrange-500/30 flex items-center justify-between">
+          <div>
+            <p class="text-[11px] text-brandOrange-600 dark:text-brandOrange-400 font-bold">📞 اتصال هاتفي مباشر</p>
+            <p id="widgetCallPhone" class="font-extrabold text-sm text-slate-800 dark:text-white" dir="ltr">01008485337</p>
+          </div>
+          <a id="widgetCallLink" href="tel:+201008485337" class="px-3 py-1.5 rounded-lg bg-brandOrange-500 hover:bg-brandOrange-600 text-white text-xs font-bold">اتصل</a>
+        </div>
+
         <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200/70 dark:border-slate-700 flex items-center justify-between">
           <div>
             <p class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">واتساب المبيعات 1</p>
@@ -2374,10 +1192,15 @@
       </div>
     </div>
 
-    <button onclick="toggleWaWidget()" class="animate-float flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-xl shadow-emerald-600/30 font-extrabold text-sm transition active:scale-95">
-      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
-      <span>واتساب</span>
-    </button>
+    <div class="flex items-center gap-2">
+      <a id="floatingCallDirect" href="tel:+201008485337" aria-label="اتصال مباشر" class="flex items-center justify-center w-11 h-11 bg-brandOrange-500 hover:bg-brandOrange-600 text-white rounded-full shadow-xl transition active:scale-95" title="اتصل بنا مباشرة">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      </a>
+      <button onclick="toggleWaWidget()" class="animate-float flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-xl shadow-emerald-600/30 font-extrabold text-sm transition active:scale-95">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+        <span>تواصل معنا</span>
+      </button>
+    </div>
   </div>
 
   <!-- Slide-Over Cart & Checkout Drawer -->
@@ -2397,7 +1220,7 @@
       </div>
 
       <!-- Free Shipping Progress Bar -->
-      <div class="px-4 py-2.5 bg-brandTeal-50 dark:bg-brandTeal-950/50 border-b border-brandTeal-100 dark:border-brandTeal-900">
+      <div class="px-4 py-2.5 bg-brandTeal-50 dark:bg-brandTeal-900/50 border-b border-brandTeal-100 dark:border-brandTeal-900">
         <p id="freeShippingMsg" class="text-xs font-bold text-brandTeal-800 dark:text-brandTeal-300 mb-1.5">أضف منتجات بقيمة 3,000 ج.م للحصول على شحن مجاني!</p>
         <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
           <div id="freeShippingBar" class="h-full bg-gradient-to-l from-brandOrange-500 to-brandTeal-500 transition-all duration-300" style="width: 0%"></div>
@@ -2432,14 +1255,14 @@
             <div class="grid grid-cols-2 gap-2.5">
               <label class="cursor-pointer">
                 <input type="radio" name="deliveryType" value="delivery" checked onchange="updateTotals()" class="peer sr-only" />
-                <div class="p-2.5 rounded-xl border-2 border-slate-200 dark:border-slate-700 peer-checked:border-brandOrange-500 peer-checked:bg-brandOrange-50 dark:peer-checked:bg-brandOrange-950/30 text-center transition">
+                <div class="p-2.5 rounded-xl border-2 border-slate-200 dark:border-slate-700 peer-checked:border-brandOrange-500 peer-checked:bg-brandOrange-50 dark:peer-checked:bg-slate-800 text-center transition">
                   <p class="font-extrabold text-xs sm:text-sm">🚚 توصيل للمنزل</p>
                   <p class="text-[11px] text-slate-500">شحن حسب المحافظة</p>
                 </div>
               </label>
               <label class="cursor-pointer">
                 <input type="radio" name="deliveryType" value="pickup" onchange="updateTotals()" class="peer sr-only" />
-                <div class="p-2.5 rounded-xl border-2 border-slate-200 dark:border-slate-700 peer-checked:border-brandTeal-500 peer-checked:bg-brandTeal-50 dark:peer-checked:bg-brandTeal-950/30 text-center transition">
+                <div class="p-2.5 rounded-xl border-2 border-slate-200 dark:border-slate-700 peer-checked:border-brandTeal-500 peer-checked:bg-brandTeal-50 dark:peer-checked:bg-slate-800 text-center transition">
                   <p class="font-extrabold text-xs sm:text-sm">🏪 استلام من الفرع</p>
                   <p class="text-[11px] text-emerald-600 font-bold">مجاناً (0 ج.م)</p>
                 </div>
@@ -2521,7 +1344,7 @@
       <div>
         <h3 class="text-xl font-black text-slate-900 dark:text-white">تم تسجيل طلبك بنجاح!</h3>
         <p class="text-xs text-slate-500 mt-1">رقم الطلب الخاص بك هو:</p>
-        <div class="mt-2 inline-flex items-center gap-2 bg-brandTeal-50 dark:bg-brandTeal-950 border border-brandTeal-200 dark:border-brandTeal-800 px-4 py-1.5 rounded-xl">
+        <div class="mt-2 inline-flex items-center gap-2 bg-brandTeal-50 dark:bg-slate-800 border border-brandTeal-200 dark:border-brandTeal-800 px-4 py-1.5 rounded-xl">
           <span id="receiptOrderId" class="font-black text-lg text-brandTeal-700 dark:text-brandTeal-300 tracking-wider">SHD-0000</span>
           <button onclick="copyOrderId()" class="text-xs bg-brandTeal-600 text-white px-2 py-0.5 rounded-md font-bold">نسخ</button>
         </div>
@@ -2554,12 +1377,57 @@
     </div>
   </div>
 
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <h3 class="font-black text-lg">🔒 سياسة الخصوصية - Shady Store</h3>
+        <button onclick="closeModal('privacyModal')" aria-label="إغلاق" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 font-bold">✕</button>
+      </div>
+      <div class="p-6 overflow-y-auto space-y-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+        <p class="font-bold text-slate-900 dark:text-white">نحن في متجر Shady Store نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية وفقاً لمعايير حماية البيانات وسياسات منصات الإعلان (Meta و Google).</p>
+        <div>
+          <h4 class="font-extrabold text-slate-900 dark:text-white mb-1">1. جمع المعلومات</h4>
+          <p>نقوم بجمع المعلومات التي تقدمها طواعية عند إتمام عملية الشراء، وتشمل: الاسم الكامل، رقم الهاتف، المحافظة، عنوان التوصيل، وملاحظات الطلب.</p>
+        </div>
+        <div>
+          <h4 class="font-extrabold text-slate-900 dark:text-white mb-1">2. استخدام المعلومات</h4>
+          <p>تُستخدم هذه المعلومات فقط لتجهيز الطلبات وشحنها إليك، وتقديم الدعم الفني وخدمات الضمان والاستبدال، ولا يتم مشاركتها مع أي أطراف خارجية إلا شركات الشحن المختصة بتوصيل طلبك.</p>
+        </div>
+        <div>
+          <h4 class="font-extrabold text-slate-900 dark:text-white mb-1">3. ملفات تعريف الارتباط (Cookies)</h4>
+          <p>نستخدم ملفات تعريف الارتباط وخدمات تحليلات جوجل (Google Analytics) لتحسين سرعة المتجر وفهم اهتمامات الزوار لتقديم عروض أفضل.</p>
+        </div>
+        <div>
+          <h4 class="font-extrabold text-slate-900 dark:text-white mb-1">4. التواصل والاستفسار</h4>
+          <p>لأي استفسار يخص بياناتك أو سياسة الخصوصية، تواصل معنا على الرقم <span dir="ltr" class="font-bold">01008485337</span> أو في مقرنا: كفر حماد، مركز كفر صقر، محافظة الشرقية.</p>
+        </div>
+      </div>
+      <div class="p-4 border-t border-slate-200 dark:border-slate-800 text-left">
+        <button onclick="closeModal('privacyModal')" class="bg-brandOrange-500 text-white font-bold px-5 py-2 rounded-xl text-xs">فهمت، إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Confirmation Modal (Replaces native confirm()) -->
+  <div id="customConfirmModal" class="fixed inset-0 z-60 hidden flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-xs">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4">
+      <div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-500 flex items-center justify-center text-2xl mx-auto font-black">!</div>
+      <h4 id="confirmModalTitle" class="font-black text-base text-slate-900 dark:text-white">تأكيد الإجراء</h4>
+      <p id="confirmModalMessage" class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">هل أنت متأكد من تنفيذ هذا الإجراء؟</p>
+      <div class="grid grid-cols-2 gap-2.5 pt-2">
+        <button id="confirmModalCancelBtn" type="button" class="py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 font-bold text-xs">إلغاء</button>
+        <button id="confirmModalOkBtn" type="button" class="py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs">نعم، متأكد</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Customer My Orders Modal -->
   <div id="myOrdersModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
     <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
       <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
         <h3 class="font-black text-lg">📦 سجل طلباتي على هذا الجهاز</h3>
-        <button onclick="closeModal(\'myOrdersModal\')" aria-label="إغلاق" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 font-bold">✕</button>
+        <button onclick="closeModal('myOrdersModal')" aria-label="إغلاق" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 font-bold">✕</button>
       </div>
       <div id="myOrdersList" class="p-4 overflow-y-auto space-y-3 flex-1"></div>
     </div>
@@ -2579,13 +1447,13 @@
         </div>
         <div class="flex items-center gap-2">
           <button id="adminSignOutBtn" onclick="adminSignOut()" class="hidden text-xs bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/30 text-rose-200 px-3 py-1.5 rounded-xl font-bold">تسجيل خروج</button>
-          <button onclick="closeModal(\'adminModal\')" aria-label="إغلاق" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 font-bold">✕</button>
+          <button onclick="closeModal('adminModal')" aria-label="إغلاق" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 font-bold">✕</button>
         </div>
       </div>
 
       <!-- Admin Login View (Shown if not authenticated with Google) -->
       <div id="adminLoginView" class="p-8 text-center space-y-5 my-auto">
-        <div class="w-16 h-16 rounded-2xl bg-brandOrange-100 dark:bg-brandOrange-950 text-brandOrange-600 flex items-center justify-center text-3xl mx-auto">🔐</div>
+        <div class="w-16 h-16 rounded-2xl bg-brandOrange-100 dark:bg-slate-800 text-brandOrange-600 flex items-center justify-center text-3xl mx-auto">🔐</div>
         <div class="max-w-md mx-auto space-y-2">
           <h4 class="text-xl font-black">تسجيل دخول مدير المتجر</h4>
           <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
@@ -2725,10 +1593,10 @@
         <!-- Tab 3: Settings -->
         <div id="adminTabSettings" class="hidden flex-1 overflow-y-auto p-4 space-y-4">
           <form onsubmit="saveStoreSettings(event)" class="bg-slate-50 dark:bg-slate-800/70 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3 max-w-xl">
-            <h4 class="font-black text-sm text-brandOrange-600">إعدادات أرقام التواصل والشحن</h4>
+            <h4 class="font-black text-sm text-brandOrange-600">إعدادات أرقام التواصل والشحن والسوشيال ميديا</h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label class="block text-xs font-bold mb-1">رقم واتساب 1</label>
+                <label class="block text-xs font-bold mb-1">رقم الاتصال وواتساب 1</label>
                 <input id="setWa1" type="text" dir="ltr" value="01008485337" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm font-bold" />
               </div>
               <div>
@@ -2740,14 +1608,24 @@
               <label class="block text-xs font-bold mb-1">الحد الأدنى للشحن المجاني (ج.م)</label>
               <input id="setFreeShip" type="number" value="3000" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm font-bold" />
             </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-200 dark:border-slate-700">
+              <div>
+                <label class="block text-xs font-bold mb-1">رابط إنستجرام (Instagram URL)</label>
+                <input id="setInstagram" type="url" dir="ltr" placeholder="https://instagram.com/..." class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-xs sm:text-sm" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold mb-1">رابط تيك توك (TikTok URL)</label>
+                <input id="setTiktok" type="url" dir="ltr" placeholder="https://tiktok.com/@..." class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-xs sm:text-sm" />
+              </div>
+            </div>
             <button type="submit" class="bg-brandOrange-600 hover:bg-brandOrange-700 text-white font-extrabold px-5 py-2.5 rounded-xl text-xs sm:text-sm">حفظ الإعدادات</button>
           </form>
 
           <div class="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 p-4 rounded-2xl max-w-xl space-y-2 text-xs">
-            <p class="font-black text-amber-800 dark:text-amber-300">💡 تذكير مهم لعمل تسجيل الدخول على الرابط العام:</p>
+            <p class="font-black text-amber-800 dark:text-amber-300">💡 تذكير مهم لعمل تسجيل الدخول على الرابط العام أو الدومين الجديد:</p>
             <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-              بعد رفع الموقع على Netlify أو Vercel، انسخ رابط الموقع (بدون https://) وأضفه في Firebase Console داخل:
-              <strong>Authentication ← Settings ← Authorized domains</strong> حتى يعمل زر تسجيل الدخول بحساب Google على الرابط الجديد.
+              عند ربط دومين جديد (مثل shadystore.com)، أضفه في Firebase Console داخل:
+              <strong>Authentication ← Settings ← Authorized domains</strong> حتى يعمل زر تسجيل الدخول بحساب Google بدون مشاكل.
             </p>
           </div>
         </div>
@@ -2787,7 +1665,7 @@
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
     const app = initializeApp(firebaseConfig);
 
-    // Google Analytics (via Firebase) - page views are automatic
+    // Google Analytics (via Firebase)
     let analytics = null;
     isSupported().then(ok => { if (ok) analytics = getAnalytics(app); }).catch(() => {});
     const track = (name, params) => { try { if (analytics) logEvent(analytics, name, params); } catch (_) {} };
@@ -2795,7 +1673,31 @@
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
 
-    // Starter fallback products (shown if database is still empty)
+    // Custom Confirmation Dialog Helper (No native confirm())
+    function showConfirmDialog(title, message) {
+      return new Promise((resolve) => {
+        const modal = document.getElementById("customConfirmModal");
+        document.getElementById("confirmModalTitle").textContent = title;
+        document.getElementById("confirmModalMessage").textContent = message;
+        modal.classList.remove("hidden");
+
+        const cleanup = (result) => {
+          modal.classList.add("hidden");
+          okBtn.removeEventListener("click", onOk);
+          cancelBtn.removeEventListener("click", onCancel);
+          resolve(result);
+        };
+        const onOk = () => cleanup(true);
+        const onCancel = () => cleanup(false);
+
+        const okBtn = document.getElementById("confirmModalOkBtn");
+        const cancelBtn = document.getElementById("confirmModalCancelBtn");
+        okBtn.addEventListener("click", onOk);
+        cancelBtn.addEventListener("click", onCancel);
+      });
+    }
+
+    // Starter fallback products
     const STARTER_PRODUCTS = [
       {
         id: "starter-1",
@@ -2857,15 +1759,15 @@
     let storeSettings = JSON.parse(localStorage.getItem("shady_settings") || JSON.stringify({
       wa1: "01008485337",
       wa2: "01067390673",
-      freeShippingThreshold: 3000
+      freeShippingThreshold: 3000,
+      instagramUrl: "",
+      tiktokUrl: ""
     }));
 
-    // Handle redirect login result on mobile Safari
     getRedirectResult(auth).catch((err) => {
       console.warn("Redirect auth info:", err);
     });
 
-    // Apply saved dark mode
     if (localStorage.getItem("shady_dark") === "true") {
       document.documentElement.classList.add("dark");
     }
@@ -2875,16 +1777,59 @@
       return clean.startsWith("20") ? clean : "2" + clean;
     }
 
+    function formatTelLink(phone) {
+      const clean = String(phone).replace(/\D/g, "");
+      return clean.startsWith("20") ? `+${clean}` : `+2${clean}`;
+    }
+
+    function renderSocialLinks() {
+      const container = document.getElementById("socialLinksContainer");
+      const fbUrl = "https://www.facebook.com/share/1ACASHAtEq/?mibextid=wwXIfr";
+      let html = `
+        <a href="${fbUrl}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#f5f5f7] dark:bg-slate-800 hover:bg-brandOrange-500 hover:text-white text-xs font-bold transition">
+          <span>فيسبوك</span>
+        </a>
+      `;
+      if (storeSettings.instagramUrl) {
+        html += `
+          <a href="${esc(storeSettings.instagramUrl)}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#f5f5f7] dark:bg-slate-800 hover:bg-rose-600 hover:text-white text-xs font-bold transition">
+            <span>إنستجرام</span>
+          </a>
+        `;
+      }
+      if (storeSettings.tiktokUrl) {
+        html += `
+          <a href="${esc(storeSettings.tiktokUrl)}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#f5f5f7] dark:bg-slate-800 hover:bg-black hover:text-white text-xs font-bold transition">
+            <span>تيك توك</span>
+          </a>
+        `;
+      }
+      container.innerHTML = html;
+    }
+
     function applySettingsUI() {
-      const { wa1, wa2, freeShippingThreshold } = storeSettings;
+      const { wa1, wa2, freeShippingThreshold, instagramUrl, tiktokUrl } = storeSettings;
       const intl1 = formatWaIntl(wa1);
       const intl2 = formatWaIntl(wa2);
+      const tel1 = formatTelLink(wa1);
 
       document.getElementById("topFreeShippingText").textContent = Number(freeShippingThreshold).toLocaleString();
       document.getElementById("topWaLink1").href = `https://wa.me/${intl1}`;
       document.getElementById("topWaLink1").querySelector("span[dir='ltr']").textContent = wa1;
       document.getElementById("topWaLink2").href = `https://wa.me/${intl2}`;
       document.getElementById("topWaLink2").querySelector("span[dir='ltr']").textContent = wa2;
+
+      // Update Direct Call Links
+      document.getElementById("topCallLink").href = `tel:${tel1}`;
+      document.getElementById("topCallLink").querySelector("span[dir='ltr']").textContent = wa1;
+      document.getElementById("headerCallBtn").href = `tel:${tel1}`;
+      document.getElementById("heroCallBtn").href = `tel:${tel1}`;
+      document.getElementById("branchCallBtn").href = `tel:${tel1}`;
+      document.getElementById("footerCall1").href = `tel:${tel1}`;
+      document.getElementById("footerCallText").textContent = wa1;
+      document.getElementById("widgetCallPhone").textContent = wa1;
+      document.getElementById("widgetCallLink").href = `tel:${tel1}`;
+      document.getElementById("floatingCallDirect").href = `tel:${tel1}`;
 
       document.getElementById("heroWaBtn").href = `https://wa.me/${intl1}?text=${encodeURIComponent("أهلاً Shady Store، عندي استفسار عن المنتجات")}`;
       document.getElementById("footerWa1").href = `https://wa.me/${intl1}`;
@@ -2900,6 +1845,10 @@
       document.getElementById("setWa1").value = wa1;
       document.getElementById("setWa2").value = wa2;
       document.getElementById("setFreeShip").value = freeShippingThreshold;
+      document.getElementById("setInstagram").value = instagramUrl || "";
+      document.getElementById("setTiktok").value = tiktokUrl || "";
+
+      renderSocialLinks();
       updateTotals();
     }
 
@@ -2927,7 +1876,7 @@
       renderProducts();
     });
 
-    // Listen to Settings in Firestore (optional live sync)
+    // Listen to Settings in Firestore
     onSnapshot(doc(db, "settings", "store"), (docSnap) => {
       if (docSnap.exists()) {
         storeSettings = { ...storeSettings, ...docSnap.data() };
@@ -2950,7 +1899,6 @@
         signOutBtn.classList.remove("hidden");
         statusText.textContent = `مسجل الدخول كـ: ${user.email}`;
 
-        // Subscribe to real-time orders
         if (unsubOrders) unsubOrders();
         unsubOrders = onSnapshot(collection(db, "orders"), (snap) => {
           adminOrders = snap.docs.map(d => ({ docId: d.id, ...d.data() }));
@@ -3068,34 +2016,34 @@
         const discountPct = hasDiscount ? Math.round(((p.oldPrice - p.price) / p.oldPrice) * 100) : 0;
         const fallbackImg = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80";
         return `
-          <div class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden hover:shadow-xl transition-all flex flex-col">
+          <div class="group bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl overflow-hidden hover:shadow-xl transition-all flex flex-col">
             <div class="relative aspect-square bg-slate-100 dark:bg-slate-800 overflow-hidden cursor-pointer" onclick="openProductDetail('${p.id}')">
               <img src="${p.image || fallbackImg}" alt="${esc(p.name)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImg}'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div class="absolute top-3 right-3 flex flex-col gap-1.5">
-                ${p.badge ? `<span class="bg-brandOrange-500 text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-lg shadow">${esc(p.badge)}</span>` : ""}
-                ${hasDiscount ? `<span class="bg-brandTeal-600 text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-lg shadow">وفر ${discountPct}%</span>` : ""}
+              <div class="absolute top-2 right-2 sm:top-3 sm:right-3 flex flex-col gap-1">
+                ${p.badge ? `<span class="bg-brandOrange-500 text-white text-[10px] sm:text-[11px] font-extrabold px-2 py-0.5 rounded-lg shadow">${esc(p.badge)}</span>` : ""}
+                ${hasDiscount ? `<span class="bg-brandTeal-600 text-white text-[10px] sm:text-[11px] font-extrabold px-2 py-0.5 rounded-lg shadow">وفر ${discountPct}%</span>` : ""}
               </div>
-              ${!p.inStock ? `<div class="absolute inset-0 bg-slate-950/60 flex items-center justify-center"><span class="bg-rose-600 text-white font-black text-xs px-3 py-1.5 rounded-xl">نفذت الكمية مؤقتاً</span></div>` : ""}
+              ${!p.inStock ? `<div class="absolute inset-0 bg-slate-950/60 flex items-center justify-center"><span class="bg-rose-600 text-white font-black text-[11px] sm:text-xs px-2.5 py-1 rounded-xl">نفذت الكمية</span></div>` : ""}
             </div>
 
-            <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+            <div class="p-3 sm:p-4 flex-1 flex flex-col justify-between space-y-2.5 sm:space-y-3">
               <div>
-                <span class="text-[11px] font-bold text-brandTeal-600 dark:text-brandTeal-400">${esc(p.category || "عام")}</span>
-                <h3 onclick="openProductDetail('${p.id}')" class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white line-clamp-2 mt-0.5 cursor-pointer hover:text-brandOrange-600 transition">${esc(p.name)}</h3>
-                <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mt-1">${esc(p.description || "")}</p>
+                <span class="text-[10px] sm:text-[11px] font-bold text-brandTeal-600 dark:text-brandTeal-400">${esc(p.category || "عام")}</span>
+                <h3 onclick="openProductDetail('${p.id}')" class="font-extrabold text-xs sm:text-base text-slate-900 dark:text-white line-clamp-2 mt-0.5 cursor-pointer hover:text-brandOrange-600 transition leading-relaxed">${esc(p.name)}</h3>
+                <p class="hidden sm:line-clamp-2 text-xs text-slate-500 dark:text-slate-400 mt-1">${esc(p.description || "")}</p>
               </div>
 
-              <div class="pt-2 border-t border-slate-100 dark:border-slate-800 space-y-2.5">
-                <div class="flex items-baseline gap-2">
-                  <span class="text-lg font-extrabold text-slate-900 dark:text-white">${Number(p.price).toLocaleString()} <span class="text-xs">ج.م</span></span>
-                  ${hasDiscount ? `<span class="text-xs text-slate-400 line-through">${Number(p.oldPrice).toLocaleString()} ج.م</span>` : ""}
+              <div class="pt-2 border-t border-slate-100 dark:border-slate-800 space-y-2">
+                <div class="flex flex-wrap items-baseline gap-1.5">
+                  <span class="text-sm sm:text-lg font-extrabold text-slate-900 dark:text-white">${Number(p.price).toLocaleString()} <span class="text-[11px] sm:text-xs">ج.م</span></span>
+                  ${hasDiscount ? `<span class="text-[11px] sm:text-xs text-slate-400 line-through">${Number(p.oldPrice).toLocaleString()} ج.م</span>` : ""}
                 </div>
 
-                <div class="flex items-center gap-2">
-                  <button onclick="addToCart('${p.id}')" ${!p.inStock ? "disabled" : ""} class="flex-1 bg-brandOrange-500 hover:bg-brandOrange-600 disabled:opacity-40 text-white font-extrabold py-2.5 px-3 rounded-full text-xs transition active:scale-95 flex items-center justify-center gap-1.5">
+                <div class="flex items-center gap-1.5 sm:gap-2">
+                  <button onclick="addToCart('${p.id}')" ${!p.inStock ? "disabled" : ""} class="flex-1 bg-brandOrange-500 hover:bg-brandOrange-600 disabled:opacity-40 text-white font-extrabold py-2 sm:py-2.5 px-2 sm:px-3 rounded-full text-[11px] sm:text-xs transition active:scale-95 flex items-center justify-center gap-1">
                     <span>+ أضف للسلة</span>
                   </button>
-                  <button onclick="openProductDetail('${p.id}')" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold" title="التفاصيل">
+                  <button onclick="openProductDetail('${p.id}')" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold shrink-0" title="التفاصيل">
                     👁️
                   </button>
                 </div>
@@ -3112,6 +2060,7 @@
       const fallbackImg = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80";
       const waMsg = encodeURIComponent(`أهلاً Shady Store، كنت حابب أستفسر عن منتج: ${p.name} (بسعر ${p.price} ج.م)`);
       const intl1 = formatWaIntl(storeSettings.wa1);
+      const tel1 = formatTelLink(storeSettings.wa1);
 
       document.getElementById("productDetailBody").innerHTML = `
         <div class="grid md:grid-cols-2">
@@ -3121,8 +2070,8 @@
           <div class="p-6 flex flex-col justify-between space-y-4">
             <div class="space-y-2">
               <div class="flex items-center justify-between">
-                <span class="text-xs font-bold bg-brandTeal-50 dark:bg-brandTeal-950 text-brandTeal-700 dark:text-brandTeal-300 px-3 py-1 rounded-full">${esc(p.category || "عام")}</span>
-                <button onclick="closeModal(\'productDetailModal\')" aria-label="إغلاق" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 font-bold">✕</button>
+                <span class="text-xs font-bold bg-brandTeal-50 dark:bg-slate-800 text-brandTeal-700 dark:text-brandTeal-300 px-3 py-1 rounded-full">${esc(p.category || "عام")}</span>
+                <button onclick="closeModal('productDetailModal')" aria-label="إغلاق" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 font-bold">✕</button>
               </div>
               <h3 class="text-xl font-black text-slate-900 dark:text-white pt-1">${esc(p.name)}</h3>
               <div class="flex items-baseline gap-2.5">
@@ -3136,14 +2085,23 @@
               <button onclick="addToCart('${p.id}'); closeModal('productDetailModal'); toggleCart(true);" ${!p.inStock ? "disabled" : ""} class="w-full bg-brandOrange-500 hover:bg-brandOrange-600 disabled:opacity-40 text-white font-black py-3 rounded-xl text-sm shadow-lg shadow-brandOrange-500/25">
                 اطلب المنتج الآن
               </button>
-              <a href="https://wa.me/${intl1}?text=${waMsg}" target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl text-xs">
-                <span>اسأل عن المنتج على واتساب</span>
-              </a>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="https://wa.me/${intl1}?text=${waMsg}" target="_blank" rel="noopener" class="flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl text-xs">
+                  <span>واتساب</span>
+                </a>
+                <a href="tel:${tel1}" class="flex items-center justify-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-white font-bold py-2.5 rounded-xl text-xs">
+                  <span>📞 اتصال مباشر</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       `;
       document.getElementById("productDetailModal").classList.remove("hidden");
+    };
+
+    window.openPrivacyModal = () => {
+      document.getElementById("privacyModal").classList.remove("hidden");
     };
 
     // Cart Management
@@ -3241,7 +2199,6 @@
       document.getElementById("shippingVal").textContent = shipping === 0 && subTotal > 0 ? "مجاني 🎉" : `${shipping} ج.م`;
       document.getElementById("grandTotalVal").textContent = grandTotal.toLocaleString();
 
-      // Update free shipping bar
       const pct = Math.min(100, Math.round((subTotal / threshold) * 100));
       document.getElementById("freeShippingBar").style.width = `${pct}%`;
       if (subTotal >= threshold) {
@@ -3314,19 +2271,16 @@
 
       track("purchase", { transaction_id: orderId, currency: "EGP", value: total, shipping, items: orderPayload.items.map(i => ({ item_id: i.id, item_name: i.name, price: i.price, quantity: i.qty })) });
 
-      // Save locally for customer receipt tracking
       myOrders.unshift(orderPayload);
       localStorage.setItem("shady_my_orders", JSON.stringify(myOrders));
       updateMyOrdersBadge();
 
-      // Clear cart
       cart = [];
       saveCart();
       toggleCart(false);
       btn.disabled = false;
       btn.textContent = "تأكيد وإرسال الطلب الآن ✓";
 
-      // Show Receipt Modal
       document.getElementById("receiptOrderId").textContent = orderId;
       const itemsText = orderPayload.items.map(i => `• ${i.name} (×${i.qty}) = ${(i.price * i.qty).toLocaleString()} ج.م`).join("\n");
       document.getElementById("receiptDetailsBox").innerHTML = `
@@ -3338,26 +2292,16 @@
       `;
 
       const waReceiptMsg = encodeURIComponent(
-        `طلب جديد من موقع *Shady Store* 🛍️
-` +
-        `رقم الطلب: *${orderId}*
-` +
-        `الاسم: ${name}
-` +
-        `الموبايل: ${phone}
-` +
-        `العنوان: ${gov} - ${address}
-` +
-        `طريقة الدفع: ${payment}
-` +
-        `------------------
-` +
-        `${itemsText}
-` +
-        `------------------
-` +
-        `الشحن: ${shipping === 0 ? "مجاني" : shipping + " ج.م"}
-` +
+        `طلب جديد من موقع *Shady Store* 🛍️\n` +
+        `رقم الطلب: *${orderId}*\n` +
+        `الاسم: ${name}\n` +
+        `الموبايل: ${phone}\n` +
+        `العنوان: ${gov} - ${address}\n` +
+        `طريقة الدفع: ${payment}\n` +
+        `------------------\n` +
+        `${itemsText}\n` +
+        `------------------\n` +
+        `الشحن: ${shipping === 0 ? "مجاني" : shipping + " ج.م"}\n` +
         `الإجمالي: *${total.toLocaleString()} ج.م*`
       );
 
@@ -3444,11 +2388,10 @@
 
       list.innerHTML = filtered.map(o => {
         const custWa = formatWaIntl(o.customerPhone || "");
+        const custTel = formatTelLink(o.customerPhone || "");
         const confirmMsg = encodeURIComponent(
-          `أهلاً أ/ ${o.customerName}، مع حضرتك خدمة عملاء *Shady Store* 🛍️
-` +
-          `بخصوص طلبك رقم *${o.orderId}* بإجمالي *${Number(o.total).toLocaleString()} ج.م*.
-` +
+          `أهلاً أ/ ${o.customerName}، مع حضرتك خدمة عملاء *Shady Store* 🛍️\n` +
+          `بخصوص طلبك رقم *${o.orderId}* بإجمالي *${Number(o.total).toLocaleString()} ج.م*.\n` +
           `حالة الطلب الحالية: *${o.status}*`
         );
         return `
@@ -3473,13 +2416,14 @@
             ${o.notes ? `<p class="text-amber-700 dark:text-amber-300">📝 ملاحظة: ${esc(o.notes)}</p>` : ""}
 
             <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-200 dark:border-slate-700">
-              <div class="flex items-center gap-2">
+              <div class="flex flex-wrap items-center gap-2">
                 <select onchange="updateOrderStatus('${o.docId}', this.value)" class="rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-2.5 py-1.5 font-bold text-xs">
                   ${["قيد المراجعة", "تم التأكيد", "جاري التوصيل", "تم التسليم", "ملغي"].map(st =>
                     `<option value="${st}" ${o.status === st ? "selected" : ""}>${st}</option>`
                   ).join("")}
                 </select>
-                <a href="https://wa.me/${custWa}?text=${confirmMsg}" target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3 py-1.5 rounded-xl">واتساب العميل</a>
+                <a href="https://wa.me/${custWa}?text=${confirmMsg}" target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3 py-1.5 rounded-xl">واتساب</a>
+                <a href="tel:${custTel}" class="bg-brandOrange-500 hover:bg-brandOrange-600 text-white font-bold px-3 py-1.5 rounded-xl">📞 اتصال</a>
               </div>
               <button onclick="deleteOrder('${o.docId}')" class="text-rose-500 hover:underline font-bold">حذف</button>
             </div>
@@ -3498,7 +2442,8 @@
     };
 
     window.deleteOrder = async (docId) => {
-      if (!confirm("هل أنت متأكد من حذف هذا الطلب نهائياً؟")) return;
+      const confirmed = await showConfirmDialog("حذف الطلب", "هل أنت متأكد من حذف هذا الطلب نهائياً من السجل؟");
+      if (!confirmed) return;
       try {
         await deleteDoc(doc(db, "orders", docId));
         showToast("تم حذف الطلب");
@@ -3507,7 +2452,7 @@
       }
     };
 
-    // Compress uploaded image via Canvas so it fits cleanly in Firestore
+    // Compress uploaded image via Canvas
     window.handleImageUpload = (event) => {
       const file = event.target.files[0];
       if (!file) return;
@@ -3606,7 +2551,8 @@
         showToast("هذا منتج عرض مؤقت، أضف منتجاتك الحقيقية وسيختفي تلقائياً");
         return;
       }
-      if (!confirm("هل تريد حذف هذا المنتج من المتجر؟")) return;
+      const confirmed = await showConfirmDialog("حذف المنتج", "هل تريد حذف هذا المنتج نهائياً من واجهة المتجر؟");
+      if (!confirmed) return;
       try {
         await deleteDoc(doc(db, "products", id));
         showToast("تم حذف المنتج");
@@ -3657,7 +2603,9 @@
       storeSettings = {
         wa1: document.getElementById("setWa1").value.trim(),
         wa2: document.getElementById("setWa2").value.trim(),
-        freeShippingThreshold: Number(document.getElementById("setFreeShip").value || 3000)
+        freeShippingThreshold: Number(document.getElementById("setFreeShip").value || 3000),
+        instagramUrl: document.getElementById("setInstagram").value.trim(),
+        tiktokUrl: document.getElementById("setTiktok").value.trim()
       };
       localStorage.setItem("shady_settings", JSON.stringify(storeSettings));
       applySettingsUI();
@@ -3704,7 +2652,7 @@
 
     document.addEventListener("keydown", (e) => {
       if (e.key !== "Escape") return;
-      ["productDetailModal", "myOrdersModal", "adminModal", "orderSuccessModal"].forEach(id => document.getElementById(id)?.classList.add("hidden"));
+      ["productDetailModal", "myOrdersModal", "adminModal", "orderSuccessModal", "privacyModal", "customConfirmModal"].forEach(id => document.getElementById(id)?.classList.add("hidden"));
       toggleCart(false);
     });
 
