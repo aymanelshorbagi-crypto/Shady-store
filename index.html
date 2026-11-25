@@ -1499,14 +1499,6 @@
           </button>
           <button onclick="switchAdminTab('settings')" id="tabBtnSettings" class="shrink-0 px-4 py-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">⚙️ إعدادات المتجر</button>
         </div>
-        </div>
-
-        <!-- Admin Navigation Tabs -->
-        <div class="flex border-b border-slate-200 dark:border-slate-800 px-4 bg-white dark:bg-slate-900">
-          <button onclick="switchAdminTab('orders')" id="tabBtnOrders" class="px-4 py-3 text-xs sm:text-sm font-black border-b-2 border-brandOrange-500 text-brandOrange-600">📋 طلبات العملاء</button>
-          <button onclick="switchAdminTab('products')" id="tabBtnProducts" class="px-4 py-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">📦 إدارة المنتجات</button>
-          <button onclick="switchAdminTab('settings')" id="tabBtnSettings" class="px-4 py-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">⚙️ إعدادات المتجر</button>
-        </div>
 
         <!-- Tab 1: Orders Management -->
         <div id="adminTabOrders" class="flex-1 overflow-y-auto p-4 space-y-3">
@@ -1552,6 +1544,10 @@
               </div>
               <div>
                 <label class="block text-xs font-bold mb-1">الشارة / العرض (اختياري)</label>
+                <input id="prodBadge" type="text" placeholder="خصم 15% / الأكثر مبيعاً" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-xs sm:text-sm" />
+              </div>
+            </div>
+
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
               <div>
                 <label class="block text-xs font-bold mb-1">السعر الحالي (ج.م) *</label>
@@ -1643,10 +1639,6 @@
                 <label class="block text-xs font-bold mb-1">تنبيه نقص المخزون عند أقل من (قطعة)</label>
                 <input id="setLowStockLimit" type="number" min="1" value="3" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm font-bold" />
               </div>
-            </div>
-            <div>
-              <label class="block text-xs font-bold mb-1">الحد الأدنى للشحن المجاني (ج.م)</label>
-              <input id="setFreeShip" type="number" value="3000" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm font-bold" />
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-200 dark:border-slate-700">
               <div>
@@ -2471,16 +2463,6 @@
         invBadge.classList.add("hidden");
       }
     }
-      });
-    };
-
-    function updateAdminKPIs() {
-      document.getElementById("kpiTotalOrders").textContent = adminOrders.length;
-      document.getElementById("kpiPendingOrders").textContent = adminOrders.filter(o => o.status === "قيد المراجعة").length;
-      const rev = adminOrders.filter(o => o.status !== "ملغي").reduce((s, o) => s + Number(o.total || 0), 0);
-      document.getElementById("kpiRevenue").textContent = rev.toLocaleString();
-      document.getElementById("kpiProductsCount").textContent = isUsingStarterFallback ? 0 : products.length;
-    }
 
     window.renderAdminOrders = () => {
       const filter = document.getElementById("adminOrderFilter").value;
@@ -2655,6 +2637,34 @@
       document.getElementById("productFormTitle").textContent = "+ إضافة منتج جديد للمتجر";
       document.getElementById("cancelEditProductBtn").classList.add("hidden");
     };
+
+    window.deleteProduct = async (id) => {
+      if (id.startsWith("starter-")) {
+        showToast("هذا منتج تجريبي، أضف منتجاتك الحقيقية وسيختفي تلقائياً");
+        return;
+      }
+      const confirmed = await showConfirmDialog("حذف المنتج", "هل أنت متأكد من حذف هذا المنتج من المتجر؟");
+      if (!confirmed) return;
+      try {
+        await deleteDoc(doc(db, "products", id));
+        showToast("تم حذف المنتج");
+      } catch (err) {
+        showToast("تعذر حذف المنتج");
+      }
+    };
+
+    window.seedDefaultProductsToFirestore = async () => {
+      if (!currentUser) return;
+      for (const item of STARTER_PRODUCTS) {
+        const { id, ...cleanItem } = item;
+        await addDoc(collection(db, "products"), cleanItem);
+      }
+      showToast("تمت إضافة الباقة التجريبية إلى قاعدة البيانات ✓");
+    };
+
+    function renderAdminProducts() {
+      document.getElementById("adminProdCount").textContent = products.length;
+      const list = document.getElementById("adminProductsList");
       list.innerHTML = products.map(p => {
         const stockQty = typeof p.stock === "number" ? p.stock : (p.inStock === false ? 0 : 10);
         const lowLimit = Number(storeSettings.lowStockLimit) || 3;
