@@ -1483,10 +1483,22 @@
             <p class="text-[11px] text-slate-500 font-bold">إجمالي المبيعات</p>
             <p class="text-xl font-black text-brandTeal-600 mt-0.5"><span id="kpiRevenue">0</span> <span class="text-xs">ج.م</span></p>
           </div>
-          <div class="bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200/70 dark:border-slate-800">
-            <p class="text-[11px] text-slate-500 font-bold">المنتجات المعروضة</p>
-            <p id="kpiProductsCount" class="text-xl font-black text-slate-900 dark:text-white mt-0.5">0</p>
+          <div class="bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200/70 dark:border-slate-800 cursor-pointer hover:border-amber-400 transition" onclick="switchAdminTab('inventory')">
+            <p class="text-[11px] text-slate-500 font-bold">تنبيهات المخزون</p>
+            <p id="kpiLowStock" class="text-xl font-black text-amber-600 mt-0.5">0</p>
           </div>
+        </div>
+
+        <!-- Admin Navigation Tabs -->
+        <div class="flex overflow-x-auto no-scrollbar border-b border-slate-200 dark:border-slate-800 px-4 bg-white dark:bg-slate-900">
+          <button onclick="switchAdminTab('orders')" id="tabBtnOrders" class="shrink-0 px-4 py-3 text-xs sm:text-sm font-black border-b-2 border-brandOrange-500 text-brandOrange-600">📋 طلبات العملاء</button>
+          <button onclick="switchAdminTab('products')" id="tabBtnProducts" class="shrink-0 px-4 py-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">📦 إدارة المنتجات</button>
+          <button onclick="switchAdminTab('inventory')" id="tabBtnInventory" class="shrink-0 px-4 py-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-1.5">
+            <span>📊 المخزون والنواقص</span>
+            <span id="invAlertBadge" class="hidden bg-rose-600 text-white text-[10px] px-1.5 py-0.5 rounded-full">0</span>
+          </button>
+          <button onclick="switchAdminTab('settings')" id="tabBtnSettings" class="shrink-0 px-4 py-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">⚙️ إعدادات المتجر</button>
+        </div>
         </div>
 
         <!-- Admin Navigation Tabs -->
@@ -1540,11 +1552,7 @@
               </div>
               <div>
                 <label class="block text-xs font-bold mb-1">الشارة / العرض (اختياري)</label>
-                <input id="prodBadge" type="text" placeholder="مثال: الأكثر مبيعاً / خصم خاص" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-xs sm:text-sm" />
-              </div>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
               <div>
                 <label class="block text-xs font-bold mb-1">السعر الحالي (ج.م) *</label>
                 <input id="prodPrice" type="number" min="1" required placeholder="10500" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-xs sm:text-sm" />
@@ -1553,10 +1561,14 @@
                 <label class="block text-xs font-bold mb-1">السعر قبل الخصم (اختياري)</label>
                 <input id="prodOldPrice" type="number" min="0" placeholder="11500" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-xs sm:text-sm" />
               </div>
-              <div class="col-span-2 sm:col-span-1 flex items-end">
+              <div>
+                <label class="block text-xs font-bold mb-1">الكمية بالمخزن (قطعة) *</label>
+                <input id="prodStock" type="number" min="0" value="10" required placeholder="10" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-xs sm:text-sm font-bold" />
+              </div>
+              <div class="flex items-end">
                 <label class="flex items-center gap-2 cursor-pointer bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 w-full">
                   <input id="prodInStock" type="checkbox" checked class="w-4 h-4 accent-brandTeal-600" />
-                  <span class="text-xs font-bold">متوفر حالياً في المخزن</span>
+                  <span class="text-xs font-bold">متاح للعرض</span>
                 </label>
               </div>
             </div>
@@ -1590,7 +1602,25 @@
           </div>
         </div>
 
-        <!-- Tab 3: Settings -->
+        <!-- Tab 3: Inventory & Low Stock Management -->
+        <div id="adminTabInventory" class="hidden flex-1 overflow-y-auto p-4 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 p-3.5 rounded-2xl">
+            <div>
+              <h4 class="font-black text-sm text-amber-800 dark:text-amber-300">📊 متابعة جرد المخزون والنواقص</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">يتم خصم الكمية تلقائياً عند إتمام أي طلب جديد، ويظهر تنبيه عندما تقل الكمية عن حد التنبيه.</p>
+            </div>
+            <select id="inventoryFilter" onchange="renderAdminInventory()" class="text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2">
+              <option value="all">كل الأصناف</option>
+              <option value="low">قرب يخلص (أقل من حد التنبيه)</option>
+              <option value="out">نفذت الكمية (0)</option>
+              <option value="ok">متوفر بكمية كافية</option>
+            </select>
+          </div>
+
+          <div id="adminInventoryList" class="space-y-2.5"></div>
+        </div>
+
+        <!-- Tab 4: Settings -->
         <div id="adminTabSettings" class="hidden flex-1 overflow-y-auto p-4 space-y-4">
           <form onsubmit="saveStoreSettings(event)" class="bg-slate-50 dark:bg-slate-800/70 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3 max-w-xl">
             <h4 class="font-black text-sm text-brandOrange-600">إعدادات أرقام التواصل والشحن والسوشيال ميديا</h4>
@@ -1602,6 +1632,16 @@
               <div>
                 <label class="block text-xs font-bold mb-1">رقم واتساب 2</label>
                 <input id="setWa2" type="text" dir="ltr" value="01067390673" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm font-bold" />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-bold mb-1">الحد الأدنى للشحن المجاني (ج.م)</label>
+                <input id="setFreeShip" type="number" value="3000" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm font-bold" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold mb-1">تنبيه نقص المخزون عند أقل من (قطعة)</label>
+                <input id="setLowStockLimit" type="number" min="1" value="3" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm font-bold" />
               </div>
             </div>
             <div>
@@ -1706,6 +1746,7 @@
         price: 10499,
         oldPrice: 11300,
         badge: "الأكثر طلباً",
+        stock: 8,
         inStock: true,
         image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80",
         description: "شاشة Super AMOLED مقاس 6.7 بوصة بتردد 90Hz، بطارية 5000mAh، كاميرا رئيسية 50 ميجابكسل، ضمان محلي لمدة عام."
@@ -1717,6 +1758,7 @@
         price: 1150,
         oldPrice: 1400,
         badge: "خصم 18%",
+        stock: 2,
         inStock: true,
         image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80",
         description: "صوت Bass قوي، بطارية تدوم حتى 30 ساعة مع العلبة، مقاومة للماء بمعيار IPX5، مايكروفون مزدوج لعزل الضوضاء أثناء المكالمات."
@@ -1728,6 +1770,7 @@
         price: 1690,
         oldPrice: 1950,
         badge: "عرض خاص",
+        stock: 5,
         inStock: true,
         image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=600&q=80",
         description: "شاشة HD كبيرة 2.01 بوصة، إجراء واستقبال المكالمات عبر البلوتوث، قياس نبضات القلب والأكسجين، أكثر من 100 وضع رياضي."
@@ -1739,6 +1782,7 @@
         price: 750,
         oldPrice: 900,
         badge: "أصلي",
+        stock: 12,
         inStock: true,
         image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80",
         description: "تقنية PowerIQ 3.0 للشحن فائق السرعة لهواتف الآيفون وسامسونج وشاومي مع حماية كاملة من ارتفاع الحرارة."
@@ -1760,6 +1804,7 @@
       wa1: "01008485337",
       wa2: "01067390673",
       freeShippingThreshold: 3000,
+      lowStockLimit: 3,
       instagramUrl: "",
       tiktokUrl: ""
     }));
@@ -1845,6 +1890,7 @@
       document.getElementById("setWa1").value = wa1;
       document.getElementById("setWa2").value = wa2;
       document.getElementById("setFreeShip").value = freeShippingThreshold;
+      document.getElementById("setLowStockLimit").value = storeSettings.lowStockLimit || 3;
       document.getElementById("setInstagram").value = instagramUrl || "";
       document.getElementById("setTiktok").value = tiktokUrl || "";
 
@@ -1866,6 +1912,7 @@
       renderCategories();
       renderProducts();
       renderAdminProducts();
+      renderAdminInventory();
       updateAdminKPIs();
     }, (error) => {
       console.error("Firestore products error:", error);
@@ -2014,6 +2061,10 @@
       grid.innerHTML = filtered.map(p => {
         const hasDiscount = Number(p.oldPrice) > Number(p.price);
         const discountPct = hasDiscount ? Math.round(((p.oldPrice - p.price) / p.oldPrice) * 100) : 0;
+        const stockQty = typeof p.stock === "number" ? p.stock : (p.inStock === false ? 0 : 10);
+        const isAvailable = p.inStock !== false && stockQty > 0;
+        const lowLimit = Number(storeSettings.lowStockLimit) || 3;
+        const isLowStock = isAvailable && stockQty <= lowLimit;
         const fallbackImg = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80";
         return `
           <div class="group bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl overflow-hidden hover:shadow-xl transition-all flex flex-col">
@@ -2022,8 +2073,9 @@
               <div class="absolute top-2 right-2 sm:top-3 sm:right-3 flex flex-col gap-1">
                 ${p.badge ? `<span class="bg-brandOrange-500 text-white text-[10px] sm:text-[11px] font-extrabold px-2 py-0.5 rounded-lg shadow">${esc(p.badge)}</span>` : ""}
                 ${hasDiscount ? `<span class="bg-brandTeal-600 text-white text-[10px] sm:text-[11px] font-extrabold px-2 py-0.5 rounded-lg shadow">وفر ${discountPct}%</span>` : ""}
+                ${isLowStock ? `<span class="bg-amber-100 text-amber-800 border border-amber-200 text-[10px] font-extrabold px-2 py-0.5 rounded-lg shadow">متبقي ${stockQty} فقط</span>` : ""}
               </div>
-              ${!p.inStock ? `<div class="absolute inset-0 bg-slate-950/60 flex items-center justify-center"><span class="bg-rose-600 text-white font-black text-[11px] sm:text-xs px-2.5 py-1 rounded-xl">نفذت الكمية</span></div>` : ""}
+              ${!isAvailable ? `<div class="absolute inset-0 bg-slate-950/60 flex items-center justify-center"><span class="bg-rose-600 text-white font-black text-[11px] sm:text-xs px-2.5 py-1 rounded-xl">نفذت الكمية</span></div>` : ""}
             </div>
 
             <div class="p-3 sm:p-4 flex-1 flex flex-col justify-between space-y-2.5 sm:space-y-3">
@@ -2040,8 +2092,8 @@
                 </div>
 
                 <div class="flex items-center gap-1.5 sm:gap-2">
-                  <button onclick="addToCart('${p.id}')" ${!p.inStock ? "disabled" : ""} class="flex-1 bg-brandOrange-500 hover:bg-brandOrange-600 disabled:opacity-40 text-white font-extrabold py-2 sm:py-2.5 px-2 sm:px-3 rounded-full text-[11px] sm:text-xs transition active:scale-95 flex items-center justify-center gap-1">
-                    <span>+ أضف للسلة</span>
+                  <button onclick="addToCart('${p.id}')" ${!isAvailable ? "disabled" : ""} class="flex-1 bg-brandOrange-500 hover:bg-brandOrange-600 disabled:opacity-40 text-white font-extrabold py-2 sm:py-2.5 px-2 sm:px-3 rounded-full text-[11px] sm:text-xs transition active:scale-95 flex items-center justify-center gap-1">
+                    <span>${isAvailable ? "+ أضف للسلة" : "غير متوفر"}</span>
                   </button>
                   <button onclick="openProductDetail('${p.id}')" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold shrink-0" title="التفاصيل">
                     👁️
@@ -2107,9 +2159,18 @@
     // Cart Management
     window.addToCart = (id) => {
       const p = products.find(item => item.id === id);
-      if (!p || !p.inStock) return;
+      if (!p) return;
+      const maxStock = typeof p.stock === "number" ? p.stock : (p.inStock === false ? 0 : 999);
+      if (p.inStock === false || maxStock <= 0) {
+        showToast("عذراً، نفذت كمية هذا المنتج حالياً");
+        return;
+      }
       const existing = cart.find(c => c.id === id);
       if (existing) {
+        if (existing.qty >= maxStock) {
+          showToast(`الحد الأقصى المتوفر من هذا المنتج هو ${maxStock} قطعة`);
+          return;
+        }
         existing.qty += 1;
       } else {
         cart.push({ id: p.id, name: p.name, price: Number(p.price), image: p.image || "", qty: 1 });
@@ -2122,6 +2183,14 @@
     window.changeCartQty = (id, delta) => {
       const idx = cart.findIndex(c => c.id === id);
       if (idx === -1) return;
+      if (delta > 0) {
+        const p = products.find(item => item.id === id);
+        const maxStock = p && typeof p.stock === "number" ? p.stock : 999;
+        if (cart[idx].qty >= maxStock) {
+          showToast(`المتوفر بالمخزن ${maxStock} قطعة فقط`);
+          return;
+        }
+      }
       cart[idx].qty += delta;
       if (cart[idx].qty <= 0) cart.splice(idx, 1);
       saveCart();
@@ -2264,6 +2333,19 @@
           ...orderPayload,
           createdAt: serverTimestamp()
         });
+        // Deduct ordered quantities from Firestore inventory automatically
+        for (const item of orderPayload.items) {
+          if (!item.id.startsWith("starter-")) {
+            const prod = products.find(p => p.id === item.id);
+            if (prod && typeof prod.stock === "number") {
+              const newStock = Math.max(0, prod.stock - item.qty);
+              await updateDoc(doc(db, "products", item.id), {
+                stock: newStock,
+                inStock: newStock > 0
+              });
+            }
+          }
+        }
       } catch (err) {
         orderSaved = false;
         console.warn("Firestore order write note:", err);
@@ -2351,11 +2433,12 @@
     window.openAdminModal = () => {
       document.getElementById("adminModal").classList.remove("hidden");
       renderAdminProducts();
+      renderAdminInventory();
       updateAdminKPIs();
     };
 
     window.switchAdminTab = (tab) => {
-      ["orders", "products", "settings"].forEach(t => {
+      ["orders", "products", "inventory", "settings"].forEach(t => {
         document.getElementById(`adminTab${t.charAt(0).toUpperCase() + t.slice(1)}`).classList.toggle("hidden", t !== tab);
         const btn = document.getElementById(`tabBtn${t.charAt(0).toUpperCase() + t.slice(1)}`);
         if (t === tab) {
@@ -2365,6 +2448,29 @@
           btn.classList.remove("border-brandOrange-500", "text-brandOrange-600", "font-black");
           btn.classList.add("border-transparent", "text-slate-500");
         }
+      });
+    };
+
+    function updateAdminKPIs() {
+      document.getElementById("kpiTotalOrders").textContent = adminOrders.length;
+      document.getElementById("kpiPendingOrders").textContent = adminOrders.filter(o => o.status === "قيد المراجعة").length;
+      const rev = adminOrders.filter(o => o.status !== "ملغي").reduce((s, o) => s + Number(o.total || 0), 0);
+      document.getElementById("kpiRevenue").textContent = rev.toLocaleString();
+
+      const lowLimit = Number(storeSettings.lowStockLimit) || 3;
+      const alertItems = products.filter(p => {
+        const s = typeof p.stock === "number" ? p.stock : (p.inStock === false ? 0 : 10);
+        return s <= lowLimit || p.inStock === false;
+      });
+      document.getElementById("kpiLowStock").textContent = alertItems.length;
+      const invBadge = document.getElementById("invAlertBadge");
+      if (alertItems.length > 0) {
+        invBadge.textContent = alertItems.length;
+        invBadge.classList.remove("hidden");
+      } else {
+        invBadge.classList.add("hidden");
+      }
+    }
       });
     };
 
@@ -2487,13 +2593,15 @@
       }
 
       const editId = document.getElementById("editProductId").value;
+      const stockVal = Math.max(0, Number(document.getElementById("prodStock").value || 0));
       const data = {
         name: document.getElementById("prodName").value.trim(),
         category: document.getElementById("prodCategory").value.trim(),
         badge: document.getElementById("prodBadge").value.trim(),
         price: Number(document.getElementById("prodPrice").value),
         oldPrice: Number(document.getElementById("prodOldPrice").value || 0),
-        inStock: document.getElementById("prodInStock").checked,
+        stock: stockVal,
+        inStock: stockVal > 0 ? document.getElementById("prodInStock").checked : false,
         image: document.getElementById("prodImageUrl").value.trim(),
         description: document.getElementById("prodDesc").value.trim(),
         updatedAtMs: Date.now()
@@ -2530,6 +2638,7 @@
       document.getElementById("prodBadge").value = p.badge || "";
       document.getElementById("prodPrice").value = p.price || "";
       document.getElementById("prodOldPrice").value = p.oldPrice || "";
+      document.getElementById("prodStock").value = typeof p.stock === "number" ? p.stock : (p.inStock === false ? 0 : 10);
       document.getElementById("prodInStock").checked = p.inStock !== false;
       document.getElementById("prodImageUrl").value = p.image || "";
       document.getElementById("prodDesc").value = p.description || "";
@@ -2541,62 +2650,107 @@
     window.resetProductForm = () => {
       document.getElementById("productForm").reset();
       document.getElementById("editProductId").value = "";
+      document.getElementById("prodStock").value = 10;
       document.getElementById("prodInStock").checked = true;
       document.getElementById("productFormTitle").textContent = "+ إضافة منتج جديد للمتجر";
       document.getElementById("cancelEditProductBtn").classList.add("hidden");
     };
-
-    window.deleteProduct = async (id) => {
-      if (id.startsWith("starter-")) {
-        showToast("هذا منتج عرض مؤقت، أضف منتجاتك الحقيقية وسيختفي تلقائياً");
-        return;
-      }
-      const confirmed = await showConfirmDialog("حذف المنتج", "هل تريد حذف هذا المنتج نهائياً من واجهة المتجر؟");
-      if (!confirmed) return;
-      try {
-        await deleteDoc(doc(db, "products", id));
-        showToast("تم حذف المنتج");
-      } catch (err) {
-        showToast("تعذر حذف المنتج");
-      }
-    };
-
-    window.seedDefaultProductsToFirestore = async () => {
-      if (!currentUser) return;
-      try {
-        for (const item of STARTER_PRODUCTS) {
-          const { id, ...cleanItem } = item;
-          await addDoc(collection(db, "products"), cleanItem);
-        }
-        showToast("تمت إضافة 4 منتجات جاهزة إلى قاعدة البيانات!");
-      } catch (err) {
-        showToast("خطأ: تأكد من صلاحيات الإيميل في Firestore Rules");
-      }
-    };
-
-    function renderAdminProducts() {
-      const realCount = isUsingStarterFallback ? 0 : products.length;
-      document.getElementById("adminProdCount").textContent = realCount;
-      const list = document.getElementById("adminProductsList");
-
-      if (isUsingStarterFallback) {
-        list.innerHTML = `<p class="col-span-full text-xs text-slate-500 bg-slate-100 dark:bg-slate-800 p-4 rounded-2xl">قاعدة البيانات فارغة حالياً ويظهر للزوار منتجات البداية المؤقتة. أضف أول منتج حقيقي لمتجرك من الفورم بالأعلى.</p>`;
-        return;
-      }
-
-      list.innerHTML = products.map(p => `
+      list.innerHTML = products.map(p => {
+        const stockQty = typeof p.stock === "number" ? p.stock : (p.inStock === false ? 0 : 10);
+        const lowLimit = Number(storeSettings.lowStockLimit) || 3;
+        const stockBadge = stockQty === 0
+          ? `<span class="text-rose-600 font-bold">نفذ (0)</span>`
+          : (stockQty <= lowLimit
+            ? `<span class="text-amber-700 font-bold">قرب يخلص (${stockQty})</span>`
+            : `<span class="text-emerald-600 font-bold">متوفر (${stockQty})</span>`);
+        return `
         <div class="flex items-center justify-between gap-3 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
           <div class="min-w-0">
             <p class="font-extrabold text-xs sm:text-sm truncate">${esc(p.name)}</p>
-            <p class="text-xs text-brandOrange-600 font-bold">${Number(p.price).toLocaleString()} ج.م <span class="text-slate-400 font-normal">(${esc(p.category)})</span></p>
+            <p class="text-xs text-brandOrange-600 font-bold">${Number(p.price).toLocaleString()} ج.م <span class="text-slate-400 font-normal">(${esc(p.category)})</span> • ${stockBadge}</p>
           </div>
           <div class="flex items-center gap-1.5 shrink-0">
             <button onclick="editProduct('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-brandTeal-600 text-white text-xs font-bold">تعديل</button>
             <button onclick="deleteProduct('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-rose-600 text-white text-xs font-bold">حذف</button>
           </div>
         </div>
-      `).join("");
+      `;
+      }).join("");
     }
+
+    window.renderAdminInventory = () => {
+      const filter = document.getElementById("inventoryFilter").value;
+      const lowLimit = Number(storeSettings.lowStockLimit) || 3;
+      const list = document.getElementById("adminInventoryList");
+
+      const enriched = products.map(p => ({
+        ...p,
+        stockNum: typeof p.stock === "number" ? p.stock : (p.inStock === false ? 0 : 10)
+      })).sort((a, b) => a.stockNum - b.stockNum);
+
+      const filtered = enriched.filter(p => {
+        if (filter === "out") return p.stockNum === 0;
+        if (filter === "low") return p.stockNum > 0 && p.stockNum <= lowLimit;
+        if (filter === "ok") return p.stockNum > lowLimit;
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        list.innerHTML = `<p class="text-center text-xs text-slate-400 py-10">لا توجد أصناف مطابقة لهذا التصنيف.</p>`;
+        return;
+      }
+
+      list.innerHTML = filtered.map(p => {
+        const isOut = p.stockNum === 0;
+        const isLow = p.stockNum > 0 && p.stockNum <= lowLimit;
+        const statusPill = isOut
+          ? `<span class="px-2.5 py-1 rounded-full bg-rose-600 text-white font-black text-[11px]">نفذت الكمية</span>`
+          : (isLow
+            ? `<span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 border border-amber-200 font-black text-[11px]">⚠️ قرب يخلص</span>`
+            : `<span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-black text-[11px]">✓ متوفر</span>`);
+
+        return `
+          <div class="flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border ${isOut ? "border-rose-400/50" : isLow ? "border-amber-300" : "border-slate-200 dark:border-slate-700"}">
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center gap-2 flex-wrap">
+                <p class="font-extrabold text-xs sm:text-sm">${esc(p.name)}</p>
+                ${statusPill}
+              </div>
+              <p class="text-[11px] text-slate-500 mt-0.5">${esc(p.category || "عام")} • السعر: ${Number(p.price).toLocaleString()} ج.م</p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button onclick="adjustProductStock('${p.id}', -1)" class="w-8 h-8 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 font-black text-rose-600 hover:bg-slate-100">-</button>
+              <div class="text-center min-w-[3.5rem]">
+                <span class="font-black text-base ${isOut ? "text-rose-600" : isLow ? "text-amber-700" : "text-slate-900 dark:text-white"}">${p.stockNum}</span>
+                <span class="block text-[10px] text-slate-400">قطعة</span>
+              </div>
+              <button onclick="adjustProductStock('${p.id}', 1)" class="w-8 h-8 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 font-black text-emerald-600 hover:bg-slate-100">+</button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    };
+
+    window.adjustProductStock = async (id, delta) => {
+      if (id.startsWith("starter-")) {
+        showToast("أضف منتجاتك الحقيقية أولاً لتتمكن من تعديل مخزونها");
+        return;
+      }
+      const p = products.find(item => item.id === id);
+      if (!p) return;
+      const currentStock = typeof p.stock === "number" ? p.stock : (p.inStock === false ? 0 : 10);
+      const nextStock = Math.max(0, currentStock + delta);
+      try {
+        await updateDoc(doc(db, "products", id), {
+          stock: nextStock,
+          inStock: nextStock > 0
+        });
+        showToast(`تم تحديث مخزون "${p.name}" إلى ${nextStock} قطعة`);
+      } catch (err) {
+        showToast("تعذر تحديث المخزون");
+      }
+    };
 
     window.saveStoreSettings = async (e) => {
       e.preventDefault();
@@ -2604,11 +2758,16 @@
         wa1: document.getElementById("setWa1").value.trim(),
         wa2: document.getElementById("setWa2").value.trim(),
         freeShippingThreshold: Number(document.getElementById("setFreeShip").value || 3000),
+        lowStockLimit: Math.max(1, Number(document.getElementById("setLowStockLimit").value || 3)),
         instagramUrl: document.getElementById("setInstagram").value.trim(),
         tiktokUrl: document.getElementById("setTiktok").value.trim()
       };
       localStorage.setItem("shady_settings", JSON.stringify(storeSettings));
       applySettingsUI();
+      renderProducts();
+      renderAdminProducts();
+      renderAdminInventory();
+      updateAdminKPIs();
       try {
         await setDoc(doc(db, "settings", "store"), storeSettings);
       } catch (_) {}
