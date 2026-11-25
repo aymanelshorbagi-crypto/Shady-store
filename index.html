@@ -823,36 +823,11 @@
       document.getElementById("topFreeShippingText").textContent = Number(freeShippingThreshold).toLocaleString();
       document.getElementById("topWaLink1").href = `https://wa.me/${intl1}`;
       document.getElementById("topWaLink1").querySelector("span[dir='ltr']").textContent = wa1;
-      document.getElementById("topWaLink2").href = `https://wa.me/${intl2}`;
-      document.getElementById("topWaLink2").querySelector("span[dir='ltr']").textContent = wa2;
-
-      document.getElementById("heroWaBtn").href = `https://wa.me/${intl1}?text=${encodeURIComponent("أهلاً Shady Store، عندي استفسار عن المنتجات")}`;
-      document.getElementById("footerWa1").href = `https://wa.me/${intl1}`;
+      document.getElementById("topWaLink2").href = `https://wa.me/${intl2}`; document.getElementById("topWaLink2").querySelector("span[dir='ltr']").textContent = wa2;  document.getElementById("heroWaBtn").href = `https://wa.me/${intl1}?text=${encodeURIComponent("أهلاً Shady Store، عندي استفسار عن المنتجات")}`; document.getElementById("footerWa1").href = `https://wa.me/${intl1}`;
       document.getElementById("footerPhone1Text").textContent = wa1;
-      document.getElementById("footerWa2").href = `https://wa.me/${intl2}`;
-      document.getElementById("footerPhone2Text").textContent = wa2;
-
-      document.getElementById("widgetPhone1").textContent = wa1;
-      document.getElementById("widgetWaLink1").href = `https://wa.me/${intl1}`;
+      document.getElementById("footerWa2").href = `https://wa.me/${intl2}`; document.getElementById("footerPhone2Text").textContent = wa2;  document.getElementById("widgetPhone1").textContent = wa1; document.getElementById("widgetWaLink1").href = `https://wa.me/${intl1}`;
       document.getElementById("widgetPhone2").textContent = wa2;
-      document.getElementById("widgetWaLink2").href = `https://wa.me/${intl2}`;
-
-      document.getElementById("setWa1").value = wa1;
-      document.getElementById("setWa2").value = wa2;
-      document.getElementById("setFreeShip").value = freeShippingThreshold;
-      updateTotals();
-    }
-
-    // Listen to Products in Firestore
-    onSnapshot(collection(db, "products"), (snapshot) => {
-      if (snapshot.empty) {
-        isUsingStarterFallback = true;
-        products = [...STARTER_PRODUCTS];
-        document.getElementById("dbStatusBadge").textContent = "جاهز (باقة البداية)";
-      } else {
-        isUsingStarterFallback = false;
-        products = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
-        document.getElementById("dbStatusBadge").textContent = `متصل مباشر (${products.length} منتج)`;
+      document.getElementById("widgetWaLink2").href = `https://wa.me/${intl2}`;  document.getElementById("setWa1").value = wa1; document.getElementById("setWa2").value = wa2; document.getElementById("setFreeShip").value = freeShippingThreshold; updateTotals(); }  // Listen to Products in Firestore onSnapshot(collection(db, "products"), (snapshot) => { if (snapshot.empty) { isUsingStarterFallback = true; products = [...STARTER_PRODUCTS]; document.getElementById("dbStatusBadge").textContent = "جاهز (باقة البداية)"; } else { isUsingStarterFallback = false; products = snapshot.docs.map(d => ({ id: d.id, ...d.data() })); document.getElementById("dbStatusBadge").textContent = `متصل مباشر (${products.length} منتج)`;
       }
       renderCategories();
       renderProducts();
@@ -888,40 +863,7 @@
         loginView.classList.add("hidden");
         dashView.classList.remove("hidden");
         signOutBtn.classList.remove("hidden");
-        statusText.textContent = `مسجل الدخول كـ: ${user.email}`;
-
-        // Subscribe to real-time orders
-        if (unsubOrders) unsubOrders();
-        unsubOrders = onSnapshot(collection(db, "orders"), (snap) => {
-          adminOrders = snap.docs.map(d => ({ docId: d.id, ...d.data() }));
-          adminOrders.sort((a, b) => (b.createdAtMs || 0) - (a.createdAtMs || 0));
-          renderAdminOrders();
-          updateAdminKPIs();
-        }, (err) => {
-          console.error("Orders read error:", err);
-          showToast("تنبيه: تأكد من إضافة إيميلك في Firestore Rules لقراءة الطلبات.");
-        });
-      } else {
-        loginView.classList.remove("hidden");
-        dashView.classList.add("hidden");
-        signOutBtn.classList.add("hidden");
-        statusText.textContent = "إدارة المنتجات، طلبات العملاء، وإعدادات المتجر";
-        if (unsubOrders) { unsubOrders(); unsubOrders = null; }
-      }
-    });
-
-    window.adminGoogleLogin = async () => {
-      const errEl = document.getElementById("adminLoginError");
-      errEl.classList.add("hidden");
-      try {
-        await signInWithPopup(auth, provider);
-        showToast("تم تسجيل الدخول بنجاح!");
-      } catch (err) {
-        console.error("Login error:", err);
-        if (err.code === "auth/popup-blocked" || err.code === "auth/operation-not-supported-in-this-environment") {
-          await signInWithRedirect(auth, provider);
-        } else {
-          errEl.textContent = `تعذر تسجيل الدخول: ${err.message}`;
+        statusText.textContent = `مسجل الدخول كـ: ${user.email}`;  // Subscribe to real-time orders if (unsubOrders) unsubOrders(); unsubOrders = onSnapshot(collection(db, "orders"), (snap) => { adminOrders = snap.docs.map(d => ({ docId: d.id, ...d.data() })); adminOrders.sort((a, b) => (b.createdAtMs \vert{}\vert{} 0) - (a.createdAtMs \vert{}\vert{} 0)); renderAdminOrders(); updateAdminKPIs(); }, (err) => { console.error("Orders read error:", err); showToast("تنبيه: تأكد من إضافة إيميلك في Firestore Rules لقراءة الطلبات."); }); } else { loginView.classList.remove("hidden"); dashView.classList.add("hidden"); signOutBtn.classList.add("hidden"); statusText.textContent = "إدارة المنتجات، طلبات العملاء، وإعدادات المتجر"; if (unsubOrders) { unsubOrders(); unsubOrders = null; } } });  window.adminGoogleLogin = async () => { const errEl = document.getElementById("adminLoginError"); errEl.classList.add("hidden"); try { await signInWithPopup(auth, provider); showToast("تم تسجيل الدخول بنجاح!"); } catch (err) { console.error("Login error:", err); if (err.code === "auth/popup-blocked" \vert{}\vert{} err.code === "auth/operation-not-supported-in-this-environment") { await signInWithRedirect(auth, provider); } else { errEl.textContent = `تعذر تسجيل الدخول: ${err.message}`;
           errEl.classList.remove("hidden");
         }
       }
@@ -937,11 +879,7 @@
       const container = document.getElementById("categoryTabs");
       container.innerHTML = cats.map(cat => {
         const active = cat === currentCategory;
-        return `<button onclick="selectCategory('${cat.replace(/'/g, "\'")}')" class="shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition ${
-          active
-            ? "bg-brandOrange-500 text-white shadow-md shadow-brandOrange-500/25"
-            : "bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brandTeal-500"
-        }">${cat}</button>`;
+        return `<button onclick="selectCategory('${cat.replace(/'/g, "\\'")}')" class="shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition ${ active ? "bg-brandOrange-500 text-white shadow-md shadow-brandOrange-500/25" : "bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brandTeal-500" }">${cat}</button>`;
       }).join("");
     }
 
@@ -1177,132 +1115,26 @@
 
       const grandTotal = subTotal + shipping;
       document.getElementById("subTotalVal").textContent = subTotal.toLocaleString();
-      document.getElementById("shippingVal").textContent = shipping === 0 && subTotal > 0 ? "مجاني 🎉" : `${shipping} ج.م`;
-      document.getElementById("grandTotalVal").textContent = grandTotal.toLocaleString();
-
-      // Update free shipping bar
-      const pct = Math.min(100, Math.round((subTotal / threshold) * 100));
-      document.getElementById("freeShippingBar").style.width = `${pct}%`;
+      document.getElementById("shippingVal").textContent = shipping === 0 && subTotal > 0 ? "مجاني 🎉" : `${shipping} ج.م`; document.getElementById("grandTotalVal").textContent = grandTotal.toLocaleString();  // Update free shipping bar const pct = Math.min(100, Math.round((subTotal / threshold) * 100)); document.getElementById("freeShippingBar").style.width = `${pct}%`;
       if (subTotal >= threshold) {
         document.getElementById("freeShippingMsg").textContent = "مبروك! حصلت على شحن مجاني بالكامل 🎉";
       } else {
         const diff = threshold - subTotal;
-        document.getElementById("freeShippingMsg").textContent = `أضف منتجات بقيمة ${diff.toLocaleString()} ج.م للحصول على شحن مجاني!`;
-      }
-    };
-
-    window.submitOrder = async (e) => {
-      e.preventDefault();
-      if (cart.length === 0) return;
-
-      const name = document.getElementById("custName").value.trim();
-      const phone = document.getElementById("custPhone").value.trim();
-      if (!/^01[0125][0-9]{8}$/.test(phone.replace(/\s+/g, ""))) {
-        showToast("يرجى إدخال رقم موبايل مصري صحيح مكون من 11 رقم");
-        return;
-      }
-
-      const deliveryType = document.querySelector("input[name='deliveryType']:checked").value;
-      const gov = deliveryType === "delivery" ? document.getElementById("custGov").value : "استلام من الفرع";
-      const address = deliveryType === "delivery" ? document.getElementById("custAddress").value.trim() : "استلام مباشر من الفرع";
-      const payment = document.getElementById("custPayment").value;
-      const notes = document.getElementById("custNotes").value.trim();
-
-      const subTotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-      const threshold = Number(storeSettings.freeShippingThreshold) || 3000;
-      const govSelect = document.getElementById("custGov");
-      const rawShip = Number(govSelect.options[govSelect.selectedIndex].getAttribute("data-ship") || 60);
-      const shipping = deliveryType === "pickup" ? 0 : (subTotal >= threshold ? 0 : rawShip);
-      const total = subTotal + shipping;
-
-      const orderId = "SHD-" + Math.floor(1000 + Math.random() * 9000);
-      const orderPayload = {
-        orderId,
-        customerName: name,
-        customerPhone: phone,
-        deliveryType,
-        governorate: gov,
-        address,
-        paymentMethod: payment,
-        notes,
-        items: cart.map(c => ({ id: c.id, name: c.name, price: c.price, qty: c.qty })),
-        subTotal,
-        shipping,
-        total,
-        status: "قيد المراجعة",
-        createdAtMs: Date.now(),
-        createdAtText: new Date().toLocaleString("ar-EG")
-      };
-
-      const btn = document.getElementById("submitOrderBtn");
-      btn.disabled = true;
-      btn.textContent = "جاري إرسال الطلب...";
-
-      try {
-        await addDoc(collection(db, "orders"), {
-          ...orderPayload,
-          createdAt: serverTimestamp()
-        });
-      } catch (err) {
-        console.warn("Firestore order write note:", err);
-      }
-
-      // Save locally for customer receipt tracking
-      myOrders.unshift(orderPayload);
-      localStorage.setItem("shady_my_orders", JSON.stringify(myOrders));
-      updateMyOrdersBadge();
-
-      // Clear cart
-      cart = [];
-      saveCart();
-      toggleCart(false);
-      btn.disabled = false;
-      btn.textContent = "تأكيد وإرسال الطلب الآن ✓";
-
-      // Show Receipt Modal
-      document.getElementById("receiptOrderId").textContent = orderId;
-      const itemsText = orderPayload.items.map(i => `• ${i.name} (×${i.qty}) = ${(i.price * i.qty).toLocaleString()} ج.م`).join("
-");
+        document.getElementById("freeShippingMsg").textContent = `أضف منتجات بقيمة ${diff.toLocaleString()} ج.م للحصول على شحن مجاني!`; } };  window.submitOrder = async (e) => { e.preventDefault(); if (cart.length === 0) return;  const name = document.getElementById("custName").value.trim(); const phone = document.getElementById("custPhone").value.trim(); if (!/^01[0125][0-9]{8}$/.test(phone.replace(/\s+/g, ""))) { showToast("يرجى إدخال رقم موبايل مصري صحيح مكون من 11 رقم"); return; }  const deliveryType = document.querySelector("input[name='deliveryType']:checked").value; const gov = deliveryType === "delivery" ? document.getElementById("custGov").value : "استلام من الفرع"; const address = deliveryType === "delivery" ? document.getElementById("custAddress").value.trim() : "استلام مباشر من الفرع"; const payment = document.getElementById("custPayment").value; const notes = document.getElementById("custNotes").value.trim();  const subTotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0); const threshold = Number(storeSettings.freeShippingThreshold) \vert{}\vert{} 3000; const govSelect = document.getElementById("custGov"); const rawShip = Number(govSelect.options[govSelect.selectedIndex].getAttribute("data-ship") \vert{}\vert{} 60); const shipping = deliveryType === "pickup" ? 0 : (subTotal >= threshold ? 0 : rawShip); const total = subTotal + shipping;  const orderId = "SHD-" + Math.floor(1000 + Math.random() * 9000); const orderPayload = { orderId, customerName: name, customerPhone: phone, deliveryType, governorate: gov, address, paymentMethod: payment, notes, items: cart.map(c => ({ id: c.id, name: c.name, price: c.price, qty: c.qty })), subTotal, shipping, total, status: "قيد المراجعة", createdAtMs: Date.now(), createdAtText: new Date().toLocaleString("ar-EG") };  const btn = document.getElementById("submitOrderBtn"); btn.disabled = true; btn.textContent = "جاري إرسال الطلب...";  try { await addDoc(collection(db, "orders"), { ...orderPayload, createdAt: serverTimestamp() }); } catch (err) { console.warn("Firestore order write note:", err); }  // Save locally for customer receipt tracking myOrders.unshift(orderPayload); localStorage.setItem("shady_my_orders", JSON.stringify(myOrders)); updateMyOrdersBadge();  // Clear cart cart = []; saveCart(); toggleCart(false); btn.disabled = false; btn.textContent = "تأكيد وإرسال الطلب الآن ✓";  // Show Receipt Modal document.getElementById("receiptOrderId").textContent = orderId; const itemsText = orderPayload.items.map(i => `• ${i.name} (×${i.qty}) =${(i.price * i.qty).toLocaleString()} ج.م`).join("\n");
       document.getElementById("receiptDetailsBox").innerHTML = `
         <p><strong>العميل:</strong> ${name} (<span dir="ltr">${phone}</span>)</p>
-        <p><strong>الاستلام:</strong> ${gov} - ${address}</p>
+        <p><strong>الاستلام:</strong> ${gov} -${address}</p>
         <p><strong>الدفع:</strong> ${payment}</p>
         <p><strong>الإجمالي:</strong> <span class="text-brandOrange-600 font-black">${total.toLocaleString()} ج.م</span></p>
       `;
 
       const waReceiptMsg = encodeURIComponent(
-        `طلب جديد من موقع *Shady Store* 🛍️
-` +
-        `رقم الطلب: *${orderId}*
-` +
-        `الاسم: ${name}
-` +
-        `الموبايل: ${phone}
-` +
-        `العنوان: ${gov} - ${address}
-` +
-        `طريقة الدفع: ${payment}
-` +
-        `------------------
-` +
-        `${itemsText}
-` +
-        `------------------
-` +
-        `الشحن: ${shipping === 0 ? "مجاني" : shipping + " ج.م"}
-` +
-        `الإجمالي: *${total.toLocaleString()} ج.م*`
-      );
-
-      document.getElementById("receiptWaBtn1").href = `https://wa.me/${formatWaIntl(storeSettings.wa1)}?text=${waReceiptMsg}`;
-      document.getElementById("receiptWaBtn2").href = `https://wa.me/${formatWaIntl(storeSettings.wa2)}?text=${waReceiptMsg}`;
-      document.getElementById("orderSuccessModal").classList.remove("hidden");
-    };
-
-    window.copyOrderId = () => {
-      const id = document.getElementById("receiptOrderId").textContent;
-      navigator.clipboard?.writeText(id);
-      showToast(`تم نسخ رقم الطلب: ${id}`);
+        `طلب جديد من موقع *Shady Store* 🛍️\n` +
+        `رقم الطلب: *${orderId}*\n` + `الاسم: ${name}\n` +
+        `الموبايل: ${phone}\n` + `العنوان: ${gov} - ${address}\n` + `طريقة الدفع: ${payment}\n` +
+        `------------------\n` +
+        `${itemsText}\n` + `------------------\n` + `الشحن: ${shipping === 0 ? "مجاني" : shipping + " ج.م"}\n` +
+        `الإجمالي: *${total.toLocaleString()} ج.م*` );  document.getElementById("receiptWaBtn1").href = `https://wa.me/${formatWaIntl(storeSettings.wa1)}?text=${waReceiptMsg}`; document.getElementById("receiptWaBtn2").href = `https://wa.me/${formatWaIntl(storeSettings.wa2)}?text=${waReceiptMsg}`; document.getElementById("orderSuccessModal").classList.remove("hidden"); };  window.copyOrderId = () => { const id = document.getElementById("receiptOrderId").textContent; navigator.clipboard?.writeText(id); showToast(`تم نسخ رقم الطلب: ${id}`);
     };
 
     function updateMyOrdersBadge() {
@@ -1325,7 +1157,7 @@
               <span class="text-slate-400">${o.createdAtText || ""}</span>
             </div>
             <p class="font-bold">${o.items.map(i => `${i.name} (×${i.qty})`).join(" ، ")}</p>
-            <p class="text-slate-500">${o.governorate} - ${o.address}</p>
+            <p class="text-slate-500">${o.governorate} -${o.address}</p>
             <div class="flex items-center justify-between pt-1">
               <span class="font-black text-brandOrange-600 text-sm">${Number(o.total).toLocaleString()} ج.م</span>
               <span class="px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold">${o.status}</span>
@@ -1345,8 +1177,7 @@
 
     window.switchAdminTab = (tab) => {
       ["orders", "products", "settings"].forEach(t => {
-        document.getElementById(`adminTab${t.charAt(0).toUpperCase() + t.slice(1)}`).classList.toggle("hidden", t !== tab);
-        const btn = document.getElementById(`tabBtn${t.charAt(0).toUpperCase() + t.slice(1)}`);
+        document.getElementById(`adminTab${t.charAt(0).toUpperCase() + t.slice(1)}`).classList.toggle("hidden", t !== tab); const btn = document.getElementById(`tabBtn${t.charAt(0).toUpperCase() + t.slice(1)}`);
         if (t === tab) {
           btn.classList.add("border-brandOrange-500", "text-brandOrange-600", "font-black");
           btn.classList.remove("border-transparent", "text-slate-500");
@@ -1378,11 +1209,8 @@
       list.innerHTML = filtered.map(o => {
         const custWa = formatWaIntl(o.customerPhone || "");
         const confirmMsg = encodeURIComponent(
-          `أهلاً أ/ ${o.customerName}، مع حضرتك خدمة عملاء *Shady Store* 🛍️
-` +
-          `بخصوص طلبك رقم *${o.orderId}* بإجمالي *${Number(o.total).toLocaleString()} ج.م*.
-` +
-          `حالة الطلب الحالية: *${o.status}*`
+          `أهلاً أ/ ${o.customerName}، مع حضرتك خدمة عملاء *Shady Store* 🛍️\n` +
+          `بخصوص طلبك رقم *${o.orderId}* بإجمالي *${Number(o.total).toLocaleString()} ج.م*.\n` + `حالة الطلب الحالية: *${o.status}*`
         );
         return `
           <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 space-y-2.5 text-xs">
@@ -1400,7 +1228,7 @@
             </div>
 
             <div class="flex flex-wrap justify-between gap-2 text-slate-600 dark:text-slate-300">
-              <span>📍 ${o.governorate} - ${o.address}</span>
+              <span>📍 ${o.governorate} -${o.address}</span>
               <span>💳 ${o.paymentMethod} | الإجمالي: <strong class="text-brandOrange-600 text-sm">${Number(o.total).toLocaleString()} ج.م</strong></span>
             </div>
             ${o.notes ? `<p class="text-amber-700 dark:text-amber-300">📝 ملاحظة: ${o.notes}</p>` : ""}
@@ -1424,104 +1252,7 @@
     window.updateOrderStatus = async (docId, newStatus) => {
       try {
         await updateDoc(doc(db, "orders", docId), { status: newStatus });
-        showToast(`تم تحديث حالة الطلب إلى: ${newStatus}`);
-      } catch (err) {
-        showToast("خطأ في تحديث الحالة: تأكد من صلاحيات الإيميل في Rules");
-      }
-    };
-
-    window.deleteOrder = async (docId) => {
-      if (!confirm("هل أنت متأكد من حذف هذا الطلب نهائياً؟")) return;
-      try {
-        await deleteDoc(doc(db, "orders", docId));
-        showToast("تم حذف الطلب");
-      } catch (err) {
-        showToast("تعذر حذف الطلب");
-      }
-    };
-
-    // Compress uploaded image via Canvas so it fits cleanly in Firestore
-    window.handleImageUpload = (event) => {
-      const file = event.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const img = new Image();
-        img.onload = () => {
-          const canvas = document.createElement("canvas");
-          const MAX_SIZE = 550;
-          let w = img.width;
-          let h = img.height;
-          if (w > h && w > MAX_SIZE) { h *= MAX_SIZE / w; w = MAX_SIZE; }
-          else if (h > MAX_SIZE) { w *= MAX_SIZE / h; h = MAX_SIZE; }
-          canvas.width = w;
-          canvas.height = h;
-          const ctx = canvas.getContext("2d");
-          ctx.drawImage(img, 0, 0, w, h);
-          const compressedDataUrl = canvas.toDataURL("image/jpeg", 0.72);
-          document.getElementById("prodImageUrl").value = compressedDataUrl;
-          showToast("تم تجهيز وضغط الصورة بنجاح ✓");
-        };
-        img.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    };
-
-    window.saveProduct = async (e) => {
-      e.preventDefault();
-      if (!currentUser) {
-        showToast("يرجى تسجيل الدخول بحساب Google أولاً");
-        return;
-      }
-
-      const editId = document.getElementById("editProductId").value;
-      const data = {
-        name: document.getElementById("prodName").value.trim(),
-        category: document.getElementById("prodCategory").value.trim(),
-        badge: document.getElementById("prodBadge").value.trim(),
-        price: Number(document.getElementById("prodPrice").value),
-        oldPrice: Number(document.getElementById("prodOldPrice").value || 0),
-        inStock: document.getElementById("prodInStock").checked,
-        image: document.getElementById("prodImageUrl").value.trim(),
-        description: document.getElementById("prodDesc").value.trim(),
-        updatedAtMs: Date.now()
-      };
-
-      const btn = document.getElementById("saveProductBtn");
-      btn.disabled = true;
-      btn.textContent = "جاري الحفظ...";
-
-      try {
-        if (editId && !editId.startsWith("starter-")) {
-          await updateDoc(doc(db, "products", editId), data);
-          showToast("تم تعديل المنتج بنجاح ✓");
-        } else {
-          await addDoc(collection(db, "products"), data);
-          showToast("تم إضافة المنتج للمتجر بنجاح ✓");
-        }
-        resetProductForm();
-      } catch (err) {
-        console.error("Save product error:", err);
-        showToast("خطأ في الحفظ: تأكد من كتابة إيميلك الصحيح في Firestore Rules");
-      } finally {
-        btn.disabled = false;
-        btn.textContent = "حفظ المنتج في المتجر";
-      }
-    };
-
-    window.editProduct = (id) => {
-      const p = products.find(item => item.id === id);
-      if (!p) return;
-      document.getElementById("editProductId").value = p.id;
-      document.getElementById("prodName").value = p.name || "";
-      document.getElementById("prodCategory").value = p.category || "";
-      document.getElementById("prodBadge").value = p.badge || "";
-      document.getElementById("prodPrice").value = p.price || "";
-      document.getElementById("prodOldPrice").value = p.oldPrice || "";
-      document.getElementById("prodInStock").checked = p.inStock !== false;
-      document.getElementById("prodImageUrl").value = p.image || "";
-      document.getElementById("prodDesc").value = p.description || "";
-      document.getElementById("productFormTitle").textContent = `✏️ تعديل المنتج: ${p.name}`;
+        showToast(`تم تحديث حالة الطلب إلى: ${newStatus}`); } catch (err) { showToast("خطأ في تحديث الحالة: تأكد من صلاحيات الإيميل في Rules"); } };  window.deleteOrder = async (docId) => { if (!confirm("هل أنت متأكد من حذف هذا الطلب نهائياً؟")) return; try { await deleteDoc(doc(db, "orders", docId)); showToast("تم حذف الطلب"); } catch (err) { showToast("تعذر حذف الطلب"); } };  // Compress uploaded image via Canvas so it fits cleanly in Firestore window.handleImageUpload = (event) => { const file = event.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = (e) => { const img = new Image(); img.onload = () => { const canvas = document.createElement("canvas"); const MAX_SIZE = 550; let w = img.width; let h = img.height; if (w > h && w > MAX_SIZE) { h *= MAX_SIZE / w; w = MAX_SIZE; } else if (h > MAX_SIZE) { w *= MAX_SIZE / h; h = MAX_SIZE; } canvas.width = w; canvas.height = h; const ctx = canvas.getContext("2d"); ctx.drawImage(img, 0, 0, w, h); const compressedDataUrl = canvas.toDataURL("image/jpeg", 0.72); document.getElementById("prodImageUrl").value = compressedDataUrl; showToast("تم تجهيز وضغط الصورة بنجاح ✓"); }; img.src = e.target.result; }; reader.readAsDataURL(file); };  window.saveProduct = async (e) => { e.preventDefault(); if (!currentUser) { showToast("يرجى تسجيل الدخول بحساب Google أولاً"); return; }  const editId = document.getElementById("editProductId").value; const data = { name: document.getElementById("prodName").value.trim(), category: document.getElementById("prodCategory").value.trim(), badge: document.getElementById("prodBadge").value.trim(), price: Number(document.getElementById("prodPrice").value), oldPrice: Number(document.getElementById("prodOldPrice").value \vert{}\vert{} 0), inStock: document.getElementById("prodInStock").checked, image: document.getElementById("prodImageUrl").value.trim(), description: document.getElementById("prodDesc").value.trim(), updatedAtMs: Date.now() };  const btn = document.getElementById("saveProductBtn"); btn.disabled = true; btn.textContent = "جاري الحفظ...";  try { if (editId && !editId.startsWith("starter-")) { await updateDoc(doc(db, "products", editId), data); showToast("تم تعديل المنتج بنجاح ✓"); } else { await addDoc(collection(db, "products"), data); showToast("تم إضافة المنتج للمتجر بنجاح ✓"); } resetProductForm(); } catch (err) { console.error("Save product error:", err); showToast("خطأ في الحفظ: تأكد من كتابة إيميلك الصحيح في Firestore Rules"); } finally { btn.disabled = false; btn.textContent = "حفظ المنتج في المتجر"; } };  window.editProduct = (id) => { const p = products.find(item => item.id === id); if (!p) return; document.getElementById("editProductId").value = p.id; document.getElementById("prodName").value = p.name \vert{}\vert{} ""; document.getElementById("prodCategory").value = p.category \vert{}\vert{} ""; document.getElementById("prodBadge").value = p.badge \vert{}\vert{} ""; document.getElementById("prodPrice").value = p.price \vert{}\vert{} ""; document.getElementById("prodOldPrice").value = p.oldPrice \vert{}\vert{} ""; document.getElementById("prodInStock").checked = p.inStock !== false; document.getElementById("prodImageUrl").value = p.image \vert{}\vert{} ""; document.getElementById("prodDesc").value = p.description \vert{}\vert{} ""; document.getElementById("productFormTitle").textContent = `✏️ تعديل المنتج: ${p.name}`;
       document.getElementById("cancelEditProductBtn").classList.remove("hidden");
       document.getElementById("adminTabProducts").scrollTo({ top: 0, behavior: "smooth" });
     };
@@ -1575,70 +1306,4 @@
         <div class="flex items-center justify-between gap-3 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
           <div class="min-w-0">
             <p class="font-extrabold text-xs sm:text-sm truncate">${p.name}</p>
-            <p class="text-xs text-brandOrange-600 font-bold">${Number(p.price).toLocaleString()} ج.م <span class="text-slate-400 font-normal">(${p.category})</span></p>
-          </div>
-          <div class="flex items-center gap-1.5 shrink-0">
-            <button onclick="editProduct('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-brandTeal-600 text-white text-xs font-bold">تعديل</button>
-            <button onclick="deleteProduct('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-rose-600 text-white text-xs font-bold">حذف</button>
-          </div>
-        </div>
-      `).join("");
-    }
-
-    window.saveStoreSettings = async (e) => {
-      e.preventDefault();
-      storeSettings = {
-        wa1: document.getElementById("setWa1").value.trim(),
-        wa2: document.getElementById("setWa2").value.trim(),
-        freeShippingThreshold: Number(document.getElementById("setFreeShip").value || 3000)
-      };
-      localStorage.setItem("shady_settings", JSON.stringify(storeSettings));
-      applySettingsUI();
-      try {
-        await setDoc(doc(db, "settings", "store"), storeSettings);
-      } catch (_) {}
-      showToast("تم حفظ إعدادات المتجر بنجاح ✓");
-    };
-
-    // UI Helpers
-    window.toggleCart = (open) => {
-      document.getElementById("cartDrawerOverlay").classList.toggle("hidden", !open);
-      if (open) renderCart();
-    };
-
-    window.closeModal = (id) => {
-      document.getElementById(id).classList.add("hidden");
-    };
-
-    window.toggleWaWidget = () => {
-      document.getElementById("waWidgetCard").classList.toggle("hidden");
-    };
-
-    window.copyPhone = (num) => {
-      const ph = num === 1 ? storeSettings.wa1 : storeSettings.wa2;
-      navigator.clipboard?.writeText(ph);
-      showToast(`تم نسخ الرقم: ${ph}`);
-    };
-
-    window.toggleDarkMode = () => {
-      const isDark = document.documentElement.classList.toggle("dark");
-      localStorage.setItem("shady_dark", isDark);
-    };
-
-    let toastTimer = null;
-    function showToast(msg) {
-      const box = document.getElementById("toastBox");
-      document.getElementById("toastMsg").textContent = msg;
-      box.classList.remove("hidden");
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => box.classList.add("hidden"), 3200);
-    }
-    window.showToast = showToast;
-
-    // Initial render
-    applySettingsUI();
-    renderCart();
-    updateMyOrdersBadge();
-  </script>
-</body>
-</html>
+            <p class="text-xs text-brandOrange-600 font-bold">${Number(p.price).toLocaleString()} ج.م <span class="text-slate-400 font
