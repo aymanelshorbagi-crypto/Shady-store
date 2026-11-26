@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Shady Store v3 — الأزرق الحالي بس مطوّر (2026-11-26). مبنية على v2. نظام الألوان: CTA أسود #1d1d1f، الروابط والشارات أزرق #0071e3، واتساب أخضر فقط. قبل النشر: بدّل YOUR-DOMAIN.com، وارفع الصور، وبدّل آراء العملاء النموذجية بآراء حقيقية. -->
+<!-- Shady Store v4 — إصلاح الوضع الليلي (2026-11-26). مبنية على v3. السبب: Tailwind المضمّن لم يولّد كلاس النص الداكن فكان النص أبيض على خلفية بيضاء. الحل: كل أزرار CTA السوداء بقت بكلاس .cta-black عادي في CSS، مش Tailwind. -->
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -612,6 +612,25 @@
     @media (hover: hover) {
       .bento-card:hover { transform: scale(1.012); }
     }
+
+    /* v4 — إصلاح الوضع الليلي: الـ CSS المضمّن من Tailwind لقطة ثابتة، وأي كلاس جديد لم يكن موجوداً فيها لا يعمل إطلاقاً.
+       لذلك أزرار CTA السوداء والتصنيف النشط والهيرو معرّفون هنا بـ CSS عادي مضمون، لا يعتمد على Tailwind. */
+    .cta-black { background-color: #1d1d1f; color: #fff; }
+    .dark .cta-black { background-color: #fff; color: #1d1d1f; }
+    .cta-black:hover { background-color: #000; }
+    .dark .cta-black:hover { background-color: #e8e8ed; }
+    .cat-active { background-color: #1d1d1f; color: #fff; }
+    .dark .cat-active { background-color: #fff; color: #1d1d1f; }
+    .hero-split { display: grid; gap: 1.5rem; align-items: center; }
+    @media (width >= 48rem) { .hero-split { grid-template-columns: 1.15fr 1fr; gap: 2rem; } }
+    .aspect-4-3 { aspect-ratio: 4 / 3; }
+    @media (width >= 40rem) {
+      .sm\:flex { display: flex; }
+      .sm\:h-16 { height: 4rem; }
+      .sm\:w-20 { width: 5rem; }
+      .sm\:gap-4 { gap: 1rem; }
+      .sm\:px-4 { padding-inline: 1rem; }
+    }
   </style>
 </head>
 <body class="bg-[#fbfbfd] text-[#1d1d1f] dark:bg-[#000000] dark:text-[#f5f5f7] transition-colors">
@@ -655,7 +674,7 @@
           <svg id="moonIcon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
 
-        <button onclick="toggleCart(true)" aria-label="سلة المشتريات" class="relative flex items-center gap-1.5 bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] hover:bg-black dark:hover:bg-slate-200 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-xs sm:text-sm transition active:scale-95">
+        <button onclick="toggleCart(true)" aria-label="سلة المشتريات" class="relative flex items-center gap-1.5 cta-black px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-xs sm:text-sm transition active:scale-95">
           <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
           <span class="hidden sm:inline">الحقيبة</span>
           <span id="cartCount" class="bg-white text-brandOrange-600 font-bold text-[11px] w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center">0</span>
@@ -674,7 +693,7 @@
 
   <!-- Apple Store Style Compact Editorial Header + Hook -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-4">
-    <div class="grid md:grid-cols-[1.15fr_1fr] gap-6 md:gap-8 items-center">
+    <div class="hero-split">
       <div>
         <p class="text-xs sm:text-sm font-semibold text-brandOrange-500 mb-1">مرحباً بك في Shady Store</p>
         <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-[#1d1d1f] dark:text-white leading-tight">
@@ -682,7 +701,7 @@
         </h1>
         <p class="text-sm text-[#6e6e73] dark:text-[#86868b] leading-relaxed mt-3 max-w-lg">موبايلات، سماعات وساعات ذكية أصلية بأفضل سعر في مصر — افحص طلبك مع المندوب قبل ما تدفع جنيه واحد.</p>
         <div class="flex flex-wrap items-center gap-3 mt-5">
-          <button onclick="document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white px-6 py-3 rounded-full font-bold text-sm transition active:scale-95">تسوّق العروض الآن</button>
+          <button onclick="document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="cta-black px-6 py-3 rounded-full font-bold text-sm transition active:scale-95">تسوّق العروض الآن</button>
           <a id="heroWaBtn" href="https://wa.me/201008485337?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20Shady%20Store%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1" target="_blank" rel="noopener" class="text-[#0066cc] dark:text-[#2997ff] hover:underline font-semibold flex items-center gap-1 text-xs sm:text-sm">
             <span>استشارة مجانية عبر واتساب</span>
             <span>←</span>
@@ -696,14 +715,14 @@
         </div>
       </div>
       <div class="apple-card overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80" alt="Samsung Galaxy A16 — أقوى عروض الهواتف" class="w-full aspect-[4/3] object-cover" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'" />
+        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80" alt="Samsung Galaxy A16 — أقوى عروض الهواتف" class="w-full aspect-4-3 object-cover" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'" />
         <div class="p-4 flex items-center justify-between gap-3">
           <div>
             <p class="text-[11px] font-semibold text-brandOrange-500">الأكثر طلباً</p>
             <p class="font-bold text-sm text-[#1d1d1f] dark:text-white">Samsung Galaxy A16</p>
             <p class="text-xs text-[#6e6e73] dark:text-[#86868b] mt-0.5">10,499 ج.م <span class="line-through">11,300 ج.م</span></p>
           </div>
-          <button onclick="selectCategory('موبايلات'); document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="shrink-0 bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white px-4 py-2 rounded-full text-xs font-bold transition active:scale-95">شوف الموبايلات</button>
+          <button onclick="selectCategory('موبايلات'); document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="shrink-0 cta-black px-4 py-2 rounded-full text-xs font-bold transition active:scale-95">شوف الموبايلات</button>
         </div>
       </div>
     </div>
@@ -861,7 +880,7 @@
           <p class="text-sm text-[#6e6e73] dark:text-[#86868b]">كفر حماد، مركز كفر صقر، محافظة الشرقية • يومياً من 4 عصراً حتى 12 مساءً</p>
         </div>
         <div class="flex flex-wrap gap-2.5 shrink-0">
-          <a href="https://maps.app.goo.gl/YjX9EnDosmAYgaDN6?g_st=ic" target="_blank" rel="noopener" class="bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm transition">الموقع على الخريطة</a>
+          <a href="https://maps.app.goo.gl/YjX9EnDosmAYgaDN6?g_st=ic" target="_blank" rel="noopener" class="cta-black px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm transition">الموقع على الخريطة</a>
           <a id="branchCallBtn" href="tel:+201008485337" class="bg-[#f5f5f7] dark:bg-[#1d1d1f] text-[#1d1d1f] dark:text-white hover:bg-slate-200 px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm transition">اتصل بالفرع</a>
         </div>
       </div>
@@ -966,7 +985,7 @@
             <p class="text-[11px] text-[#6e6e73] font-semibold">اتصال هاتفي</p>
             <p id="widgetCallPhone" class="font-bold text-sm" dir="ltr">01008485337</p>
           </div>
-          <a id="widgetCallLink" href="tel:+201008485337" class="px-3.5 py-1.5 rounded-full bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white text-xs font-semibold">اتصل</a>
+          <a id="widgetCallLink" href="tel:+201008485337" class="px-3.5 py-1.5 rounded-full cta-black text-xs font-semibold">اتصل</a>
         </div>
 
         <div class="p-2.5 rounded-2xl bg-[#f5f5f7] dark:bg-[#1d1d1f] flex items-center justify-between">
@@ -994,7 +1013,7 @@
     </div>
 
     <div class="flex items-center gap-2">
-      <a id="floatingCallDirect" href="tel:+201008485337" aria-label="اتصال مباشر" class="flex items-center justify-center w-11 h-11 bg-[#1d1d1f] dark:bg-white text-white dark:text-[#1d1d1f] rounded-full shadow-lg transition active:scale-95" title="اتصل بنا">
+      <a id="floatingCallDirect" href="tel:+201008485337" aria-label="اتصال مباشر" class="flex items-center justify-center w-11 h-11 cta-black rounded-full shadow-lg transition active:scale-95" title="اتصل بنا">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
       </a>
       <button onclick="toggleWaWidget()" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-lg font-semibold text-xs sm:text-sm transition active:scale-95">
@@ -1130,7 +1149,7 @@
             </div>
           </div>
 
-          <button id="submitOrderBtn" type="submit" class="w-full bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white font-bold py-3.5 rounded-full transition active:scale-98 text-sm sm:text-base">
+          <button id="submitOrderBtn" type="submit" class="w-full cta-black font-bold py-3.5 rounded-full transition active:scale-98 text-sm sm:text-base">
             تأكيد الطلب الآن
           </button>
         </form>
@@ -1744,7 +1763,7 @@
         const active = cat === currentCategory;
         return `<button data-cat="${esc(cat)}" onclick="selectCategory(this.dataset.cat)" class="shrink-0 px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition ${
           active
-            ? "bg-[#1d1d1f] text-white dark:bg-white dark:text-[#1d1d1f]"
+            ? "cat-active"
             : "bg-white dark:bg-[#161617] text-[#1d1d1f] dark:text-[#f5f5f7] border border-slate-200/80 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800"
         }">${esc(cat)}</button>`;
       }).join("");
@@ -1806,7 +1825,7 @@
       if (filtered.length === 0) {
         grid.innerHTML = `<div class="col-span-full py-16 text-center space-y-3">
           <p class="text-base font-bold text-[#6e6e73]">لا توجد منتجات مطابقة لبحثك</p>
-          <button onclick="resetFilters()" class="text-xs bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white px-5 py-2.5 rounded-full font-semibold">عرض كل المنتجات</button>
+          <button onclick="resetFilters()" class="text-xs cta-black px-5 py-2.5 rounded-full font-semibold">عرض كل المنتجات</button>
         </div>`;
         return;
       }
@@ -1846,7 +1865,7 @@
               </div>
 
               <div class="flex items-center justify-between gap-2">
-                <button onclick="addToCart('${p.id}')" ${!isAvailable ? "disabled" : ""} class="flex-1 bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] hover:bg-black dark:hover:bg-slate-200 disabled:opacity-40 text-white font-semibold py-2 px-3 rounded-full text-xs transition active:scale-95">
+                <button onclick="addToCart('${p.id}')" ${!isAvailable ? "disabled" : ""} class="flex-1 cta-black disabled:opacity-40 font-semibold py-2 px-3 rounded-full text-xs transition active:scale-95">
                   ${isAvailable ? "أضف للحقيبة" : "غير متوفر"}
                 </button>
                 <button onclick="openProductDetail('${p.id}')" class="text-xs font-semibold text-[#0066cc] dark:text-[#2997ff] hover:underline px-1.5 py-1 shrink-0">
@@ -1876,7 +1895,7 @@
               <p class="text-sm sm:text-base font-bold text-[#1d1d1f] dark:text-white">${Number(p.price).toLocaleString()} ج.م</p>
             </div>
             <div class="px-3.5 sm:px-5 pb-4 sm:pb-5">
-              <button onclick="addToCart('${p.id}')" class="w-full bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] hover:bg-black dark:hover:bg-slate-200 text-white font-semibold py-2 px-3 rounded-full text-xs transition active:scale-95">أضف للحقيبة</button>
+              <button onclick="addToCart('${p.id}')" class="w-full cta-black font-semibold py-2 px-3 rounded-full text-xs transition active:scale-95">أضف للحقيبة</button>
             </div>
           </div>
         `).join("");
@@ -1912,7 +1931,7 @@
             </div>
 
             <div class="space-y-2.5 pt-3 border-t border-slate-200 dark:border-slate-800">
-              <button onclick="addToCart('${p.id}'); closeModal('productDetailModal'); toggleCart(true);" ${!detailAvailable ? "disabled" : ""} class="w-full bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] hover:bg-black dark:hover:bg-slate-200 disabled:opacity-40 text-white font-semibold py-3 rounded-full text-sm">
+              <button onclick="addToCart('${p.id}'); closeModal('productDetailModal'); toggleCart(true);" ${!detailAvailable ? "disabled" : ""} class="w-full cta-black disabled:opacity-40 font-semibold py-3 rounded-full text-sm">
                 ${detailAvailable ? "اطلب المنتج الآن" : "غير متوفر حالياً"}
               </button>
               <div class="grid grid-cols-2 gap-2">
@@ -1985,7 +2004,7 @@
         container.innerHTML = `
           <div class="py-12 text-center space-y-3">
             <p class="font-bold text-[#6e6e73]">حقيبة التسوق فارغة حالياً</p>
-            <button onclick="toggleCart(false)" class="bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white text-xs font-semibold px-5 py-2.5 rounded-full">تصفح المنتجات</button>
+            <button onclick="toggleCart(false)" class="cta-black text-xs font-semibold px-5 py-2.5 rounded-full">تصفح المنتجات</button>
           </div>
         `;
         form.classList.add("hidden");
