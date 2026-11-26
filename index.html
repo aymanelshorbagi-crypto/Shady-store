@@ -1,19 +1,29 @@
 <!DOCTYPE html>
+<!-- Shady Store v3 — الأزرق الحالي بس مطوّر (2026-11-26). مبنية على v2. نظام الألوان: CTA أسود #1d1d1f، الروابط والشارات أزرق #0071e3، واتساب أخضر فقط. قبل النشر: بدّل YOUR-DOMAIN.com، وارفع الصور، وبدّل آراء العملاء النموذجية بآراء حقيقية. -->
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#fbfbfd" />
+  <meta name="robots" content="index, follow" />
+  <meta name="color-scheme" content="light dark" />
+  <!-- بدّل YOUR-DOMAIN.com بالدومين الحقيقي قبل النشر -->
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/" />
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230071e3%22/%3E%3Ctext x=%2232%22 y=%2242%22 font-size=%2234%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22%3ES%3C/text%3E%3C/svg%3E" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <script>try{if(localStorage.getItem("shady_dark")==="true")document.documentElement.classList.add("dark");}catch(e){}</script>
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ar_EG" />
   <meta property="og:site_name" content="Shady Store" />
   <meta property="og:title" content="Shady Store | شادي ستور للتقنية والإلكترونيات" />
   <meta property="og:description" content="موبايلات، سماعات، ساعات ذكية وإكسسوارات أصلية بأفضل سعر. شحن لجميع المحافظات والدفع عند الاستلام." />
-  <meta property="og:image" content="og-image.png" />
+  <meta property="og:image" content="https://YOUR-DOMAIN.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="og-image.png" />
+  <meta name="twitter:image" content="https://YOUR-DOMAIN.com/og-image.png" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Store","name":"Shady Store","alternateName":"شادي ستور","description":"متجر إلكتروني للموبايلات والسماعات والساعات الذكية والإكسسوارات الأصلية","areaServed":"EG","hasMap":"https://maps.app.goo.gl/YjX9EnDosmAYgaDN6?g_st=ic","address":{"@type":"PostalAddress","addressLocality":"كفر حماد، مركز كفر صقر","addressRegion":"الشرقية","addressCountry":"EG"},"sameAs":["https://www.facebook.com/share/1ACASHAtEq/?mibextid=wwXIfr"],"telephone":["+201008485337","+201067390673"],"priceRange":"$$","logo":"logo-round.png"}
   </script>
@@ -102,6 +112,8 @@
     --radius-3xl: 1.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    /* ملاحظة صيانة: brandOrange هو الأزرق #0071e3 و brandTeal هو الرمادي/الأسود — الأسماء تاريخية، لا تعيد تسميتها لأن كلاسات Tailwind معتمدة عليها. */
+    /* v3 — نظام الألوان: CTA الرئيسي أسود #1d1d1f (أبيض في الدارك مود)، الأزرق #0071e3 للروابط والشارات فقط، الأخضر لواتساب فقط. */
     --color-brandOrange-50: #eff6ff;
     --color-brandOrange-100: #dbeafe;
     --color-brandOrange-400: #2997ff;
@@ -603,13 +615,16 @@
   </style>
 </head>
 <body class="bg-[#fbfbfd] text-[#1d1d1f] dark:bg-[#000000] dark:text-[#f5f5f7] transition-colors">
+  <noscript><div style="padding:16px;text-align:center;background:#fff3cd;font-weight:700">هذا المتجر يحتاج تفعيل JavaScript لعرض المنتجات وإتمام الطلب.</div></noscript>
 
+  <!-- v3: شريط إعلان أعلى الصفحة -->
+  <div class="bg-[#1d1d1f] text-white text-center text-[11px] sm:text-xs font-semibold py-2 px-4">شحن مجاني للطلبات فوق <span id="announceFreeShipText">3,000</span> ج.م &nbsp;•&nbsp; افحص طلبك قبل الدفع &nbsp;•&nbsp; الدفع عند الاستلام</div>
   <!-- Apple Glass Navigation Bar -->
   <header class="sticky top-0 z-40 apple-nav border-b border-slate-200/70 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-2 sm:gap-4">
       <!-- Brand Identity -->
       <a href="#" onclick="resetFilters(); return false;" class="flex items-center gap-2.5 min-w-0 flex-1 md:flex-initial group">
-        <img src="logo-round.png" alt="Shady Store" width="38" height="38" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full shrink-0 object-cover ring-1 ring-black/10 dark:ring-white/15" />
+        <img src="logo-round.png" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230071e3%22/%3E%3Ctext x=%2232%22 y=%2242%22 font-size=%2234%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22%3ES%3C/text%3E%3C/svg%3E'" alt="Shady Store" width="38" height="38" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full shrink-0 object-cover ring-1 ring-black/10 dark:ring-white/15" />
         <div class="min-w-0 flex-1">
           <span class="font-bold text-base sm:text-lg tracking-tight text-[#1d1d1f] dark:text-white block truncate">Shady Store</span>
           <span class="text-[10px] sm:text-[11px] text-[#6e6e73] dark:text-[#86868b] block -mt-0.5 truncate">المتجر الرسمي للتقنية والإلكترونيات</span>
@@ -629,7 +644,7 @@
           <span class="hidden sm:inline">اتصل بنا</span>
         </a>
 
-        <button onclick="openMyOrdersModal()" aria-label="طلباتي" class="p-2 sm:px-3 sm:py-1.5 rounded-full text-xs font-semibold bg-[#f5f5f7] dark:bg-[#1d1d1f] text-[#1d1d1f] dark:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition flex items-center gap-1.5">
+        <button onclick="openMyOrdersModal()" aria-label="طلباتي" class="hidden sm:flex p-2 sm:px-3 sm:py-1.5 rounded-full text-xs font-semibold bg-[#f5f5f7] dark:bg-[#1d1d1f] text-[#1d1d1f] dark:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition items-center gap-1.5">
           <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
           <span class="hidden sm:inline">طلباتي</span>
           <span id="myOrdersBadge" class="hidden bg-brandOrange-500 text-white text-[10px] px-1.5 py-0.5 rounded-full">0</span>
@@ -640,7 +655,7 @@
           <svg id="moonIcon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
 
-        <button onclick="toggleCart(true)" aria-label="سلة المشتريات" class="relative flex items-center gap-1.5 bg-brandOrange-500 hover:bg-brandOrange-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-xs sm:text-sm transition active:scale-95">
+        <button onclick="toggleCart(true)" aria-label="سلة المشتريات" class="relative flex items-center gap-1.5 bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] hover:bg-black dark:hover:bg-slate-200 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-xs sm:text-sm transition active:scale-95">
           <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
           <span class="hidden sm:inline">الحقيبة</span>
           <span id="cartCount" class="bg-white text-brandOrange-600 font-bold text-[11px] w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center">0</span>
@@ -659,38 +674,55 @@
 
   <!-- Apple Store Style Compact Editorial Header + Hook -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-4">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+    <div class="grid md:grid-cols-[1.15fr_1fr] gap-6 md:gap-8 items-center">
       <div>
         <p class="text-xs sm:text-sm font-semibold text-brandOrange-500 mb-1">مرحباً بك في Shady Store</p>
         <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-[#1d1d1f] dark:text-white leading-tight">
           التقنية الأصلية. <span class="text-[#6e6e73] dark:text-[#86868b]">أقرب إليك مما تتخيل.</span>
         </h1>
+        <p class="text-sm text-[#6e6e73] dark:text-[#86868b] leading-relaxed mt-3 max-w-lg">موبايلات، سماعات وساعات ذكية أصلية بأفضل سعر في مصر — افحص طلبك مع المندوب قبل ما تدفع جنيه واحد.</p>
+        <div class="flex flex-wrap items-center gap-3 mt-5">
+          <button onclick="document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white px-6 py-3 rounded-full font-bold text-sm transition active:scale-95">تسوّق العروض الآن</button>
+          <a id="heroWaBtn" href="https://wa.me/201008485337?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20Shady%20Store%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1" target="_blank" rel="noopener" class="text-[#0066cc] dark:text-[#2997ff] hover:underline font-semibold flex items-center gap-1 text-xs sm:text-sm">
+            <span>استشارة مجانية عبر واتساب</span>
+            <span>←</span>
+          </a>
+          <a href="#branch" class="text-[#0066cc] dark:text-[#2997ff] hover:underline font-semibold text-xs sm:text-sm">زيارة الفرع ←</a>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-5">
+          <span class="text-[11px] font-semibold px-3 py-1.5 rounded-full bg-white dark:bg-[#161617] border border-slate-200/80 dark:border-slate-800">✓ منتجات أصلية 100%</span>
+          <span class="text-[11px] font-semibold px-3 py-1.5 rounded-full bg-white dark:bg-[#161617] border border-slate-200/80 dark:border-slate-800">✓ افحص قبل ما تدفع</span>
+          <span class="text-[11px] font-semibold px-3 py-1.5 rounded-full bg-white dark:bg-[#161617] border border-slate-200/80 dark:border-slate-800">✓ الدفع عند الاستلام</span>
+        </div>
       </div>
-      <div class="flex items-center gap-3 text-xs sm:text-sm">
-        <a id="heroWaBtn" href="https://wa.me/201008485337?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20Shady%20Store%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1" target="_blank" rel="noopener" class="text-[#0066cc] dark:text-[#2997ff] hover:underline font-semibold flex items-center gap-1">
-          <span>استشارة مجانية عبر واتساب</span>
-          <span>←</span>
-        </a>
-        <span class="text-slate-300 dark:text-slate-700">•</span>
-        <a href="#branch" class="text-[#0066cc] dark:text-[#2997ff] hover:underline font-semibold">زيارة الفرع ←</a>
+      <div class="apple-card overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80" alt="Samsung Galaxy A16 — أقوى عروض الهواتف" class="w-full aspect-[4/3] object-cover" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'" />
+        <div class="p-4 flex items-center justify-between gap-3">
+          <div>
+            <p class="text-[11px] font-semibold text-brandOrange-500">الأكثر طلباً</p>
+            <p class="font-bold text-sm text-[#1d1d1f] dark:text-white">Samsung Galaxy A16</p>
+            <p class="text-xs text-[#6e6e73] dark:text-[#86868b] mt-0.5">10,499 ج.م <span class="line-through">11,300 ج.م</span></p>
+          </div>
+          <button onclick="selectCategory('موبايلات'); document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="shrink-0 bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white px-4 py-2 rounded-full text-xs font-bold transition active:scale-95">شوف الموبايلات</button>
+        </div>
       </div>
     </div>
 
     <!-- Bento Hook Cards (Immediate Customer Attraction Above the Fold) -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mt-6">
       <!-- Hook Card 1: Dark Titanium Signature Banner -->
-      <div onclick="document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="bento-card cursor-pointer bg-[#1d1d1f] text-white p-5 sm:p-6 flex items-center justify-between gap-4 overflow-hidden relative">
+      <div onclick="document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="bento-card cursor-pointer bg-[#1d1d1f] text-white p-5 sm:p-6 flex items-center justify-between gap-4 overflow-hidden relative" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
         <div class="space-y-1.5 z-10">
           <span class="inline-block text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-white/15 text-white">أحدث الإصدارات</span>
           <h2 class="text-lg sm:text-xl font-bold tracking-tight">أقوى عروض الهواتف والإكسسوارات</h2>
           <p class="text-xs text-slate-300">ضمان حقيقي • فحص كامل قبل دفع جنيه واحد</p>
           <span class="inline-block pt-1 text-xs font-semibold text-[#2997ff]">تسوق العروض الآن ←</span>
         </div>
-        <img src="logo-round.png" alt="Shady Store" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl shrink-0 object-cover ring-1 ring-white/20" />
+        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80" alt="أقوى عروض الهواتف والإكسسوارات" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl shrink-0 object-cover ring-1 ring-white/20" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80'" />
       </div>
 
       <!-- Hook Card 2: Try Before You Pay Hook -->
-      <div onclick="selectCategory('موبايلات'); document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="bento-card cursor-pointer bg-white dark:bg-[#161617] border border-slate-200/70 dark:border-slate-800 p-5 sm:p-6 flex flex-col justify-between">
+      <div onclick="selectCategory('موبايلات'); document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="bento-card cursor-pointer bg-white dark:bg-[#161617] border border-slate-200/70 dark:border-slate-800 p-5 sm:p-6 flex flex-col justify-between" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
         <div>
           <span class="text-[11px] font-bold text-brandOrange-500">اطلب وأنت مطمئن</span>
           <h3 class="text-base sm:text-lg font-bold text-[#1d1d1f] dark:text-white mt-1">افتح شحنتك وافحصها مع المندوب</h3>
@@ -700,7 +732,7 @@
       </div>
 
       <!-- Hook Card 3: Fast Delivery / Pickup Hook -->
-      <div onclick="selectCategory('سماعات'); document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="bento-card cursor-pointer bg-[#f5f5f7] dark:bg-[#161617] border border-slate-200/70 dark:border-slate-800 p-5 sm:p-6 flex flex-col justify-between">
+      <div onclick="selectCategory('سماعات'); document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="bento-card cursor-pointer bg-[#f5f5f7] dark:bg-[#161617] border border-slate-200/70 dark:border-slate-800 p-5 sm:p-6 flex flex-col justify-between" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
         <div>
           <span class="text-[11px] font-bold text-emerald-600">توصيل سريع لكل مصر</span>
           <h3 class="text-base sm:text-lg font-bold text-[#1d1d1f] dark:text-white mt-1">شحن لباب البيت أو استلام من الفرع</h3>
@@ -709,6 +741,15 @@
         <span class="text-xs font-semibold text-[#0066cc] dark:text-[#2997ff] pt-3">اكتشف السماعات والإكسسوارات ←</span>
       </div>
     </div>
+  </section>
+
+  <!-- v3: الأكثر طلباً — يُملأ تلقائياً من أول 4 منتجات متاحة -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-2 pb-2">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-[#1d1d1f] dark:text-white">الأكثر طلباً</h2>
+      <button onclick="resetFilters(); document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})" class="text-xs sm:text-sm font-semibold text-[#0066cc] dark:text-[#2997ff] hover:underline">عرض الكل ←</button>
+    </div>
+    <div id="bestSellersGrid" class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6"></div>
   </section>
 
   <!-- Main Storefront (Immediately Visible) -->
@@ -787,6 +828,28 @@
     </div>
   </section>
 
+  <!-- v3: آراء عملاء — نماذج للتنسيق فقط، بدّلها بآراء حقيقية من عملائك قبل النشر -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-[#1d1d1f] dark:text-white">قالوا عن <span class="text-[#6e6e73] dark:text-[#86868b]">Shady Store</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+      <div class="bg-white dark:bg-[#161617] border border-slate-200/70 dark:border-slate-800 rounded-3xl p-6 space-y-2">
+        <p class="text-amber-400 tracking-wider">★★★★★</p>
+        <p class="text-sm leading-relaxed text-[#1d1d1f] dark:text-white">"طلبت موبايل ووصلني تاني يوم، وفحصته مع المندوب قبل ما أدفع. تعامل محترم جداً."</p>
+        <p class="text-xs font-semibold text-[#6e6e73] dark:text-[#86868b]">أحمد — الزقازيق</p>
+      </div>
+      <div class="bg-white dark:bg-[#161617] border border-slate-200/70 dark:border-slate-800 rounded-3xl p-6 space-y-2">
+        <p class="text-amber-400 tracking-wider">★★★★★</p>
+        <p class="text-sm leading-relaxed text-[#1d1d1f] dark:text-white">"السماعة أصلية والسعر أقل من أي مكان سألت فيه. هرجع أطلب تاني أكيد."</p>
+        <p class="text-xs font-semibold text-[#6e6e73] dark:text-[#86868b]">محمد — كفر صقر</p>
+      </div>
+      <div class="bg-white dark:bg-[#161617] border border-slate-200/70 dark:border-slate-800 rounded-3xl p-6 space-y-2">
+        <p class="text-amber-400 tracking-wider">★★★★★</p>
+        <p class="text-sm leading-relaxed text-[#1d1d1f] dark:text-white">"استلمت من الفرع في نفس اليوم، والضمان والاستبدال واضحين من الأول."</p>
+        <p class="text-xs font-semibold text-[#6e6e73] dark:text-[#86868b]">عمر — القاهرة</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Branch + FAQ + Policies -->
   <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12 space-y-6">
     <!-- Branch Card -->
@@ -798,7 +861,7 @@
           <p class="text-sm text-[#6e6e73] dark:text-[#86868b]">كفر حماد، مركز كفر صقر، محافظة الشرقية • يومياً من 4 عصراً حتى 12 مساءً</p>
         </div>
         <div class="flex flex-wrap gap-2.5 shrink-0">
-          <a href="https://maps.app.goo.gl/YjX9EnDosmAYgaDN6?g_st=ic" target="_blank" rel="noopener" class="bg-brandOrange-500 hover:bg-brandOrange-600 text-white px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm transition">الموقع على الخريطة</a>
+          <a href="https://maps.app.goo.gl/YjX9EnDosmAYgaDN6?g_st=ic" target="_blank" rel="noopener" class="bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm transition">الموقع على الخريطة</a>
           <a id="branchCallBtn" href="tel:+201008485337" class="bg-[#f5f5f7] dark:bg-[#1d1d1f] text-[#1d1d1f] dark:text-white hover:bg-slate-200 px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm transition">اتصل بالفرع</a>
         </div>
       </div>
@@ -856,7 +919,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-xs sm:text-sm">
       <div class="space-y-3">
         <div class="flex items-center gap-2">
-          <img src="logo-round.png" alt="Shady Store" width="32" height="32" loading="lazy" class="w-8 h-8 rounded-full" />
+          <img src="logo-round.png" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230071e3%22/%3E%3Ctext x=%2232%22 y=%2242%22 font-size=%2234%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22%3ES%3C/text%3E%3C/svg%3E'" alt="Shady Store" width="32" height="32" loading="lazy" class="w-8 h-8 rounded-full" />
           <span class="font-bold text-base text-[#1d1d1f] dark:text-white">Shady Store</span>
         </div>
         <p class="leading-relaxed">وجهتك الموثوقة للهواتف الذكية والسماعات والساعات والإكسسوارات الأصلية في مصر.</p>
@@ -903,7 +966,7 @@
             <p class="text-[11px] text-[#6e6e73] font-semibold">اتصال هاتفي</p>
             <p id="widgetCallPhone" class="font-bold text-sm" dir="ltr">01008485337</p>
           </div>
-          <a id="widgetCallLink" href="tel:+201008485337" class="px-3.5 py-1.5 rounded-full bg-brandOrange-500 text-white text-xs font-semibold">اتصل</a>
+          <a id="widgetCallLink" href="tel:+201008485337" class="px-3.5 py-1.5 rounded-full bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white text-xs font-semibold">اتصل</a>
         </div>
 
         <div class="p-2.5 rounded-2xl bg-[#f5f5f7] dark:bg-[#1d1d1f] flex items-center justify-between">
@@ -942,7 +1005,7 @@
   </div>
 
   <!-- Slide-Over Cart & Checkout Drawer -->
-  <div id="cartDrawerOverlay" class="fixed inset-0 z-50 hidden">
+  <div id="cartDrawerOverlay" role="dialog" aria-modal="true" aria-label="حقيبة التسوق" class="fixed inset-0 z-50 hidden">
     <div onclick="toggleCart(false)" class="absolute inset-0 bg-slate-950/60 backdrop-blur-xs"></div>
     <div class="absolute inset-y-0 left-0 w-full max-w-lg bg-white dark:bg-[#161617] shadow-2xl flex flex-col h-full">
       <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
@@ -957,7 +1020,7 @@
       <div class="px-4 py-2.5 bg-[#f5f5f7] dark:bg-[#1d1d1f] border-b border-slate-200/70 dark:border-slate-800">
         <p id="freeShippingMsg" class="text-xs font-semibold text-[#1d1d1f] dark:text-white mb-1.5">أضف منتجات بقيمة 3,000 ج.م للحصول على شحن مجاني</p>
         <div class="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-          <div id="freeShippingBar" class="h-full bg-brandOrange-500 transition-all" style="width: 0%"></div>
+          <div id="freeShippingBar" class="h-full bg-[#1d1d1f] dark:bg-white transition-all" style="width: 0%"></div>
         </div>
       </div>
 
@@ -971,11 +1034,11 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label class="block text-xs font-semibold mb-1">الاسم بالكامل *</label>
-              <input id="custName" type="text" required placeholder="مثال: أحمد محمد" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-[#f5f5f7] dark:bg-[#1d1d1f] px-3 py-2 text-sm focus:ring-2 focus:ring-brandOrange-500 focus:outline-none" />
+              <input id="custName" type="text" autocomplete="name" required placeholder="مثال: أحمد محمد" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-[#f5f5f7] dark:bg-[#1d1d1f] px-3 py-2 text-sm focus:ring-2 focus:ring-brandOrange-500 focus:outline-none" />
             </div>
             <div>
               <label class="block text-xs font-semibold mb-1">رقم الموبايل (واتساب) *</label>
-              <input id="custPhone" type="tel" required placeholder="010xxxxxxxx" dir="ltr" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-[#f5f5f7] dark:bg-[#1d1d1f] px-3 py-2 text-sm text-right focus:ring-2 focus:ring-brandOrange-500 focus:outline-none" />
+              <input id="custPhone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="010xxxxxxxx" dir="ltr" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-[#f5f5f7] dark:bg-[#1d1d1f] px-3 py-2 text-sm text-right focus:ring-2 focus:ring-brandOrange-500 focus:outline-none" />
             </div>
           </div>
 
@@ -1017,12 +1080,24 @@
                 <option value="الإسماعيلية" data-ship="65">الإسماعيلية (65 ج.م)</option>
                 <option value="السويس" data-ship="70">السويس (70 ج.م)</option>
                 <option value="البحيرة" data-ship="70">البحيرة (70 ج.م)</option>
-                <option value="محافظات الصعيد" data-ship="90">محافظات الصعيد (90 ج.م)</option>
+                <option value="الفيوم" data-ship="70">الفيوم (70 ج.م)</option>
+                <option value="بني سويف" data-ship="75">بني سويف (75 ج.م)</option>
+                <option value="المنيا" data-ship="85">المنيا (85 ج.م)</option>
+                <option value="أسيوط" data-ship="90">أسيوط (90 ج.م)</option>
+                <option value="سوهاج" data-ship="90">سوهاج (90 ج.م)</option>
+                <option value="قنا" data-ship="95">قنا (95 ج.م)</option>
+                <option value="الأقصر" data-ship="95">الأقصر (95 ج.م)</option>
+                <option value="أسوان" data-ship="100">أسوان (100 ج.م)</option>
+                <option value="البحر الأحمر" data-ship="90">البحر الأحمر (90 ج.م)</option>
+                <option value="مطروح" data-ship="95">مطروح (95 ج.م)</option>
+                <option value="شمال سيناء" data-ship="100">شمال سيناء (100 ج.م)</option>
+                <option value="جنوب سيناء" data-ship="100">جنوب سيناء (100 ج.م)</option>
+                <option value="الوادي الجديد" data-ship="100">الوادي الجديد (100 ج.م)</option>
               </select>
             </div>
             <div>
               <label class="block text-xs font-semibold mb-1">العنوان بالتفصيل *</label>
-              <input id="custAddress" type="text" placeholder="المركز / الشارع / علامة مميزة" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-[#f5f5f7] dark:bg-[#1d1d1f] px-3 py-2 text-sm focus:ring-2 focus:ring-brandOrange-500 focus:outline-none" />
+              <input id="custAddress" type="text" autocomplete="street-address" placeholder="المركز / الشارع / علامة مميزة" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-[#f5f5f7] dark:bg-[#1d1d1f] px-3 py-2 text-sm focus:ring-2 focus:ring-brandOrange-500 focus:outline-none" />
             </div>
           </div>
 
@@ -1055,7 +1130,7 @@
             </div>
           </div>
 
-          <button id="submitOrderBtn" type="submit" class="w-full bg-brandOrange-500 hover:bg-brandOrange-600 text-white font-bold py-3.5 rounded-full transition active:scale-98 text-sm sm:text-base">
+          <button id="submitOrderBtn" type="submit" class="w-full bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white font-bold py-3.5 rounded-full transition active:scale-98 text-sm sm:text-base">
             تأكيد الطلب الآن
           </button>
         </form>
@@ -1064,7 +1139,7 @@
   </div>
 
   <!-- Order Success Receipt Modal -->
-  <div id="orderSuccessModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
+  <div id="orderSuccessModal" role="dialog" aria-modal="true" aria-label="تأكيد الطلب" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
     <div class="bg-white dark:bg-[#161617] rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4">
       <div class="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-3xl mx-auto font-bold">✓</div>
       <div>
@@ -1097,14 +1172,14 @@
   </div>
 
   <!-- Product Details Modal -->
-  <div id="productDetailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
+  <div id="productDetailModal" role="dialog" aria-modal="true" aria-label="تفاصيل المنتج" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
     <div class="bg-white dark:bg-[#161617] rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
       <div id="productDetailBody"></div>
     </div>
   </div>
 
   <!-- Privacy Policy Modal -->
-  <div id="privacyModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
+  <div id="privacyModal" role="dialog" aria-modal="true" aria-label="سياسة الخصوصية" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
     <div class="bg-white dark:bg-[#161617] rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
       <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
         <h3 class="font-bold text-lg">سياسة الخصوصية - Shady Store</h3>
@@ -1132,7 +1207,7 @@
   </div>
 
   <!-- Custom Confirmation Modal -->
-  <div id="customConfirmModal" class="fixed inset-0 z-60 hidden flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-xs">
+  <div id="customConfirmModal" role="dialog" aria-modal="true" aria-label="تأكيد الإجراء" class="fixed inset-0 z-60 hidden flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-xs">
     <div class="bg-white dark:bg-[#161617] rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4">
       <div class="w-12 h-12 rounded-full bg-rose-500/20 text-rose-500 flex items-center justify-center text-2xl mx-auto font-bold">!</div>
       <h4 id="confirmModalTitle" class="font-bold text-base">تأكيد الإجراء</h4>
@@ -1145,7 +1220,7 @@
   </div>
 
   <!-- Customer My Orders Modal -->
-  <div id="myOrdersModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
+  <div id="myOrdersModal" role="dialog" aria-modal="true" aria-label="طلباتي" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
     <div class="bg-white dark:bg-[#161617] rounded-3xl max-w-lg w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
       <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2">
         <h3 class="font-bold text-base sm:text-lg">سجل طلباتي على هذا الجهاز</h3>
@@ -1159,7 +1234,7 @@
   </div>
 
   <!-- Admin Dashboard Modal -->
-  <div id="adminModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-2 sm:p-4 bg-slate-950/75 backdrop-blur-xs">
+  <div id="adminModal" role="dialog" aria-modal="true" aria-label="لوحة تحكم المتجر" class="fixed inset-0 z-50 hidden flex items-center justify-center p-2 sm:p-4 bg-slate-950/75 backdrop-blur-xs">
     <div class="bg-white dark:bg-[#161617] rounded-3xl max-w-5xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
       <div class="p-4 bg-[#1d1d1f] text-white flex items-center justify-between">
         <div>
@@ -1374,7 +1449,7 @@
   </div>
 
   <!-- Minimal Toast Notification -->
-  <div id="toastBox" class="fixed bottom-5 right-5 z-50 hidden bg-[#1d1d1f] text-white px-4 py-3 rounded-full shadow-xl text-xs sm:text-sm font-semibold flex items-center gap-2">
+  <div id="toastBox" role="status" aria-live="polite" class="fixed bottom-5 right-5 z-50 hidden bg-[#1d1d1f] text-white px-4 py-3 rounded-full shadow-xl text-xs sm:text-sm font-semibold flex items-center gap-2">
     <span class="w-2 h-2 rounded-full bg-brandOrange-500"></span>
     <span id="toastMsg"></span>
   </div>
@@ -1384,7 +1459,7 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import {
       getFirestore, collection, doc, addDoc, setDoc, updateDoc, deleteDoc,
-      onSnapshot, serverTimestamp
+      onSnapshot, serverTimestamp, runTransaction
     } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
     import { getAnalytics, logEvent, isSupported } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
     import {
@@ -1403,6 +1478,8 @@
     };
 
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    // v2: قراءة آمنة من localStorage — لو البيانات تالفة تُمسح ويُستخدم الافتراضي بدل ما يقع السكربت كله
+    const safeParse = (key, fallback) => { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch (_) { try { localStorage.removeItem(key); } catch (_) {} return fallback; } };
     const app = initializeApp(firebaseConfig);
 
     let analytics = null;
@@ -1419,6 +1496,8 @@
         document.getElementById("confirmModalMessage").textContent = message;
         modal.classList.remove("hidden");
 
+        const okBtn = document.getElementById("confirmModalOkBtn");
+        const cancelBtn = document.getElementById("confirmModalCancelBtn");
         const cleanup = (result) => {
           modal.classList.add("hidden");
           okBtn.removeEventListener("click", onOk);
@@ -1428,8 +1507,6 @@
         const onOk = () => cleanup(true);
         const onCancel = () => cleanup(false);
 
-        const okBtn = document.getElementById("confirmModalOkBtn");
-        const cancelBtn = document.getElementById("confirmModalCancelBtn");
         okBtn.addEventListener("click", onOk);
         cancelBtn.addEventListener("click", onCancel);
       });
@@ -1488,22 +1565,22 @@
 
     let products = [];
     let isUsingStarterFallback = false;
-    let cart = JSON.parse(localStorage.getItem("shady_cart") || "[]");
-    let myOrders = JSON.parse(localStorage.getItem("shady_my_orders") || "[]");
+    let cart = safeParse("shady_cart", []);
+    let myOrders = safeParse("shady_my_orders", []);
     let adminOrders = [];
     let currentCategory = "الكل";
     let searchQuery = "";
     let sortBy = "featured";
     let currentUser = null;
     let unsubOrders = null;
-    let storeSettings = JSON.parse(localStorage.getItem("shady_settings") || JSON.stringify({
+    let storeSettings = safeParse("shady_settings", {
       wa1: "01008485337",
       wa2: "01067390673",
       freeShippingThreshold: 3000,
       lowStockLimit: 3,
       instagramUrl: "",
       tiktokUrl: ""
-    }));
+    });
 
     getRedirectResult(auth).catch(() => {});
 
@@ -1511,15 +1588,15 @@
       document.documentElement.classList.add("dark");
     }
 
-    function formatWaIntl(phone) {
+    function normalizeEg(phone) {
       const clean = String(phone).replace(/\D/g, "");
-      return clean.startsWith("20") ? clean : "2" + clean;
+      if (clean.startsWith("20") && clean.length === 12) return clean;
+      if (clean.startsWith("01") && clean.length === 11) return "2" + clean;
+      if (clean.startsWith("1") && clean.length === 10) return "20" + clean;
+      return clean;
     }
-
-    function formatTelLink(phone) {
-      const clean = String(phone).replace(/\D/g, "");
-      return clean.startsWith("20") ? `+${clean}` : `+2${clean}`;
-    }
+    function formatWaIntl(phone) { return normalizeEg(phone); }
+    function formatTelLink(phone) { return "+" + normalizeEg(phone); }
 
     function renderSocialLinks() {
       const container = document.getElementById("socialLinksContainer");
@@ -1542,6 +1619,8 @@
 
       const freeShipEl = document.getElementById("topFreeShippingText");
       if (freeShipEl) freeShipEl.textContent = Number(freeShippingThreshold).toLocaleString();
+      const announceEl = document.getElementById("announceFreeShipText");
+      if (announceEl) announceEl.textContent = Number(freeShippingThreshold).toLocaleString();
 
       document.getElementById("headerCallBtn").href = `tel:${tel1}`;
       document.getElementById("branchCallBtn").href = `tel:${tel1}`;
@@ -1585,6 +1664,7 @@
       }
       renderCategories();
       renderProducts();
+      renderBestSellers();
       renderAdminProducts();
       renderAdminInventory();
       updateAdminKPIs();
@@ -1594,6 +1674,7 @@
       document.getElementById("dbStatusBadge").textContent = `${products.length} منتجات`;
       renderCategories();
       renderProducts();
+      renderBestSellers();
     });
 
     onSnapshot(doc(db, "settings", "store"), (docSnap) => {
@@ -1677,8 +1758,11 @@
 
     window.handleSearch = (val) => {
       searchQuery = val.trim().toLowerCase();
-      document.getElementById("desktopSearch").value = val;
-      document.getElementById("mobileSearch").value = val;
+      // v2: لا تعيد كتابة الحقل الذي يكتب فيه المستخدم الآن (كان يحرّك المؤشر على الموبايل)
+      const d = document.getElementById("desktopSearch");
+      const m = document.getElementById("mobileSearch");
+      if (document.activeElement !== d && d.value !== val) d.value = val;
+      if (document.activeElement !== m && m.value !== val) m.value = val;
       renderProducts();
     };
 
@@ -1722,7 +1806,7 @@
       if (filtered.length === 0) {
         grid.innerHTML = `<div class="col-span-full py-16 text-center space-y-3">
           <p class="text-base font-bold text-[#6e6e73]">لا توجد منتجات مطابقة لبحثك</p>
-          <button onclick="resetFilters()" class="text-xs bg-brandOrange-500 text-white px-5 py-2.5 rounded-full font-semibold">عرض كل المنتجات</button>
+          <button onclick="resetFilters()" class="text-xs bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white px-5 py-2.5 rounded-full font-semibold">عرض كل المنتجات</button>
         </div>`;
         return;
       }
@@ -1762,7 +1846,7 @@
               </div>
 
               <div class="flex items-center justify-between gap-2">
-                <button onclick="addToCart('${p.id}')" ${!isAvailable ? "disabled" : ""} class="flex-1 bg-brandOrange-500 hover:bg-brandOrange-600 disabled:opacity-40 text-white font-semibold py-2 px-3 rounded-full text-xs transition active:scale-95">
+                <button onclick="addToCart('${p.id}')" ${!isAvailable ? "disabled" : ""} class="flex-1 bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] hover:bg-black dark:hover:bg-slate-200 disabled:opacity-40 text-white font-semibold py-2 px-3 rounded-full text-xs transition active:scale-95">
                   ${isAvailable ? "أضف للحقيبة" : "غير متوفر"}
                 </button>
                 <button onclick="openProductDetail('${p.id}')" class="text-xs font-semibold text-[#0066cc] dark:text-[#2997ff] hover:underline px-1.5 py-1 shrink-0">
@@ -1775,10 +1859,35 @@
       }).join("");
     }
 
+    function renderBestSellers() {
+      const grid = document.getElementById("bestSellersGrid");
+      if (!grid) return;
+      const top = products.filter(p => p.inStock !== false).slice(0, 4);
+      if (!top.length) { grid.innerHTML = ""; return; }
+      const fallbackImg = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80";
+      grid.innerHTML = top.map(p => `
+          <div class="group apple-card overflow-hidden flex flex-col justify-between">
+            <div class="relative aspect-square bg-[#f5f5f7] dark:bg-[#1d1d1f] overflow-hidden cursor-pointer" onclick="openProductDetail('${p.id}')">
+              <img src="${p.image || fallbackImg}" alt="${esc(p.name)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImg}'" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+            </div>
+            <div class="p-3.5 sm:p-5 space-y-1">
+              <span class="text-[11px] font-semibold text-brandOrange-500">${esc(p.badge || p.category || "أصلي")}</span>
+              <h3 onclick="openProductDetail('${p.id}')" class="font-bold text-sm sm:text-base text-[#1d1d1f] dark:text-white line-clamp-2 cursor-pointer hover:text-brandOrange-500 transition leading-snug">${esc(p.name)}</h3>
+              <p class="text-sm sm:text-base font-bold text-[#1d1d1f] dark:text-white">${Number(p.price).toLocaleString()} ج.م</p>
+            </div>
+            <div class="px-3.5 sm:px-5 pb-4 sm:pb-5">
+              <button onclick="addToCart('${p.id}')" class="w-full bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] hover:bg-black dark:hover:bg-slate-200 text-white font-semibold py-2 px-3 rounded-full text-xs transition active:scale-95">أضف للحقيبة</button>
+            </div>
+          </div>
+        `).join("");
+    }
+
     window.openProductDetail = (id) => {
       const p = products.find(item => item.id === id);
       if (!p) return;
       const fallbackImg = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80";
+      const detailStock = typeof p.stock === "number" ? p.stock : (p.inStock === false ? 0 : 10);
+      const detailAvailable = p.inStock !== false && detailStock > 0;
       const waMsg = encodeURIComponent(`أهلاً Shady Store، كنت حابب أستفسر عن منتج: ${p.name} (بسعر ${p.price} ج.م)`);
       const intl1 = formatWaIntl(storeSettings.wa1);
       const tel1 = formatTelLink(storeSettings.wa1);
@@ -1803,8 +1912,8 @@
             </div>
 
             <div class="space-y-2.5 pt-3 border-t border-slate-200 dark:border-slate-800">
-              <button onclick="addToCart('${p.id}'); closeModal('productDetailModal'); toggleCart(true);" ${!p.inStock ? "disabled" : ""} class="w-full bg-brandOrange-500 hover:bg-brandOrange-600 disabled:opacity-40 text-white font-semibold py-3 rounded-full text-sm">
-                اطلب المنتج الآن
+              <button onclick="addToCart('${p.id}'); closeModal('productDetailModal'); toggleCart(true);" ${!detailAvailable ? "disabled" : ""} class="w-full bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] hover:bg-black dark:hover:bg-slate-200 disabled:opacity-40 text-white font-semibold py-3 rounded-full text-sm">
+                ${detailAvailable ? "اطلب المنتج الآن" : "غير متوفر حالياً"}
               </button>
               <div class="grid grid-cols-2 gap-2">
                 <a href="https://wa.me/${intl1}?text=${waMsg}" target="_blank" rel="noopener" class="flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 rounded-full text-xs">واتساب</a>
@@ -1876,7 +1985,7 @@
         container.innerHTML = `
           <div class="py-12 text-center space-y-3">
             <p class="font-bold text-[#6e6e73]">حقيبة التسوق فارغة حالياً</p>
-            <button onclick="toggleCart(false)" class="bg-brandOrange-500 text-white text-xs font-semibold px-5 py-2.5 rounded-full">تصفح المنتجات</button>
+            <button onclick="toggleCart(false)" class="bg-[#1d1d1f] dark:bg-white dark:text-[#1d1d1f] text-white text-xs font-semibold px-5 py-2.5 rounded-full">تصفح المنتجات</button>
           </div>
         `;
         form.classList.add("hidden");
@@ -1967,7 +2076,7 @@
       const shipping = deliveryType === "pickup" ? 0 : (subTotal >= threshold ? 0 : rawShip);
       const total = subTotal + shipping;
 
-      const orderId = "SHD-" + Date.now().toString(36).slice(-5).toUpperCase() + Math.floor(Math.random() * 10);
+      const orderId = "SHD-" + Date.now().toString(36).toUpperCase() + "-" + Math.random().toString(36).slice(2, 6).toUpperCase();
       const orderPayload = {
         orderId,
         customerName: name,
@@ -1990,26 +2099,39 @@
       btn.disabled = true;
       btn.textContent = "جاري تسجيل الطلب...";
 
+      // v2: الطلب وخصم المخزون في Transaction واحدة — لو فشل أي جزء لا يُنشأ الطلب ولا يُخصم المخزون، والسلة تفضل زي ما هي
       let orderSaved = true;
+      let orderError = "";
       try {
-        await addDoc(collection(db, "orders"), {
-          ...orderPayload,
-          createdAt: serverTimestamp()
-        });
-        for (const item of orderPayload.items) {
-          if (!item.id.startsWith("starter-")) {
-            const prod = products.find(p => p.id === item.id);
-            if (prod && typeof prod.stock === "number") {
-              const newStock = Math.max(0, prod.stock - item.qty);
-              await updateDoc(doc(db, "products", item.id), {
-                stock: newStock,
-                inStock: newStock > 0
-              });
-            }
+        const orderRef = doc(collection(db, "orders"));
+        await runTransaction(db, async (tx) => {
+          tx.set(orderRef, { ...orderPayload, createdAt: serverTimestamp() });
+          for (const item of orderPayload.items) {
+            if (item.id.startsWith("starter-")) continue;
+            const ref = doc(db, "products", item.id);
+            const snap = await tx.get(ref);
+            if (!snap.exists()) continue;
+            const data = snap.data();
+            if (typeof data.stock !== "number") continue;
+            if (data.stock < item.qty) throw new Error("OUT_OF_STOCK:" + item.name);
+            const newStock = data.stock - item.qty;
+            tx.update(ref, { stock: newStock, inStock: newStock > 0 });
           }
-        }
+        });
       } catch (err) {
         orderSaved = false;
+        orderError = err && err.message ? err.message : String(err);
+      }
+
+      if (!orderSaved) {
+        btn.disabled = false;
+        btn.textContent = "تأكيد الطلب الآن";
+        if (orderError.startsWith("OUT_OF_STOCK")) {
+          showToast("عذراً، نفدت كمية أحد المنتجات أثناء تأكيد طلبك. راجع السلة وحاول مجدداً");
+        } else {
+          showToast("تعذّر تسجيل الطلب الآن. تحقق من الاتصال وحاول مجدداً — لم يتم خصم أي مبلغ");
+        }
+        return;
       }
 
       track("purchase", { transaction_id: orderId, currency: "EGP", value: total, shipping, items: orderPayload.items.map(i => ({ item_id: i.id, item_name: i.name, price: i.price, quantity: i.qty })) });
